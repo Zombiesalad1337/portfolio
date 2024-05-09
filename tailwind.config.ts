@@ -57,6 +57,8 @@ const config: Config = {
 			fontFamily: {
 				sans: [...fontFamily.sans]
 			},
+			//todo: convert to rem
+			//add for padding margin too
             fontSize: {
                 sm: '0.8rem',
                 base: '1rem',

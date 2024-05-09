@@ -1,0 +1,75 @@
+{
+    "service":[
+        {
+            "sno": "01",
+            "title": "Business Design",
+            "header": "Guiding principles to drive transformation",
+            "points": [
+                "point 1",
+                "point 2",
+                "point 3",
+                "point 4",
+                "point 5"
+            ]
+        },
+        {
+            "sno": "02",
+            "title": "Brand Design",
+            "header": "Guiding principles to drive transformation",
+            "points": [
+                "point 1",
+                "point 2",
+                "point 3",
+                "point 4",
+                "point 5"
+            ]
+        },
+        {
+            "sno": "03",
+            "title": "Experience Design",
+            "header": "Guiding principles to drive transformation",
+            "points": [
+                "point 1",
+                "point 2",
+                "point 3",
+                "point 4",
+                "point 5"
+            ]
+        }
+    ],
+
+    "process":[
+        {
+            "sno": "01",
+            "title": "Discuss",
+            "text": " The content of your character is your choice. Day by day, what you do is who you become. Your integrity is your destiny",
+            "keyPoints": [
+                "Product Observation",
+                "Define a Problem",
+                "Solving Difficulties"
+            ]
+        },
+        {
+            "sno": "02",
+            "title": "Mapping",
+            "text": " The content of your character is your choice. Day by day, what you do is who you become. Your integrity is your destiny",
+            "keyPoints": [
+                "Product Observation",
+                "Define a Problem",
+                "Solving Difficulties"
+            ]
+        },
+        {
+            "sno": "03",
+            "title": "Deal",
+            "text": " The content of your character is your choice. Day by day, what you do is who you become. Your integrity is your destiny",
+            "keyPoints": [
+                "Product Observation",
+                "Define a Problem",
+                "Solving Difficulties"
+            ]
+        }
+
+    ]
+
+}
