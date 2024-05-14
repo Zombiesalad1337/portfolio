@@ -7,6 +7,7 @@
   import staticData from "$lib/staticData.json";
   import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
+	import Button from "$lib/components/ui/button/button.svelte";
 </script>
 
 <Navbar />
@@ -36,7 +37,10 @@
 </div>
 
 
-<h1 class="text-5xl"> Concepts </h1>
+<div class="flex justify-between">
+  <h1 class="text-5xl"> Concepts </h1>
+  <a class="bg-red-500 rounded-full px-8 py-2 text-black text-center" href="/projects">All Projects -></a>
+</div>
 
 	
 
