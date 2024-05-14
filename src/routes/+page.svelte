@@ -3,6 +3,7 @@
 	import Navbar from "$lib/components/navbar.svelte";
 	import ProcessCard from "$lib/components/processCard.svelte";
   import ServiceCard from "$lib/components/serviceCard.svelte";
+  import FeaturedProject from "$lib/components/featuredProject.svelte";
   import staticData from "$lib/staticData.json";
   import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
@@ -45,7 +46,7 @@
   <p>test</p>
 <Carousel.Root
   opts={{
-    align: "start"
+    align: "center"
   }}
   class="w-full max-w-sm"
 >
@@ -74,3 +75,20 @@
 
 </div>
 
+
+<h1 class="text-5xl"> Featured Projects </h1>
+
+
+<Carousel.Root
+  class="mx-10 px-5"
+>
+  <Carousel.Content>
+    <Carousel.Item>
+      <FeaturedProject>
+
+      </FeaturedProject>
+    </Carousel.Item>
+  </Carousel.Content>
+  <Carousel.Previous />
+  <Carousel.Next />
+</Carousel.Root>
