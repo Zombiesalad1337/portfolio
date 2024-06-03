@@ -10,6 +10,8 @@
 
     import Toc from 'svelte-toc';
 
+  import BlogCard from "$lib/components/blogCard.svelte";
+
   export let data: { title: string; date: string; slug: string }[];
   $: console.log(data);
 </script>
@@ -22,11 +24,19 @@
 
 
 
-<h1>Blog Posts</h1>
-<ul>
+<h1 class="text-3xl">Blog Posts</h1>
+<!-- <ul>
   {#each data.blogs as blog}
     <li>
-      <a href={`/concepts/${blog.slug}`}>{blog.title}</a> - {blog.date}
+      <a href={`/concepts/${blog.slug}`} data-sveltekit-preload-data="tap" data-sveltekit-preload-code="hover">{blog.title}</a> - {blog.date}
     </li>
   {/each}
-</ul>
+</ul> -->
+
+<div class="mx-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {#each data.blogs as blog}
+    <div>
+      <BlogCard {...blog} />
+    </div>
+  {/each}
+</div>

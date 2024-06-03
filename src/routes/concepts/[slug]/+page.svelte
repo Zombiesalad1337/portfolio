@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Toc } from "svelte-toc"; 
     import { page } from '$app/stores'
+  import BlogCard from "$lib/components/blogCard.svelte";
 
   export let data : any;
     $: headingSelector =
@@ -44,7 +45,7 @@
 
 
 
-  <div class="flex prose !max-w-none">
+  <div class="mb-20 flex prose !max-w-none">
       <div class="w-1/5 mr-10">
           <Toc />
       </div>
@@ -53,6 +54,14 @@
       </div>
   </div>
 
+<h1 class="text-4xl mb-5"> Related Resources</h1>
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {#each data.blogs.slice(0, 3) as blog}
+    <div>
+      <BlogCard {...blog} />
+    </div>
+  {/each}
+</div>
 
 </div>
   

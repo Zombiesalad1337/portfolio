@@ -3,7 +3,7 @@ title: "Release notes what should be do about this faggotry fag fag code editor"
 date: "June 24, 2024"
 category: "Changelog"
 readTime: "4 min"
-headerImage: "/blog-1.png"
+headerImage: "/blog-1.jpg"
 ---
 
 
