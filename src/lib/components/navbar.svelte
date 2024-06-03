@@ -22,7 +22,7 @@
             Process
         </a>
         <a
-            href="/"
+            href="/concepts"
             class="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
         >
             Insights

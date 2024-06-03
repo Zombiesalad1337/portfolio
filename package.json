@@ -19,7 +19,7 @@
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@tailwindcss/typography": "^0.5.10",
+		"@tailwindcss/typography": "^0.5.13",
 		"@types/eslint": "^8.56.0",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
@@ -44,7 +44,9 @@
 		"bits-ui": "^0.21.7",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.0.4",
+		"mdsvex": "^0.11.0",
 		"svelte-radix": "^1.1.0",
+		"svelte-toc": "^0.5.8",
 		"tailwind-merge": "^2.3.0",
 		"tailwind-variants": "^0.2.1"
 	}
