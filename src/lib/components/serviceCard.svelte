@@ -18,15 +18,17 @@
 
 </script>
 
+<div>
+
 <Card.Root>
-    <Card.Header>
-        <Card.Title>{sno}</Card.Title>
+    <Card.Header class="text-red">
+        <Card.Title class="text-red">{sno}</Card.Title>
     </Card.Header>
 
     {#if contentVisible}
         <!-- TODO: FIND a way to calculate fly from card bottom -->
-        <div in:fly={{y: 40,  duration: 500}}>
-            <Card.Content>
+        <div in:fly={{y: 40,  duration: 500}} out:fly={{y:40, duration: 500}}>
+            <Card.Content class="text-white">
                 <p>{header}</p>
                 <ul>
                     {#each points as point}
@@ -36,7 +38,7 @@
             </Card.Content>
         </div>
     {:else}
-        <Card.Content class="text-white">
+        <Card.Content class="text-black">
             <p>{header}</p>
             <ul>
                 {#each points as point}
@@ -46,8 +48,9 @@
         </Card.Content>
     {/if}
 
-    <Card.Footer class="flex justify-between">
+    <Card.Footer class="flex justify-between text-white">
         <p>{title}</p>
         <button on:click={toggleContent}>{contentVisible ? 'x' : '+'}</button>
     </Card.Footer>
 </Card.Root>
+</div>

@@ -40,7 +40,7 @@
 
 <style>
   .active {
-    @apply font-bold text-red-500;
+    @apply font-bold text-red;
   }
 </style>
 

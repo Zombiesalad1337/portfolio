@@ -24,6 +24,7 @@
 
 
 
+<a href="/" class=""> Take me home, country roads</a>
 <h1 class="text-3xl">Blog Posts</h1>
 <!-- <ul>
   {#each data.blogs as blog}
@@ -40,3 +41,6 @@
     </div>
   {/each}
 </div>
+
+
+TEST | TEST | TEST

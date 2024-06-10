@@ -11,6 +11,7 @@
 
 </script>
 
+<div>
 <Card.Root>
     <Card.Header>
         <Card.Title>{sno}</Card.Title>
@@ -27,3 +28,5 @@
         {/each}
     </Card.Footer>
 </Card.Root>
+
+</div>
