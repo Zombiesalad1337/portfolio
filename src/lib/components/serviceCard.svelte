@@ -1,56 +1,39 @@
+
 <script lang="ts">
-    import { fly } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
 
-    import * as Card from "$lib/components/ui/card";
+  export let sno: string;
+  export let title: string;
+  export let header: string;
+  export let points: string[];
 
-    export let sno: string;
-    export let title: string;
-    export let header: string;
-    export let points: string[];
+  let showContent: boolean = false;
 
-    let contentVisible: boolean = false;
-
-    function toggleContent(): void {
-        contentVisible = !contentVisible;
-    }
-
-    let flyHeight: number = 0;
-
+  function toggleContent() {
+    showContent = !showContent;
+  }
 </script>
 
-<div>
-
-<Card.Root>
-    <Card.Header class="text-red">
-        <Card.Title class="text-red">{sno}</Card.Title>
-    </Card.Header>
-
-    {#if contentVisible}
-        <!-- TODO: FIND a way to calculate fly from card bottom -->
-        <div in:fly={{y: 40,  duration: 500}} out:fly={{y:40, duration: 500}}>
-            <Card.Content class="text-white">
-                <p>{header}</p>
-                <ul>
-                    {#each points as point}
-                        <li>{point}</li>
-                    {/each}
-                </ul>
-            </Card.Content>
-        </div>
-    {:else}
-        <Card.Content class="text-black">
-            <p>{header}</p>
-            <ul>
-                {#each points as point}
-                    <li>{point}</li>
-                {/each}
-            </ul>
-        </Card.Content>
-    {/if}
-
-    <Card.Footer class="flex justify-between text-white">
-        <p>{title}</p>
-        <button on:click={toggleContent}>{contentVisible ? 'x' : '+'}</button>
-    </Card.Footer>
-</Card.Root>
+<div class="border rounded-lg bg-serviceBg/20 text-white p-4 w-72 mx-4 my-4 min-h-[150px]">
+  <div class="mb-2">
+    <p class="text-left text-red font-bold">{sno}</p>
+  </div>
+  <div class="relative pb-5 overflow-hidden min-h-[50px]">  <!-- Ensure this has a min-height -->
+    <!-- {#if showContent} -->
+      <div class="mb-2 {showContent ? '' : 'invisible'}" in:fly={{ y: 200, duration: 300 }} out:fly={{ y: 200, duration: 1000 }}>
+        <p class="text-left py-5">{header}</p>
+        <ul class="list-disc pl-5">
+            {#each points as point}
+                <li>{point}</li>
+            {/each}
+        </ul>
+      </div>
+    <!-- {/if} -->
+  </div>
+  <div class="flex justify-between items-center">
+    <p class="text-left">{title}</p>
+    <button class="bg-red text-white rounded-full px-3 py-1" on:click={toggleContent}>
+      {showContent ? 'x' : '+'}
+    </button>
+  </div>
 </div>

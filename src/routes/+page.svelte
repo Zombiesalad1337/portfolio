@@ -1,7 +1,9 @@
 <script lang="ts">
 
 	import Navbar from "$lib/components/navbar.svelte";
-	import ProcessCard from "$lib/components/processCard.svelte";
+  import ProcessCard from "$lib/components/serviceCard.svelte";
+	import ProcessCardDeprecated from "$lib/components/processCardDeprecated.svelte";
+  import ServiceCardDeprecated from "$lib/components/serviceCardDeprecated.svelte";
   import ServiceCard from "$lib/components/serviceCard.svelte";
   import FeaturedProject from "$lib/components/featuredProject.svelte";
   import staticData from "$lib/staticData.json";
@@ -25,6 +27,12 @@
     <ServiceCard {...staticData.service[1]}></ServiceCard>
     <ServiceCard {...staticData.service[2]}></ServiceCard>
   </div>
+  <div class="flex items-center justify-between">
+
+    <ServiceCardDeprecated {...staticData.service[0]}></ServiceCardDeprecated>
+    <ServiceCardDeprecated {...staticData.service[1]}></ServiceCardDeprecated>
+    <ServiceCardDeprecated {...staticData.service[2]}></ServiceCardDeprecated>
+  </div>
 
 
   <h1 id="Process" class="text-5xl text-red"> Process </h1>
@@ -32,9 +40,9 @@
 
   <div class="flex items-center justify-between text-white">
 
-    <ProcessCard {...staticData.process[0]}></ProcessCard>
-    <ProcessCard {...staticData.process[1]}></ProcessCard>
-    <ProcessCard {...staticData.process[2]}></ProcessCard>
+    <ProcessCardDeprecated {...staticData.process[0]}></ProcessCardDeprecated>
+    <ProcessCardDeprecated {...staticData.process[1]}></ProcessCardDeprecated>
+    <ProcessCardDeprecated {...staticData.process[2]}></ProcessCardDeprecated>
   </div>
 
 

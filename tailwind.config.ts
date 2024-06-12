@@ -19,7 +19,9 @@ const config: Config = {
 				'black': '#000000',
 				'white': '#ffffff',
 				'black-10': '#101010',
-				'black-100': '#FFFFFF'
+				'black-100': '#FFFFFF',
+				'serviceBg': '#6C5455'
+
 			},
 			borderRadius: {
 			},
