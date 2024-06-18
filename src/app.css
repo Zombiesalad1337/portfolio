@@ -1,4 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+@layer base{
+    @font-face {
+    font-family: 'pavelt';
+    src: url('..static/fonts/Pavelt.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('../static/fonts/NeueMachina-Light.otf') format('otf');
+    font-weight: light;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('../static/fonts/NeueMachina-Bold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('/fonts/NeueMachina-Ultrabold.otf') format('otf');
+    font-weight: bold;
+    font-style: normal;
+    }
+
+}
+
+.font-pavelt {
+  font-family: pavelt, sans-serif;
+}
+
+.font-neuemachine {
+  font-family: neuemachina, sans-serif;
+}

@@ -20,6 +20,8 @@
   }
 </script>
 
+<!-- TODO: Figure out how to increase height without increasing content -->
+
 
 <style>
   .rotate-45-on-hover:hover {
@@ -63,19 +65,20 @@
 </div> -->
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->
-<div on:click={toggleContent} class="relative transition  border-grey-base border hover:bg-grey-base text-white">
+<div on:click={toggleContent} class="relative transition rounded-lg  border-red border hover:bg-red hover:bg-opacity-10 text-white">
   <div class="content p-7">
-    <p class="text-sm leading-[1.4] tracking-[0.04em]">
+    <p class="text-sm text-red leading-[1.4] tracking-[0.04em]">
       {sno}
     </p>
 
-    <div class=" transition-transform {showContent ? 'visible-fly' : 'invisible-fly'}">
+    <div class="transition-transform {showContent ? 'visible-fly' : 'invisible-fly'}">
       <!-- <p class="text-lg font-medium mt-7 lg:text-2xl" style="opacity: 1; transform: none;">{header}</p> -->
-      <p class="text-lg font-medium mt-7 lg:text-2xl">{header}</p>
+      <p class="whitespace-pre-line text-lg font-medium mt-7 lg:text-2xl">{header}</p>
 
-      <ul class="list-disc pl-5 pb-16 mt-3 lg:mt-6">
+      <ul class="whitespace-pre-line list-disc pl-5 pb-16 mt-3 lg:mt-6">
           {#each points as point}
               <!-- <li class="whitespace-pre-line  max-w-[45ch] text-base lg:text-lg" style="opacity: 1; transform: none;">{point}</li> -->
+              <!-- <li class="whitespace-pre-line  max-w-[45ch] text-base lg:text-lg">{point}</li> -->
               <li class="whitespace-pre-line  max-w-[45ch] text-base lg:text-lg">{point}</li>
           {/each}
       </ul>

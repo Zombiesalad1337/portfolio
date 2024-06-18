@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'pavelt';
+  src: url('/fonts/Pavelt.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuemachina';
+  src: url('/fonts/NeueMachina-Light.otf') format('otf');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuemachina';
+  src: url('/fonts/NeueMachina-Bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neuemachina';
+  src: url('/fonts/NeueMachina-Ultrabold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-pavelt {
+  font-family: pavelt, sans-serif;
+}
+
+.font-neuemachine {
+  font-family: neuemachina, sans-serif;
+}

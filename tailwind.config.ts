@@ -26,7 +26,9 @@ const config: Config = {
 			borderRadius: {
 			},
 			fontFamily: {
-				sans: [...fontFamily.sans]
+				sans: [...fontFamily.sans],
+				pavelt: ['pavelt', 'sans-serif'],
+				neuemachina: ['neuemachina', 'sans-serif']
 			},
 			//todo: convert to rem
 			//add for padding margin too
