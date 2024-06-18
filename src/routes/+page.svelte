@@ -21,17 +21,25 @@
   <p class="text-white"> Let me tell you what GOD said next. He said, “You’re my son, And today is your birthday. What do you want? Name it: Nations as a present? continents as a prize? You can command them all to dance for you, Or throw them out with tomorrow’s trash.” So, rebel-kings, use your heads; Upstart-judges, learn your lesson: Worship GOD in adoring embrace, Celebrate in trembling awe. Kiss Messiah! Your very lives are in danger, you know; His anger is about to explode, But if you make a run for God—you won’t regret it! </p>
 
 
-  <div class="flex items-center justify-between">
+  <!-- <div class="flex justify-center mx-4 space-x-4">
+    {#each staticData.service as service}
+      <div class="w-1/3 px-2 aspect-square">
+        <ServiceCard {...service}></ServiceCard>
+      </div>
+    {/each}
+  </div>
+  <div class="flex items-center justify-between"> -->
 
-    <ServiceCard {...staticData.service[0]}></ServiceCard>
-    <ServiceCard {...staticData.service[1]}></ServiceCard>
-    <ServiceCard {...staticData.service[2]}></ServiceCard>
+  <div class="grid container grid-gap-default gap-y-10 lg:gap-y-8 my-16 lg:my-24 lg:grid-cols-3">
+    {#each staticData.service as service}
+        <ServiceCard {...service}></ServiceCard>
+    {/each}
   </div>
   <div class="flex items-center justify-between">
 
-    <ServiceCardDeprecated {...staticData.service[0]}></ServiceCardDeprecated>
+    <!-- <ServiceCardDeprecated {...staticData.service[0]}></ServiceCardDeprecated>
     <ServiceCardDeprecated {...staticData.service[1]}></ServiceCardDeprecated>
-    <ServiceCardDeprecated {...staticData.service[2]}></ServiceCardDeprecated>
+    <ServiceCardDeprecated {...staticData.service[2]}></ServiceCardDeprecated> -->
   </div>
 
 
