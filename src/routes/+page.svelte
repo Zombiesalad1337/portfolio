@@ -10,14 +10,10 @@
   import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
 	import Button from "$lib/components/ui/button/button.svelte";
-    import emblaCarouselSvelte from 'embla-carousel-svelte';
-    import Emblacarousel from "$lib/components/emblacarousel.svelte";
 </script>
 
 <style>
 @import '../app.css';
-
-
 
 .container-card {
     box-sizing: border-box;
@@ -89,24 +85,12 @@
     <a class="bg-red-500 rounded-full px-8 py-2 text-white text-center" href="/projects">All Projects -></a>
   </div>
 
-
-<!-- <div class="embla" use:emblaCarouselSvelte>
-  <div class="embla__container text-white">
-    <div class="embla__slide">Slide 1</div>
-    <div class="embla__slide">Slide 2</div>
-    <div class="embla__slide">Slide 3</div>
-  </div>
-</div>
---!>
-
-
-
     
 
 
-  <!-- <div class="flex items-center justify-between"> -->
+  <div class="flex items-center justify-between">
     <!-- TODO:Added to center this fucking shit -->
-    <!-- <p>test</p>
+    <p>test</p>
   <Carousel.Root
     opts={{
       align: "center"
@@ -136,11 +120,8 @@
     <p>test</p>
 
 
-  </div> -->
+  </div>
 
-  <Emblacarousel>
-
-  </Emblacarousel>
 
   <h1 class="text-5xl"> Featured Projects </h1>
 
