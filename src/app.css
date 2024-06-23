@@ -4,29 +4,29 @@
 
 @layer base{
     @font-face {
-    font-family: 'pavelt';
-    src: url('..static/fonts/Pavelt.otf') format('otf');
+    font-family: 'Pavelt';
+    src: url('/fonts/Pavelt.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
     }
 
     @font-face {
     font-family: 'neuemachina';
-    src: url('../static/fonts/NeueMachina-Light.otf') format('otf');
+    src: url('../static/fonts/NeueMachina-Light.otf') format('opentype');
     font-weight: light;
     font-style: normal;
     }
 
     @font-face {
     font-family: 'neuemachina';
-    src: url('../static/fonts/NeueMachina-Bold.otf') format('otf');
+    src: url('../static/fonts/NeueMachina-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     }
 
     @font-face {
     font-family: 'neuemachina';
-    src: url('/fonts/NeueMachina-Ultrabold.otf') format('otf');
+    src: url('/fonts/NeueMachina-Ultrabold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
     }

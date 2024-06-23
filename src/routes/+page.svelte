@@ -10,7 +10,6 @@
   import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
 	import Button from "$lib/components/ui/button/button.svelte";
-  import '../fonts.css';
 </script>
 
 <style>

@@ -27,7 +27,7 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
-				pavelt: ['pavelt', 'sans-serif'],
+				pavelt: ['Pavelt', 'sans-serif'],
 				neuemachina: ['neuemachina', 'sans-serif']
 			},
 			//todo: convert to rem
