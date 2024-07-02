@@ -7,9 +7,17 @@
   import ServiceCard from "$lib/components/serviceCard.svelte";
   import FeaturedProject from "$lib/components/featuredProject.svelte";
   import staticData from "$lib/staticData.json";
-  import * as Carousel from "$lib/components/ui/carousel/index.ts";
+  // import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
 	import Button from "$lib/components/ui/button/button.svelte";
+   import Carousel from 'svelte-carousel';
+  import { browser } from '$app/environment';
+
+  let carousel; // for calling methods of the carousel instance
+  
+  const handleNextClick = () => {
+    carousel.goToNext()
+  }
 </script>
 
 <style>
@@ -40,6 +48,34 @@
 
 <div class="bg-black px-8">
   <Navbar />
+
+  {#if browser}
+  <Carousel particlesToShow={3}
+  particlesToScroll={1}
+  arrows={false}
+  infinite={true}
+    bind:this={carousel}
+  >
+  <Carousel particlesToShow={2}
+  particlesToScroll={1}
+  arrows={false}
+  dots={true}
+  autoplay={true}
+  duration={200}
+  autoplayProgressVisible={true}
+    bind:this={carousel}
+  >
+    {#each staticData.service as service}
+        <ServiceCard {...service}></ServiceCard>
+    {/each}
+  </Carousel>
+    {#each staticData.service as service}
+        <ServiceCard {...service}></ServiceCard>
+    {/each}
+  </Carousel>
+{/if}
+
+<button on:click={handleNextClick}>Next</button>
 
 
   <h1 id="Services" class="font-pavelt text-bold text-5xl text-red"> Services </h1>
@@ -88,10 +124,10 @@
     
 
 
-  <div class="flex items-center justify-between">
+  <!-- <div class="flex items-center justify-between">
     <!-- TODO:Added to center this fucking shit -->
-    <p>test</p>
-  <Carousel.Root
+    <!-- <p>test</p> --> -->
+  <!-- <Carousel.Root
     opts={{
       align: "center"
     }}
@@ -138,6 +174,6 @@
     </Carousel.Content>
     <Carousel.Previous />
     <Carousel.Next />
-  </Carousel.Root>
+  </Carousel.Root> -->
 
 </div>
