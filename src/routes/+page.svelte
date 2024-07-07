@@ -12,12 +12,12 @@
 	import Button from "$lib/components/ui/button/button.svelte";
    import Carousel from 'svelte-carousel';
   import { browser } from '$app/environment';
+      let carousel; // for calling methods of the carousel instance
+    
+    const handleNextClick = () => {
+        carousel.goToNext()
+    }
 
-  let carousel; // for calling methods of the carousel instance
-  
-  const handleNextClick = () => {
-    carousel.goToNext()
-  }
 </script>
 
 <style>
@@ -49,31 +49,6 @@
 <div class="bg-black px-8">
   <Navbar />
 
-  {#if browser}
-  <Carousel particlesToShow={3}
-  particlesToScroll={1}
-  arrows={false}
-  infinite={true}
-    bind:this={carousel}
-  >
-  <Carousel particlesToShow={2}
-  particlesToScroll={1}
-  arrows={false}
-  dots={true}
-  autoplay={true}
-  duration={200}
-  autoplayProgressVisible={true}
-    bind:this={carousel}
-  >
-    {#each staticData.service as service}
-        <ServiceCard {...service}></ServiceCard>
-    {/each}
-  </Carousel>
-    {#each staticData.service as service}
-        <ServiceCard {...service}></ServiceCard>
-    {/each}
-  </Carousel>
-{/if}
 
 <button on:click={handleNextClick}>Next</button>
 
@@ -105,7 +80,7 @@
   </div>
 
 
-  <h1 id="Process" class="text-5xl text-red"> Process </h1>
+  <h1 id="Process" class="text-5xl text-red font-pavelt"> Process </h1>
 
 
   <div class="flex items-center justify-between text-white">
@@ -116,64 +91,41 @@
   </div>
 
 
-  <div class="flex justify-between">
+  <!-- <div class="flex justify-between">
     <h1 id="Insights" class="text-5xl text-red"> Insights </h1>
     <a class="bg-red-500 rounded-full px-8 py-2 text-white text-center" href="/projects">All Projects -></a>
-  </div>
-
-    
+  </div> -->
 
 
-  <!-- <div class="flex items-center justify-between">
-    <!-- TODO:Added to center this fucking shit -->
-    <!-- <p>test</p> --> -->
-  <!-- <Carousel.Root
-    opts={{
-      align: "center"
-    }}
-    class="w-full max-w-sm text-white"
-  >
-    <Carousel.Content>
-      {#each Array(5) as _, i (i)}
-        <Carousel.Item class="md:basis-1/2 lg:basis-1/3">
-          <div class="p-1">
-            <Card.Root>
-              <Card.Content
-                class="flex aspect-square items-center justify-center p-6"
-              >
-                <span class="text-3xl font-semibold">{i + 1}</span>
-              </Card.Content>
-            </Card.Root>
-          </div>
-        </Carousel.Item>
-      {/each}
-    </Carousel.Content>
-    <Carousel.Previous />
-    <Carousel.Next />
-  </Carousel.Root>
-
-    
-    <p>test</p>
+  <h1 id="FeaturedProjects" class="text-5xl text-red font-pavelt"> FEATURED PROJECTS </h1>
 
 
-  </div>
 
 
-  <h1 class="text-5xl"> Featured Projects </h1>
 
 
-  <Carousel.Root
-    class="mx-10 px-5"
-  >
-    <Carousel.Content>
-      <Carousel.Item>
-        <FeaturedProject>
 
-        </FeaturedProject>
-      </Carousel.Item>
-    </Carousel.Content>
-    <Carousel.Previous />
-    <Carousel.Next />
-  </Carousel.Root> -->
+
+
+
+
+    {#if browser}
+    <Carousel particlesToShow={1}
+    particlesToScroll={1}
+    arrows={false}
+    dots={true}
+    autoplay={false}
+    infinite={false}
+    pauseOnFocus={true}
+        bind:this={carousel}
+    >
+
+    {#each staticData.featuredProjects as featuredProject}
+      <FeaturedProject {...featuredProject}></FeaturedProject>
+    {/each}
+    </Carousel>
+    {/if}
+
+
 
 </div>

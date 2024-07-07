@@ -71,6 +71,32 @@
         }
 
     ],
+    "featuredProjects":[
+        {
+            "designText": "WE OUGHT to consider not only that our life is daily wasting away and a smaller part of it is left, but another thing also must be taken into the account, that if a man should live longer, it is quite uncertain whether the understanding will still continue sufficient for the comprehension of things, and retain the power of contemplation which strives to acquire the knowledge of the divine and the human. For if he shall begin to fall into dotage, perspiration and nutrition and imagination and appetite, and whatever else there is of the kind, will not fail; but the power of making use of ourselves, and filling up the measure of our duty, and clearly separating all appearances, and considering whether a man should now depart from life, and whatever else of the kind absolutely requires a disciplined reason, all this is already extinguished.",
+            "projectText": "We ought to observe also that even the things which follow after the things which are produced according to nature contain something pleasing and attractive. For instance, when bread is baked some parts are split at the surface, and these parts which thus open, and have a certain fashion contrary to the purpose of the baker's art, are beautiful in a manner, and in a peculiar way excite a desire for eating.",
+            "executionText": "Hippocrates after curing many diseases himself fell sick and died. The Chaldaei foretold the deaths of many, and then fate caught them too.  Alexander, and Pompeius, and Caius Caesar, after so often completely destroying whole cities, and in battle cutting to pieces many ten thousands of cavalry and infantry, themselves too at last departed from life.  Heraclitus, after so many speculations on the conflagration of the universe, was filled with water internally and died smeared all over with mud. And lice destroyed Democritus; and other lice killed Socrates",
+            "imagesDesign": ["/blog-1.jpg", "/blog-2.jpg", "/blog-3.jpg"],
+            "imagesProject": ["/blog-4.jpg", "/blog-5.jpg", "/blog-6.jpg"],
+            "imagesExecution": ["/blog-7.jpg", "/blog-8.jpg", "/blog-9.jpg"]
+        },
+        {
+            "designText": "Never value anything as profitable to thyself which shall compel thee to break thy promise, to lose thy self-respect, to hate any man, to suspect, to curse, to act the hypocrite, to desire anything which needs walls and curtains:",
+            "projectText": "In the mind of one who is chastened and purified thou wilt find no corrupt matter, nor impurity, nor any sore skinned over. Nor is his life incomplete when fate overtakes him, as one may say of an actor who leaves the stage before ending and finishing the play.",
+            "executionText": "Reverence the faculty which produces opinion. On this faculty it entirely depends whether there shall exist in thy ruling part any opinion inconsistent with nature and the constitution of the rational animal. And this faculty promises freedom from hasty judgement, and friendship towards men, and obedience to the gods.",
+            "imagesDesign": ["/blog-10.jpg", "/blog-11.jpg", "/blog-12.jpg"],
+            "imagesProject": ["/blog-13.jpg", "/blog-14.jpg", "/blog-15.jpg"],
+            "imagesExecution": ["/blog-1.jpg", "/blog-5.jpg", "/blog-9.jpg"]
+        },
+        {
+            "designText": "Do not waste the remainder of thy life in thoughts about others, when thou dost not refer thy thoughts to some object of common utility. For thou losest the opportunity of doing something else when thou hast such thoughts as these, What is such a person doing, and why, and what is he saying, and what is he thinking of, and what is he contriving, and whatever else of the kind makes us wander away from the observation of our own ruling power.",
+            "projectText": "Labour not unwillingly, nor without regard to the common interest, nor without due consideration, nor with distraction; nor let studied ornament set off thy thoughts, and be not either a man of many words, or busy about too many things.",
+            "executionText": "If thou findest in human life anything better than justice, truth, temperance, fortitude, and, in a word, anything better than thy own mind's self-satisfaction in the things which it enables thee to do according to right reason, and in the condition that is assigned to thee without thy own choice; if, I say, thou seest anything better than this, turn to it with all thy soul, and enjoy that which thou hast found to be the best.",
+            "imagesDesign": ["/blog-2.jpg", "/blog-6.jpg", "/blog-8.jpg"],
+            "imagesProject": ["/blog-5.jpg", "/blog-3.jpg", "/blog-7.jpg"],
+            "imagesExecution": ["/blog-15.jpg", "/blog-12.jpg", "/blog-6.jpg"]
+        }
+    ],
 
     "sections" : [
     { "id": "section1", "title": "Section 1", "content": "nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger nigger " },
