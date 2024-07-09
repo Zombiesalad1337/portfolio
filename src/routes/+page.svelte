@@ -6,6 +6,7 @@
   import ServiceCardDeprecated from "$lib/components/serviceCardDeprecated.svelte";
   import ServiceCard from "$lib/components/serviceCard.svelte";
   import FeaturedProject from "$lib/components/featuredProject.svelte";
+  import FeaturedProjectsList from "$lib/components/featuredProjectsList.svelte";
   import staticData from "$lib/staticData.json";
   // import * as Carousel from "$lib/components/ui/carousel/index.ts";
   import * as Card from "$lib/components/ui/card/index.ts";
@@ -99,8 +100,7 @@
 
   <h1 id="FeaturedProjects" class="text-5xl text-red font-pavelt"> FEATURED PROJECTS </h1>
 
-
-
+  <FeaturedProjectsList {...staticData.featuredProjectsList}></FeaturedProjectsList>
 
 
 
