@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { fade } from 'svelte/transition';
+
   export let type = "Case Study";
   export let title = "Example Blog Post Title";
   export let description = "This is a brief description of the blog post. It flies in from the right on hover.";
@@ -47,8 +49,10 @@
   });
 </script>
 
-<div class="transition rounded-lg border-red border hover:bg-red hover:bg-opacity-10 text-white"
+{#each [currentImageIndex] as index (index)}
+<div transition:fade class="image-container transition rounded-lg border-red border hover:bg-red hover:bg-opacity-10 text-white"
      style="background-image: url({imageUrls[currentImageIndex]}); background-size: cover; background-position: center;"
+     animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave}>
   <div class="p-7">
     <p class="text-sm text-white font-bold leading-[1.4] tracking-[0.04em]">
@@ -65,3 +69,10 @@
 
   </div>
 </div>
+{/each}
+
+<style>
+  .image-container {
+    transition: opacity 0.8s ease;
+  }
+</style>
