@@ -14,6 +14,7 @@
    import Carousel from 'svelte-carousel';
   import { browser } from '$app/environment';
 	import Testimonial from "$lib/components/testimonial.svelte";
+	import ConceptCard from "$lib/components/conceptCard.svelte";
       let carousel; // for calling methods of the carousel instance
     
     const handleNextClick = () => {
@@ -91,6 +92,16 @@
     <h1 id="Insights" class="text-5xl text-red"> Insights </h1>
     <a class="bg-red-500 rounded-full px-8 py-2 text-white text-center" href="/projects">All Projects -></a>
   </div> -->
+
+  <h1 id="Concepts" class="text-5xl text-red font-pavelt"> Concepts </h1>
+  <p class="text-white text-2xl">I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger said they should. Is that what a man looks like? Self improvement is masturbation. Now self-destruction.</p>
+
+
+  <div class="grid container-card gap-x-10 gap-y-10 lg:gap-y-8 my-16 lg:my-24 lg:grid-cols-3">
+    {#each staticData.process as process}
+        <ConceptCard></ConceptCard>
+    {/each}
+  </div>
 
 
   <h1 id="FeaturedProjects" class="text-5xl text-red font-pavelt"> FEATURED PROJECTS </h1>
