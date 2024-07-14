@@ -1,7 +1,7 @@
 <script lang="ts">
 
 	import Navbar from "$lib/components/navbar.svelte";
-  import ProcessCard from "$lib/components/serviceCard.svelte";
+  import ProcessCard from "$lib/components/processCard.svelte";
 	import ProcessCardDeprecated from "$lib/components/processCardDeprecated.svelte";
   import ServiceCardDeprecated from "$lib/components/serviceCardDeprecated.svelte";
   import ServiceCard from "$lib/components/serviceCard.svelte";
@@ -13,6 +13,7 @@
 	import Button from "$lib/components/ui/button/button.svelte";
    import Carousel from 'svelte-carousel';
   import { browser } from '$app/environment';
+	import Testimonial from "$lib/components/testimonial.svelte";
       let carousel; // for calling methods of the carousel instance
     
     const handleNextClick = () => {
@@ -73,23 +74,17 @@
         <ServiceCard {...service}></ServiceCard>
     {/each}
   </div>
-  <div class="flex items-center justify-between">
-
-    <!-- <ServiceCardDeprecated {...staticData.service[0]}></ServiceCardDeprecated>
-    <ServiceCardDeprecated {...staticData.service[1]}></ServiceCardDeprecated>
-    <ServiceCardDeprecated {...staticData.service[2]}></ServiceCardDeprecated> -->
-  </div>
 
 
   <h1 id="Process" class="text-5xl text-red font-pavelt"> Process </h1>
 
 
-  <div class="flex items-center justify-between text-white">
-
-    <ProcessCardDeprecated {...staticData.process[0]}></ProcessCardDeprecated>
-    <ProcessCardDeprecated {...staticData.process[1]}></ProcessCardDeprecated>
-    <ProcessCardDeprecated {...staticData.process[2]}></ProcessCardDeprecated>
+  <div class="grid container-card gap-x-10 gap-y-10 lg:gap-y-8 my-16 lg:my-24 lg:grid-cols-3">
+    {#each staticData.process as process}
+        <ProcessCard {...process}></ProcessCard>
+    {/each}
   </div>
+
 
 
   <!-- <div class="flex justify-between">
@@ -127,5 +122,11 @@
     {/if}
 
 
+  <h1 id="Process" class="text-5xl text-red font-pavelt mt-5"> Testimonials </h1>
 
+  <div class="grid grid-cols-3 grid-rows-1 gap-x-10">
+    <Testimonial></Testimonial>
+    <Testimonial></Testimonial>
+    <Testimonial></Testimonial>
+  </div>
 </div>
