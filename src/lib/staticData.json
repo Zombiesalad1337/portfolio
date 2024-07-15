@@ -165,6 +165,38 @@
             "link": "/",
             "images": ["/blog-14.jpg", "/blog-6.jpg", "/blog-15.jpg"]
         }
-    ]}
+    ]},
+    "concepts":[
+        {
+            "type": "Talmud Study",
+            "title": "The Goyim Doesn't Know",
+            "description": "Oy vey, I have no hands and I must rub.",
+            "imageUrls": [
+                "/dark-1.webp",
+                "/dark-2.webp",
+                "/dark-3.webp"
+            ]
+        },
+        {
+            "type": "Holy War",
+            "title": "Spongebob's Jihad",
+            "description": "How did spongebob got his pineapple? Through Jihad.",
+            "imageUrls": [
+                "/dark-4.webp",
+                "/dark-5.webp",
+                "/dark-6.webp"
+            ]
+        },
+        {
+            "type": "Novigrad Report",
+            "title": "Kalkestein burned to death",
+            "description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
+            "imageUrls": [
+                "/dark-7.webp",
+                "/dark-8.webp",
+                "/dark-9.webp"
+            ]
+        }
+    ]
 
 }

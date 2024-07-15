@@ -98,8 +98,8 @@
 
 
   <div class="grid container-card gap-x-10 gap-y-10 lg:gap-y-8 my-16 lg:my-24 lg:grid-cols-3">
-    {#each staticData.process as process}
-        <ConceptCard></ConceptCard>
+    {#each staticData.concepts as concept}
+        <ConceptCard {...concept}></ConceptCard>
     {/each}
   </div>
 

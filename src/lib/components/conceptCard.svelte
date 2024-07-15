@@ -51,10 +51,10 @@
 
 {#each [currentImageIndex] as index (index)}
 <div transition:fade class="image-container background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card rounded-lg  text-white {hover ? 'expand' : 'expand-revert'}"
-    style="background-image: url({imageUrls[currentImageIndex]});" 
      animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave} on:focus={onMouseEnter}>
-  <div class="p-7">
+  <div class="background-image" style="background-image: url({imageUrls[currentImageIndex]});"></div>
+  <div class="content p-7">
     <p class="text-lg text-white font-bold leading-[1.4] tracking-[0.04em]">
       {type}
     </p>
@@ -72,10 +72,14 @@
 {/each}
 
 <style>
-  .image-container {
+  /* .image-container {
     transition: opacity 0.8s ease;
     background-size: cover; 
     background-position: center;
+  } */
+   .image-container {
+    position: relative;
+    overflow: hidden;
   }
     .transition-transform-description {
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -95,10 +99,35 @@
   .invisible-slide {
     transform: translateX(+50px);
     opacity: 0;
+    transition-delay: 0.0s;
   }
 
   .visible-slide {
     transform: translateX(+0px);
     opacity: 1;
+    transition-delay: 0.3s;
+  }
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+    background-position: center;
+    filter: blur(0); /* Initially no blur */
+    background-origin: border-box;
+    transition: background-position 0.5s ease, translate 0.2s ease, filter 0.5s ease;
+    transform: translate(0, 0);
+    transition-delay: 0.15s;
+  }
+    .content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+  }
+    .image-container:hover .background-image {
+    filter: blur(5px); /* Apply blur on hover */
+    background-position:  bottom -100px right;
+    transition-delay: 0.0s;
   }
 </style>
