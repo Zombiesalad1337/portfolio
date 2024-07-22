@@ -1,6 +1,7 @@
 <script lang="ts">
-
+	import { enhance } from '$app/forms';
 	import Navbar from "$lib/components/navbar.svelte";
+    import { SvelteToast, toast } from '@zerodevx/svelte-toast'
   import ProcessCard from "$lib/components/processCard.svelte";
 	import ProcessCardDeprecated from "$lib/components/processCardDeprecated.svelte";
   import ServiceCardDeprecated from "$lib/components/serviceCardDeprecated.svelte";
@@ -15,15 +16,24 @@
   import { browser } from '$app/environment';
 	import Testimonial from "$lib/components/testimonial.svelte";
 	import ConceptCard from "$lib/components/conceptCard.svelte";
+
       let carousel; // for calling methods of the carousel instance
     
     const handleNextClick = () => {
         carousel.goToNext()
     }
+      const options = {}
 
+  	export let form;
 </script>
 
 <style>
+  :root {
+    --toastContainerTop: auto;
+    --toastContainerRight: auto;
+    --toastContainerBottom: 1rem;
+    --toastContainerLeft: calc(100vw - 20rem);
+  }
 @import '../app.css';
 
 .container-card {
@@ -49,6 +59,7 @@
   }
 </style>
 
+<SvelteToast  options={{ reversed: true, intro: { y: 192 } }} />
 <div class="bg-black px-8">
   <Navbar />
 
@@ -140,4 +151,63 @@
     <Testimonial></Testimonial>
     <Testimonial></Testimonial>
   </div>
+
+  <div class="m-20">
+
+  </div>
+
+  <div class="w-full">
+    
+    <div class="flex items-center justify-center text-white">
+      <img src="/emailSub.svg" class="w-20">
+      <h1 class="text-2xl">Let's Know the World Better</h1>
+    </div>
+
+    <div class="text-center text-white">
+      <h1 class="text-xl"> Subscribe and receive our</h1>
+      <h1 class="text-xl">Newsletter to follow the news about</h1>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <form method="POST" action="?/subscribe" use:enhance>
+
+        <label>
+          <input name="email" type="email" class="rounded bg-black-10 text-white" placeholder="Your Email">
+        </label>
+        
+        <button formaction="?/subscribe">Subscribe</button>
+
+
+      </form>
+    </div>
+      {#if form?.invalid}
+        <p class="text-red text-center">Email is invalid</p>
+        {toast.push('Invalid Email!', {
+  theme: {
+    '--toastColor': 'white',
+    '--toastBackground': '#af1315',
+    '--toastBarBackground': '#2F855A',
+        '--toastBarHeight': 0
+  }
+})}
+      {/if}
+      {#if form?.success}
+        <p class="text-green text-center">You are successfully registered</p>
+        {toast.push('Success!', {
+  theme: {
+    '--toastColor': 'mintcream',
+    '--toastBackground': 'rgba(72,187,120,0.9)',
+    '--toastBarBackground': '#2F855A',
+        '--toastBarHeight': 0
+  }
+})}
+      {/if}
+
+  </div>
+
+<div class="p-10">
+
+</div>
+
+
 </div>
