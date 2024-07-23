@@ -18,6 +18,9 @@
 	import ConceptCard from '$lib/components/conceptCard.svelte';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
+      const handleNextClick = () => {
+      carousel.goToNext()
+  }
 	const options = {};
 
 	const successToast = (m : string) => {
@@ -42,6 +45,12 @@
 	};
 
 	export let form;
+    $: if (form?.success) {
+    successToast("Successfully registered!");
+  }
+    $: if (form?.invalid) {
+    failureToast("Invalid Email");
+  }
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
@@ -150,7 +159,7 @@
 					<input
 						name="email"
 						type="email"
-						class="rounded bg-black-10 text-white"
+						class="rounded rounded-2xl bg-black-10 text-white text-xl w-[70vw] h-20"
 						placeholder="Your Email"
 					/>
 				</label>
