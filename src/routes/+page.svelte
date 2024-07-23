@@ -18,12 +18,12 @@
 	import ConceptCard from '$lib/components/conceptCard.svelte';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
-      const handleNextClick = () => {
-      carousel.goToNext()
-  }
+	const handleNextClick = () => {
+		carousel.goToNext();
+	};
 	const options = {};
 
-	const successToast = (m : string) => {
+	const successToast = (m: string) => {
 		toast.push(m, {
 			theme: {
 				'--toastColor': 'mintcream',
@@ -33,24 +33,24 @@
 			}
 		});
 	};
-	const failureToast = (m : string) => {
+	const failureToast = (m: string) => {
 		toast.push(m, {
 			theme: {
-					'--toastColor': 'white',
-					'--toastBackground': '#af1315',
-					'--toastBarBackground': '#2F855A',
-					'--toastBarHeight': 0
+				'--toastColor': 'white',
+				'--toastBackground': '#af1315',
+				'--toastBarBackground': '#2F855A',
+				'--toastBarHeight': 0
 			}
 		});
 	};
 
 	export let form;
-    $: if (form?.success) {
-    successToast("Successfully registered!");
-  }
-    $: if (form?.invalid) {
-    failureToast("Invalid Email");
-  }
+	$: if (form?.success) {
+		successToast('Successfully registered!');
+	}
+	$: if (form?.invalid) {
+		failureToast('Invalid Email');
+	}
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
@@ -159,7 +159,7 @@
 					<input
 						name="email"
 						type="email"
-						class="rounded rounded-2xl bg-black-10 text-white text-xl w-[70vw] h-20"
+						class="h-20 w-[70vw] rounded rounded-2xl bg-black-10 text-xl text-white"
 						placeholder="Your Email"
 					/>
 				</label>
@@ -178,6 +178,23 @@
 	</div>
 
 	<div class="p-10"></div>
+
+	<div class="flex justify-between">
+		<h1 id="Process" class="font-pavelt text-5xl text-red">Testimonials</h1>
+		<div>
+			<h3 class="text-2xl text-red">Email Address</h3>
+			<h3 class="text-xl text-white">humastudios@gmail.com</h3>
+		</div>
+	</div>
+
+	<div>
+		<div class="grid grid-cols-3 grid-rows-2 gap-4">
+			<div class="col-span-1 bg-black-10 p-4">Column 1, Row 1</div>
+			<div class="col-span-2 bg-black-10 p-4">Column 2, Row 1</div>
+			<div class="col-span-1 bg-black-10 p-4">Column 1, Row 2</div>
+			<div class="col-span-2 bg-black-10 p-4">Column 2, Row 2</div>
+		</div>
+	</div>
 </div>
 
 <style>
