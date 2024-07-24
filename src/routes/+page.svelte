@@ -60,6 +60,8 @@
 	<button on:click={handleNextClick}>Next</button>
 
 	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red">Services</h1>
+	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red-light">Services</h1>
+	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red-dark">Services</h1>
 
 	<p class="text-white">
 		Let me tell you what GOD said next. He said, “You’re my son, And today is your birthday. What do
