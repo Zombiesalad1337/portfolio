@@ -54,37 +54,26 @@
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
-<div class="bg-black px-8">
+<div class="bg-black">
 	<Navbar />
 
 	<button on:click={handleNextClick}>Next</button>
 
-	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red">Services</h1>
-	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red-light">Services</h1>
-	<h1 id="Services" class="text-bold font-pavelt text-5xl text-red-dark">Services</h1>
+	<div id="Services" class="px-3.5rem">
+		<h1 class="text-bold font-pavelt text-8.5xl text-red">Services</h1>
 
-	<p class="text-white">
-		Let me tell you what GOD said next. He said, “You’re my son, And today is your birthday. What do
-		you want? Name it: Nations as a present? continents as a prize? You can command them all to
-		dance for you, Or throw them out with tomorrow’s trash.” So, rebel-kings, use your heads;
-		Upstart-judges, learn your lesson: Worship GOD in adoring embrace, Celebrate in trembling awe.
-		Kiss Messiah! Your very lives are in danger, you know; His anger is about to explode, But if you
-		make a run for God—you won’t regret it!
-	</p>
+		<p class="text-white text-center font-neuemachina text-4.5xl">
+			SPQR, an initialism for Senatus Populusque Romanus (Classical Latin:  transl. "The Senate and People of Rome"), is an emblematic phrase referring to the government of the Roman Republic.
+		</p>
 
-	<!-- <div class="flex justify-center mx-4 space-x-4">
-    {#each staticData.service as service}
-      <div class="w-1/3 px-2 aspect-square">
-        <ServiceCard {...service}></ServiceCard>
-      </div>
-    {/each}
-  </div>
-  <div class="flex items-center justify-between"> -->
 
-	<div class="container-card my-16 grid gap-x-10 gap-y-10 lg:my-24 lg:grid-cols-3 lg:gap-y-8">
-		{#each staticData.service as service}
-			<ServiceCard {...service}></ServiceCard>
-		{/each}
+		<div class="container-card my-16 grid gap-2rem grid-cols-12 justify-items-stretch">
+			{#each staticData.service as service}
+				<div class="col-span-4">
+					<ServiceCard {...service}></ServiceCard>
+				</div>
+			{/each}
+		</div>
 	</div>
 
 	<h1 id="Process" class="font-pavelt text-5xl text-red">Process</h1>
@@ -200,27 +189,22 @@
 </div>
 
 <style>
+	@import '../app.css';
 	:root {
 		--toastContainerTop: auto;
 		--toastContainerRight: auto;
 		--toastContainerBottom: 1rem;
 		--toastContainerLeft: calc(100vw - 20rem);
 	}
-	@import '../app.css';
 
 	.container-card {
 		box-sizing: border-box;
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 2000px;
-		padding-left: 1rem;
-		padding-right: 1rem;
 	}
 	@media (min-width: 1024px) {
 		.container-card {
-			padding-left: 2rem;
-			padding-right: 2rem;
 		}
 	}
 	.lg\:grid-cols-3 {

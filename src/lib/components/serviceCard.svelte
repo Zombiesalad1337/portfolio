@@ -66,7 +66,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->
 <div on:click={toggleContent} class="relative transition rounded-lg  border-red border hover:bg-red hover:bg-opacity-10 text-white">
-  <div class="content p-7">
+  <div class="content p-7 mx-0">
     <p class="text-sm text-red leading-[1.4] tracking-[0.04em]">
       {sno}
     </p>
