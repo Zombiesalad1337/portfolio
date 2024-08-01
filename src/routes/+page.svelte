@@ -16,6 +16,7 @@
 	import { browser } from '$app/environment';
 	import Testimonial from '$lib/components/testimonial.svelte';
 	import ConceptCard from '$lib/components/conceptCard.svelte';
+	import Header from '$lib/components/header.svelte';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
 	const handleNextClick = () => {
@@ -54,20 +55,23 @@
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
+
+
+
 <div class="bg-black">
 	<Navbar />
 
 	<button on:click={handleNextClick}>Next</button>
 
 	<div id="Services" class="px-3.5rem">
-		<h1 class="text-bold font-pavelt text-8.5xl text-red">Services</h1>
+		<Header name="Services"></Header>
 
-		<p class="text-white text-center font-neuemachina text-4.5xl">
-			SPQR, an initialism for Senatus Populusque Romanus (Classical Latin:  transl. "The Senate and People of Rome"), is an emblematic phrase referring to the government of the Roman Republic.
+		<p class="text-center font-neuemachina text-4.5xl text-white">
+			SPQR, an initialism for Senatus Populusque Romanus (Classical Latin: transl. "The Senate and
+			People of Rome"), is an emblematic phrase referring to the government of the Roman Republic.
 		</p>
 
-
-		<div class="container-card my-16 grid gap-2rem grid-cols-12 justify-items-stretch">
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.service as service}
 				<div class="col-span-4">
 					<ServiceCard {...service}></ServiceCard>
@@ -76,12 +80,15 @@
 		</div>
 	</div>
 
-	<h1 id="Process" class="font-pavelt text-5xl text-red">Process</h1>
-
-	<div class="container-card my-16 grid gap-x-10 gap-y-10 lg:my-24 lg:grid-cols-3 lg:gap-y-8">
-		{#each staticData.process as process}
-			<ProcessCard {...process}></ProcessCard>
-		{/each}
+	<div id="Process" class="px-3.5rem">
+		<Header name="Process"></Header>
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+			{#each staticData.process as process}
+				<div class="col-span-4">
+					<ProcessCard {...process}></ProcessCard>
+				</div>
+			{/each}
+		</div>
 	</div>
 
 	<!-- <div class="flex justify-between">
@@ -89,17 +96,20 @@
     <a class="bg-red-500 rounded-full px-8 py-2 text-white text-center" href="/projects">All Projects -></a>
   </div> -->
 
-	<h1 id="Concepts" class="font-pavelt text-5xl text-red">Concepts</h1>
-	<p class="text-2xl text-white">
-		I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger
-		said they should. Is that what a man looks like? Self improvement is masturbation. Now
-		self-destruction.
-	</p>
-
-	<div class="container-card my-16 grid gap-x-10 gap-y-10 lg:my-24 lg:grid-cols-3 lg:gap-y-8">
-		{#each staticData.concepts as concept}
-			<ConceptCard {...concept}></ConceptCard>
-		{/each}
+	<div id="Concepts" class="px-3.5rem">
+		<Header name="Concepts"></Header>
+		<p class="text-2xl text-white">
+			I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger
+			said they should. Is that what a man looks like? Self improvement is masturbation. Now
+			self-destruction.
+		</p>
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+			{#each staticData.concepts as concept}
+				<div class="col-span-4">
+					<ConceptCard {...concept}></ConceptCard>
+				</div>
+			{/each}
+		</div>
 	</div>
 
 	<h1 id="FeaturedProjects" class="font-pavelt text-5xl text-red">FEATURED PROJECTS</h1>
@@ -150,7 +160,7 @@
 					<input
 						name="email"
 						type="email"
-						class="h-20 w-[70vw] rounded rounded-2xl bg-black-10 text-xl text-white"
+						class="bg-black-10 h-20 w-[70vw] rounded rounded-2xl text-xl text-white"
 						placeholder="Your Email"
 					/>
 				</label>
@@ -180,10 +190,10 @@
 
 	<div>
 		<div class="grid grid-cols-3 grid-rows-2 gap-4">
-			<div class="col-span-1 bg-black-10 p-4">Column 1, Row 1</div>
-			<div class="col-span-2 bg-black-10 p-4">Column 2, Row 1</div>
-			<div class="col-span-1 bg-black-10 p-4">Column 1, Row 2</div>
-			<div class="col-span-2 bg-black-10 p-4">Column 2, Row 2</div>
+			<div class="bg-black-10 col-span-1 p-4">Column 1, Row 1</div>
+			<div class="bg-black-10 col-span-2 p-4">Column 2, Row 1</div>
+			<div class="bg-black-10 col-span-1 p-4">Column 1, Row 2</div>
+			<div class="bg-black-10 col-span-2 p-4">Column 2, Row 2</div>
 		</div>
 	</div>
 </div>
