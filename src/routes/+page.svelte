@@ -17,6 +17,7 @@
 	import Testimonial from '$lib/components/testimonial.svelte';
 	import ConceptCard from '$lib/components/conceptCard.svelte';
 	import Header from '$lib/components/header.svelte';
+	import LandingPage from '$lib/components/landingPage.svelte';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
 	const handleNextClick = () => {
@@ -56,6 +57,7 @@
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
 
+<LandingPage></LandingPage>
 
 
 <div class="">
@@ -66,7 +68,7 @@
 	<div id="Services" class="px-3.5rem">
 		<Header name="Services"></Header>
 
-		<p class="text-center font-neuemachina text-5xl text-white">
+		<p class="text-center font-neuemachina text-4.5xl text-white">
 			SPQR, an initialism for Senatus Populusque Romanus (Classical Latin: transl. "The Senate and
 			People of Rome"), is an emblematic phrase referring to the government of the Roman Republic.
 		</p>

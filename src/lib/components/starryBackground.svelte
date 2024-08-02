@@ -4,11 +4,11 @@
   import { gsap } from 'gsap';
 
   let canvas;
-  let baseScrollSpeed = 0.5; // Base speed of the effect
-  let amplifiedScrollSpeed = baseScrollSpeed; // Initial amplified speed is the base speed
+  let baseScrollSpeed = 0.5;
+  let amplifiedScrollSpeed = baseScrollSpeed;
   let scrollAmount = 0;
   let lastScrollTime = 0;
-  let scrollDirection = 1; // Initial scroll direction (1 for down, -1 for up)
+  let scrollDirection = 1;
 
   onMount(() => {
     // Create the scene, camera, and renderer
@@ -17,36 +17,27 @@
     const renderer = new THREE.WebGLRenderer({ canvas });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
 
     // Create star geometry and material
     const starCount = 1000;
-    const starGeometry = new THREE.CircleGeometry(1, 6); // Base geometry for the star
+    const starGeometry = new THREE.CircleGeometry(1, 6);
 
-    const createStarMaterial = (color) => {
-      return new THREE.MeshBasicMaterial({
-        color: color,
-        side: THREE.DoubleSide
-      });
-    };
+    const createStarMaterial = (color) => new THREE.MeshBasicMaterial({
+      color: color,
+      side: THREE.DoubleSide
+    });
 
-    // Array to hold star references
     const stars = [];
 
-    // Create stars
     const createStar = (position) => {
-      const starMaterial = createStarMaterial(0xffffff); // Initial white color
+      const starMaterial = createStarMaterial(0xffffff);
       const star = new THREE.Mesh(starGeometry, starMaterial);
-
       star.position.set(...position);
-
-      // Add star to the scene
       scene.add(star);
       stars.push(star);
 
-      // Randomize twinkle effect
-      const twinkleDuration = THREE.MathUtils.randFloat(0.5, 2); // Random duration for twinkle
-      const twinkleScale = THREE.MathUtils.randFloat(1.5, 3); // Random max scale for twinkle
+      const twinkleDuration = THREE.MathUtils.randFloat(0.5, 2);
+      const twinkleScale = THREE.MathUtils.randFloat(1.5, 3);
 
       gsap.to(star.scale, {
         x: twinkleScale,
@@ -55,10 +46,7 @@
         repeat: -1,
         yoyo: true,
         ease: "power1.inOut",
-        stagger: {
-          each: 0.1, // Stagger delay for a more natural effect
-          from: "random"
-        }
+        stagger: { each: 0.1, from: "random" }
       });
     };
 
@@ -71,34 +59,26 @@
       ]);
     }
 
-    // Position the camera
     camera.position.z = 1000;
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Decay the scroll intensity gradually
       const now = Date.now();
-      if (now - lastScrollTime > 100) { // 100ms after scroll stops
-        amplifiedScrollSpeed += (baseScrollSpeed - amplifiedScrollSpeed) * 0.1; // Adjust decay rate here
+      if (now - lastScrollTime > 100) {
+        amplifiedScrollSpeed += (baseScrollSpeed - amplifiedScrollSpeed) * 0.1;
       }
 
-      // Update star positions based on the amplified scroll speed and direction
       stars.forEach(star => {
         star.position.z -= amplifiedScrollSpeed * scrollDirection;
-        if (star.position.z < -1000) {
-          star.position.z = 1000; // Reset position for a continuous effect
-        }
-        if (star.position.z > 1000) {
-          star.position.z = -1000; // Reset position for a continuous effect
-        }
+        if (star.position.z < -1000) star.position.z = 1000;
+        if (star.position.z > 1000) star.position.z = -1000;
 
-        // Update star color based on scroll direction and speed
         const colorIntensity = Math.min(Math.max(0.15 * amplifiedScrollSpeed / baseScrollSpeed + 0.2, 1), 5);
         const colorShift = scrollDirection === 1
-          ? new THREE.Color(1, 1 - 0.2 * colorIntensity, 1 - 0.2 * colorIntensity) // Red shift
-          : new THREE.Color(1 - 0.2 * colorIntensity, 1 - 0.2 * colorIntensity, 1); // Blue shift
-        star.material.color = colorShift;
+          ? new THREE.Color(1, 1 - 0.2 * colorIntensity, 1 - 0.2 * colorIntensity)
+          : new THREE.Color(1 - 0.2 * colorIntensity, 1 - 0.2 * colorIntensity, 1);
+        star.material.color.set(colorShift);
       });
 
       renderer.render(scene, camera);
@@ -106,28 +86,30 @@
 
     animate();
 
-    // Handle window resize
-    window.addEventListener('resize', () => {
+    const resizeHandler = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+    };
 
-    // Handle scroll event
-    window.addEventListener('scroll', () => {
+    window.addEventListener('resize', resizeHandler);
+
+    const scrollHandler = () => {
       let currentScroll = window.scrollY;
       scrollDirection = currentScroll > scrollAmount ? 1 : -1;
       scrollAmount = currentScroll;
       lastScrollTime = Date.now();
-      amplifiedScrollSpeed = baseScrollSpeed * 24; // Amplify the speed during scroll, adjust multiplier as needed
-    });
+      amplifiedScrollSpeed = baseScrollSpeed * 24;
+    };
+
+    window.addEventListener('scroll', scrollHandler);
 
     canvas.style.position = 'fixed';
     canvas.style.top = '0';
     canvas.style.left = '0';
     canvas.style.width = '100%';
     canvas.style.height = '100%';
-    canvas.style.zIndex = '-1'; // Ensure canvas is behind other content
+    canvas.style.zIndex = '-1';
   });
 </script>
 
@@ -137,6 +119,6 @@
   body {
     margin: 0;
     overflow: hidden;
-    background: transparent; /* Ensure body background is transparent */
+    background: transparent;
   }
 </style>
