@@ -14,7 +14,6 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"tailwind-config-viewer": "tailwind-config-viewer -o"
-
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -51,11 +50,13 @@
 		"bits-ui": "^0.21.7",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.0.4",
+		"gsap": "^3.12.5",
 		"mdsvex": "^0.11.0",
 		"svelte-french-toast": "^1.2.0",
 		"svelte-radix": "^1.1.0",
 		"svelte-toc": "^0.5.8",
 		"tailwind-merge": "^2.3.0",
-		"tailwind-variants": "^0.2.1"
+		"tailwind-variants": "^0.2.1",
+		"three": "^0.167.1"
 	}
 }

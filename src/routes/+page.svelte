@@ -58,7 +58,7 @@
 
 
 
-<div class="bg-black">
+<div class="">
 	<Navbar />
 
 	<button on:click={handleNextClick}>Next</button>
@@ -66,7 +66,7 @@
 	<div id="Services" class="px-3.5rem">
 		<Header name="Services"></Header>
 
-		<p class="text-center font-neuemachina text-4.5xl text-white">
+		<p class="text-center font-neuemachina text-5xl text-white">
 			SPQR, an initialism for Senatus Populusque Romanus (Classical Latin: transl. "The Senate and
 			People of Rome"), is an emblematic phrase referring to the government of the Roman Republic.
 		</p>
