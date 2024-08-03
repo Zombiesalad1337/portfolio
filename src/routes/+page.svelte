@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { fade } from 'svelte/transition';
 	import Navbar from '$lib/components/navbar.svelte';
 	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
 	import ProcessCard from '$lib/components/processCard.svelte';
@@ -18,8 +19,11 @@
 	import ConceptCard from '$lib/components/conceptCard.svelte';
 	import Header from '$lib/components/header.svelte';
 	import LandingPage from '$lib/components/landingPage.svelte';
+	import AboutUsPopup from '$lib/components/aboutUsPopup.svelte';
+	import { quadInOut } from 'svelte/easing';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
+	let isAboutUsPopupOpen : boolean = false;
 	const handleNextClick = () => {
 		carousel.goToNext();
 	};
@@ -46,6 +50,14 @@
 		});
 	};
 
+	function openAboutUsPopup(){
+		isAboutUsPopupOpen = true;
+	}
+	
+	function closeAboutUsPopup(){
+		isAboutUsPopupOpen = false;
+	}
+
 	export let form;
 	$: if (form?.success) {
 		successToast('Successfully registered!');
@@ -63,7 +75,25 @@
 <div class="">
 	<Navbar />
 
-	<button on:click={handleNextClick}>Next</button>
+	<div id="aboutUs" class="px-3.5rem">
+		<div class="flex justify-between my-10rem items-center">
+			<button class="flex" on:click={openAboutUsPopup}>
+				<img src="/icons/topRightArrow.svg" class="w-5.25rem mr-2rem">
+				<p class="font-pavelt text-red text-5.5xl">About</p>
+			</button>
+			<div class="max-w-[65%]">
+				<p class="text-white text-4.5xl text-right break-words">
+					We are HUMA. A strategic brand agency working across strategy, design, technology...
+				</p>
+			</div>
+		</div>
+	</div>
+
+	{#if isAboutUsPopupOpen}
+		<div class="w-4/5 h-4/5">
+			<AboutUsPopup closePopup={closeAboutUsPopup}></AboutUsPopup>
+		</div>
+	{/if}
 
 	<div id="Services" class="px-3.5rem">
 		<Header name="Services"></Header>

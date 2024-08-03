@@ -104,21 +104,22 @@
 
     window.addEventListener('scroll', scrollHandler);
 
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.zIndex = '-1';
   });
 </script>
 
-<canvas bind:this={canvas} style="display: block;"></canvas>
+<canvas bind:this={canvas} class="canvas"></canvas>
 
 <style>
-  body {
+  .canvas {
     margin: 0;
     overflow: hidden;
     background: transparent;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
   }
 </style>
