@@ -8,7 +8,8 @@
 
 </script>
 
-<div class="transition rounded-3xl border border-white hover:border hover:border-red text-white hover:scale-105">
+<div class="transition relative rounded-3xl border border-white hover:border hover:border-red text-white hover:scale-105">
+  <div class="absolute inset-0 bg-black bg-opacity-50 rounded-3xl"></div>
   <div class=" p-7">
     <p class="text-sm text-white font-bold leading-[1.4] tracking-[0.04em]">
       {sno}
