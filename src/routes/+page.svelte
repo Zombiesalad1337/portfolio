@@ -71,6 +71,18 @@
 
 <LandingPage></LandingPage>
 
+<div class="py-10rem">
+</div>
+<div class="py-10rem">
+</div>
+<div class="py-10rem">
+</div>
+<div class="py-10rem">
+</div>
+<div class="py-10rem">
+</div>
+<div class="py-10rem">
+</div>
 
 <div class="">
 	<Navbar />
