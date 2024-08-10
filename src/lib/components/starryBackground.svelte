@@ -2,6 +2,8 @@
   import { onMount } from 'svelte';
   import * as THREE from 'three';
   import { gsap } from 'gsap';
+	import LoadingScreen from './loadingScreen.svelte';
+	import { slide } from 'svelte/transition';
 
   let canvas;
   let baseScrollSpeed = 0.5;
@@ -9,6 +11,8 @@
   let scrollAmount = 0;
   let lastScrollTime = 0;
   let scrollDirection = 1;
+  
+  let isLoading = true;
 
   onMount(() => {
     // Create the scene, camera, and renderer
@@ -103,9 +107,15 @@
     };
 
     window.addEventListener('scroll', scrollHandler);
-
+    isLoading = false;
   });
 </script>
+
+{#if isLoading}
+  <div transition:slide={{ delay: 0, duration: 200, axis: 'x' }}>
+    <LoadingScreen></LoadingScreen>
+  </div>
+{/if}
 
 <canvas bind:this={canvas} class="canvas"></canvas>
 

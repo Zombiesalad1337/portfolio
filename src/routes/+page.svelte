@@ -23,7 +23,8 @@
 	import { quadInOut } from 'svelte/easing';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
-	let isAboutUsPopupOpen : boolean = false;
+	let isAboutUsPopupOpen: boolean = false;
+
 	const handleNextClick = () => {
 		carousel.goToNext();
 	};
@@ -50,11 +51,11 @@
 		});
 	};
 
-	function openAboutUsPopup(){
+	function openAboutUsPopup() {
 		isAboutUsPopupOpen = true;
 	}
-	
-	function closeAboutUsPopup(){
+
+	function closeAboutUsPopup() {
 		isAboutUsPopupOpen = false;
 	}
 
@@ -65,36 +66,24 @@
 	$: if (form?.invalid) {
 		failureToast('Invalid Email');
 	}
+
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
 
 <LandingPage></LandingPage>
 
-<div class="py-10rem">
-</div>
-<div class="py-10rem">
-</div>
-<div class="py-10rem">
-</div>
-<div class="py-10rem">
-</div>
-<div class="py-10rem">
-</div>
-<div class="py-10rem">
-</div>
-
 <div class="">
 	<Navbar />
 
 	<div id="aboutUs" class="px-3.5rem">
-		<div class="flex justify-between my-10rem items-center">
+		<div class="my-10rem flex items-center justify-between">
 			<button class="flex" on:click={openAboutUsPopup}>
-				<img src="/icons/topRightArrow.svg" class="w-5.25rem mr-2rem">
-				<p class="font-pavelt text-red text-5.5xl">About</p>
+				<img src="/icons/topRightArrow.svg" class="mr-2rem w-5.25rem" />
+				<p class="font-pavelt text-5.5xl text-red">About</p>
 			</button>
 			<div class="max-w-[65%]">
-				<p class="text-white text-4.5xl text-right break-words">
+				<p class="break-words text-right text-4.5xl text-white">
 					We are HUMA. A strategic brand agency working across strategy, design, technology...
 				</p>
 			</div>
@@ -102,7 +91,7 @@
 	</div>
 
 	{#if isAboutUsPopupOpen}
-		<div class="w-4/5 h-4/5">
+		<div class="h-4/5 w-4/5">
 			<AboutUsPopup closePopup={closeAboutUsPopup}></AboutUsPopup>
 		</div>
 	{/if}
