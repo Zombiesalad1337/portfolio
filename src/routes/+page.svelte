@@ -83,7 +83,7 @@
 				<p class="font-pavelt text-5.5xl text-red">About</p>
 			</button>
 			<div class="max-w-[65%]">
-				<p class="break-words text-right text-4.5xl text-white">
+				<p class="break-words text-right text-4.5xl text-white font-neuemachina">
 					We are HUMA. A strategic brand agency working across strategy, design, technology...
 				</p>
 			</div>

@@ -1,33 +1,29 @@
-
 <script lang="ts">
-
-  export let sno: string;
-  export let title: string;
-  export let text: string;
-  export let keyPoints: string[];
-
+	export let sno: string;
+	export let title: string;
+	export let text: string;
+	export let keyPoints: string[];
 </script>
 
-<div class="transition relative rounded-3xl border border-white hover:border hover:border-red text-white hover:scale-105">
-  <div class="absolute inset-0 bg-black bg-opacity-50 rounded-3xl"></div>
-  <div class=" p-7">
-    <p class="text-sm text-white font-bold leading-[1.4] tracking-[0.04em]">
-      {sno}
-    </p>
+<div
+	class="relative rounded-2rem border border-white text-white transition hover:scale-105 hover:border hover:border-red"
+>
+	<div class="absolute inset-0 rounded-2rem bg-black bg-opacity-75"></div>
+	<div class="relative p-7">
+		<p class="font-neuemachina text-3xl leading-[1.4] tracking-[0.04em] text-red">
+			{sno}
+		</p>
 
-    <div class="">
-      <p class="whitespace-pre-line text-lg font-medium mt-7 lg:text-3xl">{title}</p>
-    </div>
-
-    <div class="">
-      <p class="whitespace-pre-line text-lg font-medium mt-7">{text}</p>
-    </div>
-
-  </div>
-
-  <div class="flex items-end justify-between px-7 py-8  ">
-    {#each keyPoints as keyPoint}
-        <p class="text-sm leading-[1.2]">{keyPoint}</p>
-    {/each}
-</div>
+		<div class="">
+			<p class="mt-7 whitespace-pre-line font-pavelt text-6xl lg:text-6xl">{title}</p>
+		</div>
+		<div class="">
+			<p class="mb-10 mt-7 whitespace-pre-line font-neuemachina text-2xl">{text}</p>
+		</div>
+		<div class="flex items-end justify-between">
+			{#each keyPoints as keyPoint, index}
+				<p class="font-neuemachina text-base leading-[1.2] text-red  {(index < (keyPoints.length - 1)) ? 'pr-0.75rem border-r-2 border-r-red' : ''}">{keyPoint}</p>
+			{/each}
+		</div>
+	</div>
 </div>
