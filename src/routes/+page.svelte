@@ -66,7 +66,6 @@
 	$: if (form?.invalid) {
 		failureToast('Invalid Email');
 	}
-
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
@@ -76,7 +75,6 @@
 <div class="">
 	<Navbar />
 
-
 	<div id="aboutUs" class="px-3.5rem">
 		<div class="my-10rem flex items-center justify-between">
 			<button class="flex" on:click={openAboutUsPopup}>
@@ -84,7 +82,7 @@
 				<p class="font-pavelt text-5.5xl text-red">About</p>
 			</button>
 			<div class="max-w-[65%]">
-				<p class="break-words text-right text-4.5xl text-white font-neuemachina">
+				<p class="break-words text-right font-neuemachina text-4.5xl text-white">
 					We are HUMA. A strategic brand agency working across strategy, design, technology...
 				</p>
 			</div>
@@ -149,10 +147,17 @@
 		</div>
 	</div>
 
-	<h1 id="FeaturedProjects" class="font-pavelt text-5xl text-red">FEATURED PROJECTS</h1>
+	<div class="px-3.5rem">
+		<div class="flex justify-between items-center">
+			<h1 class="text-bold font-pavelt text-7xl text-red">Featured Projects</h1>
+			<button class="flex items-center">
+				<p class="font-pavelt text-4xl text-white">All Projects</p>
+				<img src="/icons/topRightArrow.svg" class="ml-2rem w-4.5rem" />
+			</button>
+		</div>
 
-	<FeaturedProjectsList {...staticData.featuredProjectsList}></FeaturedProjectsList>
-
+		<FeaturedProjectsList {...staticData.featuredProjectsList}></FeaturedProjectsList>
+	</div>
 	{#if browser}
 		<Carousel
 			particlesToShow={1}
