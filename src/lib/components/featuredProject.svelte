@@ -69,23 +69,23 @@
     }
 </style>
 
-<div class="grid grid-row-1 grid-cols-5 bg-black text-gray-600 px-8">
+<div class="grid grid-row-1 grid-cols-5 bg-black text-gray-600 px-3.5rem">
     <!-- left -->
-    <div class="col-span-2 grid grid-cols-1 grid-rows-9">
-        <div class="row-start-1 row-span-3 grid grid-cols-1 grid-rows-3">
-            <button class="border-l-4 px-4 text-3xl text-left {designActive ? 'text-white border-red' : 'text-gray-600 border-gray-600'}"
+    <div class="col-span-2 grid grid-cols-1 grid-rows-9">   
+        <div class="row-start-1 row-span-3 grid grid-cols-1 grid-rows-3 font-pavelt text-5.5xl">
+            <button class="border-l-4 px-4 text-left {designActive ? 'text-red border-red' : 'text-gray-600 border-gray-600'}"
             on:click={toggleDesign}>Design</button>
 
-            <button class="border-l-4 px-4 text-3xl text-left {projectActive ? 'text-white border-red' : 'text-gray-600 border-gray-600'}"
+            <button class="border-l-4 px-4 text-left {projectActive ? 'text-red border-red' : 'text-gray-600 border-gray-600'}"
             on:click={toggleProject}>Project</button>
 
-            <button class="border-l-4 px-4 text-3xl text-left {executionActive ? 'text-white border-red' : 'text-gray-600 border-gray-600'}"
+            <button class="border-l-4 px-4 text-left {executionActive ? 'text-red border-red' : 'text-gray-600 border-gray-600'}"
             on:click={toggleExecution}>Execution</button>
         
 
         </div>
 
-        <div class="row-start-5 row-span-5">
+        <div class="row-start-5 row-span-5 font-neuemachina text-2xl">
 
             {#if designActive}
                 <p in:fade={{ duration: 200 }}>
@@ -107,6 +107,7 @@
 
     <!-- right, image -->
     <!-- TODO: keep images same aspect ratio or styling fucking breaks -->
+    <!-- TODO: Or find a way to make them occupy same space -->
 
 
     <div class="col-span-3">
