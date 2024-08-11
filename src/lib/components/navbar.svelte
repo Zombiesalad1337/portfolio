@@ -21,14 +21,15 @@
 	});
 </script>
 
+<!-- TODO: breaks for mobile view, handle -->
 <nav
-	class="navbar {showNavbar ? 'visible' : ''} flex w-full items-center justify-between px-3.5rem"
+	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem"
 >
-	<div class="flex-shrink-0">
+	<div class="col-span-4">
 		<!-- TODO: GET SVG OF LOGO, then animate -->
 		<img class="h-20" src="/logo-header.png" alt="Logo" />
 	</div>
-	<div class="flex-grow flex justify-center">
+	<div class="col-span-4 content-right">
 		<div
 			class="flex transform justify-between space-x-10 rounded-full bg-red px-6 py-1 text-white"
 		>
@@ -58,7 +59,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="flex-shrink-0">
+	<div class="col-span-4 flex justify-end">
 		<button class="rounded-full bg-red px-4 py-2 text-white md:block">
 			<span class="flex items-center justify-around">
 				Let's Talk
