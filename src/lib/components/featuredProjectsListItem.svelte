@@ -21,7 +21,7 @@
 </style>
 
 <a href={link}>
-        <div class="group relative flex justify-between pt-4 pb-4 border-b {index == 0 ? 'border-t' : ''} border-red hover:bg-red transition duration-600 ease-in-out">
+        <div class="group relative flex justify-between pt-4 pb-4 border-b-2 {index == 0 ? 'border-t-2' : ''} border-red-800 hover:bg-red-700 transition duration-600 ease-in-out">
 
             <div class="text-4.5xl font-neuemachina text-white">
                 {title}
@@ -29,6 +29,7 @@
 
             <div class="flex flex-col justify-center items-end text-right">
             <p class="text-white font-pavelt text-weight text-base">{company}</p> 
+            <!-- TOOD: find better color -->
             <p class="font-neuemachina text-base text-gray-600">{type}</p>
             </div>
             <div class="absolute top-1/2 left-1/2 w-[40rem] h-[40rem] object-cover hidden group-hover:block z-10">

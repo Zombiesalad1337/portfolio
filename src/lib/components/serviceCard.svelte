@@ -44,7 +44,7 @@
 
 
 <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions (because of reasons) -->
-<div on:click={toggleContent} class="relative transition rounded-2rem  border-white border hover:scale-105 hover:border-red hover:bg-opacity-10 text-white">
+<div on:click={toggleContent} class="relative transition rounded-2rem  border-white border hover:scale-105 hover:border-red hover:border-2 hover:bg-opacity-10 text-white">
 	<div class="absolute inset-0 rounded-2rem bg-black bg-opacity-75"></div>
   <div class="relative content p-7 mx-0 font-neuemachina">
     <p class="text-red text-3xl leading-[1.4] tracking-[0.04em]">

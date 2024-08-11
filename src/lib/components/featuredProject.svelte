@@ -69,7 +69,7 @@
     }
 </style>
 
-<div class="grid grid-row-1 grid-cols-5 bg-black text-gray-600 px-3.5rem">
+<div class="grid grid-row-1 grid-cols-5  text-gray-600 px-3.5rem">
     <!-- left -->
     <div class="col-span-2 grid grid-cols-1 grid-rows-9">   
         <div class="row-start-1 row-span-3 grid grid-cols-1 grid-rows-3 font-pavelt text-5.5xl">
