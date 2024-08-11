@@ -6,7 +6,7 @@
 	let showNavbar: boolean = false;
 	onMount(() => {
 		const handleScroll = () => {
-			if (window.scrollY > window.innerHeight) {
+			if (window.scrollY > 0.9 * window.innerHeight) {
 				showNavbar = true;
 			} else {
 				showNavbar = false;
@@ -21,9 +21,9 @@
 	});
 </script>
 
-<!-- TODO: breaks for mobile view, handle -->
+	<!-- TODO: breaks for mobile view, handle -->
 <nav
-	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem"
+	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem gap-2rem"
 >
 	<div class="col-span-4">
 		<!-- TODO: GET SVG OF LOGO, then animate -->
@@ -31,29 +31,29 @@
 	</div>
 	<div class="col-span-4 content-right">
 		<div
-			class="flex transform justify-between space-x-10 rounded-full bg-red px-6 py-1 text-white"
+			class="flex transform justify-between px-2 space-x-3 rounded-full bg-red py-1 text-white"
 		>
 			<a
 				href="#Services"
-				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Services
 			</a>
 			<a
 				href="#Process"
-				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Process
 			</a>
 			<a
 				href="#Insights"
-				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Insights
 			</a>
 			<a
 				href="#Connect"
-				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Connect
 			</a>

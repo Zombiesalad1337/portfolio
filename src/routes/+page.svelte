@@ -76,6 +76,7 @@
 <div class="">
 	<Navbar />
 
+
 	<div id="aboutUs" class="px-3.5rem">
 		<div class="my-10rem flex items-center justify-between">
 			<button class="flex" on:click={openAboutUsPopup}>
