@@ -72,6 +72,7 @@
 
 <LandingPage></LandingPage>
 
+
 <div class="">
 	<Navbar />
 
@@ -95,6 +96,7 @@
 		</div>
 	{/if}
 
+	<!-- TODO: change url on scroll -->
 	<div id="Services" class="px-3.5rem">
 		<Header name="Services"></Header>
 

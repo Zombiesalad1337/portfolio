@@ -29,31 +29,31 @@
 		<!-- TODO: GET SVG OF LOGO, then animate -->
 		<img class="h-20" src="/logo-header.png" alt="Logo" />
 	</div>
-	<div class="col-span-4 content-right">
+	<div class="col-span-4 content-right font-pavelt">
 		<div
-			class="flex transform justify-between px-2 space-x-3 rounded-full bg-red py-1 text-white"
+			class="flex transform justify-between px-2 space-x-2 rounded-full bg-red py-1 text-white"
 		>
 			<a
 				href="#Services"
-				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Services
 			</a>
 			<a
 				href="#Process"
-				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Process
 			</a>
 			<a
 				href="#Insights"
-				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Insights
 			</a>
 			<a
 				href="#Connect"
-				class="relative rounded-full px-9 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
 			>
 				Connect
 			</a>
