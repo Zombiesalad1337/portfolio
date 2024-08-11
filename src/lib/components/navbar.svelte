@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 	let activeLink = 'Services';
 
 	let navs = ['Services'];
@@ -21,29 +21,51 @@
 	});
 </script>
 
-<nav class="{showNavbar ? 'visible' : ''} flex w-full items-center justify-between px-3.5rem">
-    <div>
-        <!-- TODO: GET SVG OF LOGO, then animate -->
-        <img class="h-20" src="/logo-header.png" alt="Logo" />
-    </div>
-    <div class="flex justify-between rounded-full bg-red px-6 py-1 text-white space-x-10">
-        <a href="#Services" class="relative text-sm font-medium px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all duration-300">
-            Services
-        </a>
-        <a href="#Process" class="relative text-sm font-medium px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all duration-300">
-            Process
-        </a>
-        <a href="#Insights" class="relative text-sm font-medium px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all duration-300">
-            Insights
-        </a>
-        <a href="#Connect" class="relative text-sm font-medium px-4 py-2 rounded-full hover:bg-black hover:text-white transition-all duration-300">
-            Connect
-        </a>
-    </div>
-    <button class="flex justify-around items-center text-white rounded-full bg-red px-4 py-2 md:block">
-        	Let's talk
-			<span class="btn-circle ml-2rem"> </span>
-    </button>
+<nav
+	class="navbar {showNavbar ? 'visible' : ''} flex w-full items-center justify-between px-3.5rem"
+>
+	<div class="flex-shrink-0">
+		<!-- TODO: GET SVG OF LOGO, then animate -->
+		<img class="h-20" src="/logo-header.png" alt="Logo" />
+	</div>
+	<div class="flex-grow flex justify-center">
+		<div
+			class="flex transform justify-between space-x-10 rounded-full bg-red px-6 py-1 text-white"
+		>
+			<a
+				href="#Services"
+				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+			>
+				Services
+			</a>
+			<a
+				href="#Process"
+				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+			>
+				Process
+			</a>
+			<a
+				href="#Insights"
+				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+			>
+				Insights
+			</a>
+			<a
+				href="#Connect"
+				class="relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 hover:bg-black hover:text-white"
+			>
+				Connect
+			</a>
+		</div>
+	</div>
+	<div class="flex-shrink-0">
+		<button class="rounded-full bg-red px-4 py-2 text-white md:block">
+			<span class="flex items-center justify-around">
+				Let's Talk
+				<span class="btn-circle ml-2rem"> </span>
+			</span>
+		</button>
+	</div>
 </nav>
 
 <style>
@@ -52,17 +74,17 @@
 		transition: opacity 0.3s ease-in-out;
 		position: fixed;
 		top: 0;
-        z-index: 10;
+		z-index: 10;
 	}
 	.visible {
 		opacity: 1;
 	}
-	    .btn-circle {
+	.btn-circle {
 		display: inline-block;
-        width: 1rem; /* Adjust the size of the circle */
-        height: 1rem;
-        background-color: black;
-        border-radius: 50%;
+		width: 1rem; /* Adjust the size of the circle */
+		height: 1rem;
+		background-color: black;
+		border-radius: 50%;
 		align-self: center;
-    }
+	}
 </style>

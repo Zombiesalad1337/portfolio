@@ -115,6 +115,9 @@
 
 	<div id="Process" class="px-3.5rem">
 		<Header name="Process"></Header>
+		<p class="text-left font-neuemachina text-4.5xl text-white">
+			You can do it with ease, just get on your knees.
+		</p>
 		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.process as process}
 				<div class="col-span-4">
@@ -131,7 +134,7 @@
 
 	<div id="Concepts" class="px-3.5rem">
 		<Header name="Concepts"></Header>
-		<p class="text-2xl text-white">
+		<p class="text-left font-neuemachina text-4.5xl text-white">
 			I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger
 			said they should. Is that what a man looks like? Self improvement is masturbation. Now
 			self-destruction.
