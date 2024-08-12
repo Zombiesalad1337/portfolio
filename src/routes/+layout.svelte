@@ -1,9 +1,11 @@
 <script>
-	import StarryBackground from "$lib/components/starryBackground.svelte";
+	import Bgbugtest from "$lib/components/bgbugtest.svelte";
+import StarryBackground from "$lib/components/starryBackground.svelte";
 
 </script>
 
 <StarryBackground></StarryBackground>
+<!-- <Bgbugtest></Bgbugtest> -->
 
 <main>
   <slot></slot>

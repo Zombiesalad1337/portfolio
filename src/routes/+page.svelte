@@ -21,9 +21,12 @@
 	import LandingPage from '$lib/components/landingPage.svelte';
 	import AboutUsPopup from '$lib/components/aboutUsPopup.svelte';
 	import { quadInOut } from 'svelte/easing';
+	import CarouselSlider from '$lib/components/carouselSlider.svelte';
+	import FeaturedProjectsListItem from '$lib/components/featuredProjectsListItem.svelte';
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
 	let isAboutUsPopupOpen: boolean = false;
+	let currentPageIndexGlobal: number = 0;
 
 	const handleNextClick = () => {
 		carousel.goToNext();
@@ -55,6 +58,10 @@
 		isAboutUsPopupOpen = true;
 	}
 
+	function carouselGoTo(idx : number) {
+		carousel.goTo(idx, { animated: true });
+		currentPageIndexGlobal = idx;
+	}
 	function closeAboutUsPopup() {
 		isAboutUsPopupOpen = false;
 	}
@@ -71,7 +78,6 @@
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
 
 <LandingPage></LandingPage>
-
 
 <div class="">
 	<Navbar />
@@ -150,7 +156,7 @@
 	</div>
 
 	<div class="px-3.5rem">
-		<div class="flex justify-between items-center">
+		<div class="flex items-center justify-between">
 			<h1 class="text-bold font-pavelt text-7xl text-red">Featured Projects</h1>
 			<button class="flex items-center">
 				<p class="font-pavelt text-4xl text-white">All Projects</p>
@@ -162,6 +168,9 @@
 	</div>
 	{#if browser}
 		<Carousel
+			let:currentPageIndex
+			let:pagesCount
+			let:showPage
 			particlesToShow={1}
 			particlesToScroll={1}
 			arrows={false}
@@ -171,6 +180,15 @@
 			pauseOnFocus={true}
 			bind:this={carousel}
 		>
+			<div slot="dots" class="flex justify-center w-full ">
+				{#each Array(3) as _, pageIndex (pageIndex)}
+					<CarouselSlider
+						symbol={pageIndex + 1}
+						active={currentPageIndexGlobal === pageIndex}
+						on:click={() => carouselGoTo(pageIndex)}
+					></CarouselSlider>
+				{/each}
+			</div>
 			{#each staticData.featuredProjects as featuredProject}
 				<FeaturedProject {...featuredProject}></FeaturedProject>
 			{/each}
