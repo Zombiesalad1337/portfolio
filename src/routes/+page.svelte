@@ -23,10 +23,15 @@
 	import { quadInOut } from 'svelte/easing';
 	import CarouselSlider from '$lib/components/carouselSlider.svelte';
 	import FeaturedProjectsListItem from '$lib/components/featuredProjectsListItem.svelte';
+	import CarouselSliderDrag from '$lib/components/carouselSliderDrag.svelte';
+
+  import { highlightedIndex } from '../stores/carouselIndexStore.ts';
+
+	let currentPageIndexGlobal: number = 0;
+
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
 	let isAboutUsPopupOpen: boolean = false;
-	let currentPageIndexGlobal: number = 0;
 
 	const handleNextClick = () => {
 		carousel.goToNext();
@@ -72,6 +77,12 @@
 	}
 	$: if (form?.invalid) {
 		failureToast('Invalid Email');
+	}
+	$: {
+		currentPageIndexGlobal = $highlightedIndex;
+		if (carousel){
+			carouselGoTo(currentPageIndexGlobal);
+		}
 	}
 </script>
 
@@ -146,13 +157,14 @@
 			said they should. Is that what a man looks like? Self improvement is masturbation. Now
 			self-destruction.
 		</p>
-		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+		<!-- TODO: infinite scroll bug -->
+		<!-- <div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.concepts as concept}
 				<div class="col-span-4">
 					<ConceptCard {...concept}></ConceptCard>
 				</div>
 			{/each}
-		</div>
+		</div> -->
 	</div>
 
 	<div class="px-3.5rem">
@@ -195,6 +207,7 @@
 		</Carousel>
 	{/if}
 
+	<CarouselSliderDrag></CarouselSliderDrag>
 	<h1 id="Process" class="mt-5 font-pavelt text-5xl text-red">Testimonials</h1>
 
 	<div class="grid grid-cols-3 grid-rows-1 gap-x-10">

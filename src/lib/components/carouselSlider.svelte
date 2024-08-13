@@ -10,13 +10,6 @@
   export let symbol: number = -1;
 </script>
 
-<div
-  class="custom-line__container"
-  class:custom-line__container_active={active}
-  on:click
->
-  <span class="custom-line__symbol"></span>
-</div>
 
 <style>
   .custom-line__container {

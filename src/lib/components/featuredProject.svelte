@@ -116,7 +116,7 @@
         particlesToScroll={1}
         arrows={false}
         dots={false}
-        autoplay={true}
+        autoplay={false}
         duration={200}
         autoplayProgressVisible={false}
             bind:this={carousel}
