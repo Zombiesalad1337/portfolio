@@ -163,7 +163,7 @@
 		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.concepts as concept}
 				<div class="col-span-4">
-					<ConceptCard  {...concept}></ConceptCard>
+				<ConceptCard  {...concept}></ConceptCard>
 				</div>
 			{/each}
 		</div>
@@ -180,6 +180,10 @@
 
 		<FeaturedProjectsList {...staticData.featuredProjectsList}></FeaturedProjectsList>
 	</div>
+
+	<div class="py-10rem"></div>
+	<div class="py-10rem"></div>
+
 	{#if browser}
 		<Carousel
 			let:currentPageIndex

@@ -77,7 +77,7 @@
 		transition: opacity 0.3s ease-in-out;
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 20;
 	}
 	.visible {
 		opacity: 1;

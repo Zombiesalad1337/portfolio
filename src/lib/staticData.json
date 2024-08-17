@@ -152,16 +152,16 @@
             "images": ["/blog-10.jpg", "/blog-3.jpg", "/blog-8.jpg"]
         },
         {
-            "title": "Hitler's Suicide",
-            "company": "Netanyahu",
-            "type": "Mourning",
+            "title": "hitler's suicide",
+            "company": "netanyahu",
+            "type": "mourning",
             "link": "/",
             "images": ["/blog-11.jpg", "/blog-12.jpg", "/blog-13.jpg"]
         },
         {
-            "title": "Socrates Hemlock",
-            "company": "Jews",
-            "type": "Mourning",
+            "title": "socrates hemlock",
+            "company": "jews",
+            "type": "mourning",
             "link": "/",
             "images": ["/blog-14.jpg", "/blog-6.jpg", "/blog-15.jpg"]
         }
