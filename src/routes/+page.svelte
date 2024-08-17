@@ -160,13 +160,13 @@
 			self-destruction.
 		</p>
 		<!-- TODO: infinite scroll bug -->
-		<!-- <div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.concepts as concept}
 				<div class="col-span-4">
-					<ConceptCard {...concept}></ConceptCard>
+					<ConceptCard  {...concept}></ConceptCard>
 				</div>
 			{/each}
-		</div> -->
+		</div>
 	</div>
 
 	<div class="px-3.5rem">

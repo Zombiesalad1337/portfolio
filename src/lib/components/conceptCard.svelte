@@ -50,7 +50,7 @@
 </script>
 
 {#each [currentImageIndex] as index (index)}
-<div transition:fade class="image-container background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card rounded-lg  text-white {hover ? 'expand' : 'expand-revert'}"
+<div transition:fade class="image-container w-full aspect-[4/3] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card rounded-lg  text-white {hover ? 'expand' : 'expand-revert'}"
      animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave} on:focus={onMouseEnter}>
   <div class="background-image" style="background-image: url({imageUrls[currentImageIndex]});"></div>
