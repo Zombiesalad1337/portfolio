@@ -26,6 +26,7 @@
 	import CarouselSliderDrag from '$lib/components/carouselSliderDrag.svelte';
 
   import { highlightedIndex } from '../stores/carouselIndexStore.ts';
+	import StarryBackground from '$lib/components/starryBackground.svelte';
 
 	let currentPageIndexGlobal: number = 0;
 
@@ -87,6 +88,7 @@
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
+<StarryBackground></StarryBackground>
 
 <LandingPage></LandingPage>
 

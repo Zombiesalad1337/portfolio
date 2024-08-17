@@ -91,12 +91,13 @@
     animate();
 
     const resizeHandler = () => {
+      console.log("ww: " + window.innerWidth + " , wh: " + window.innerHeight);
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    // dow.addEventListener('resize', resizeHandler);
+    window.addEventListener('resize', resizeHandler);
 
     const scrollHandler = () => {
       let currentScroll = window.scrollY;

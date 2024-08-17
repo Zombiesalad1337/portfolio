@@ -75,7 +75,7 @@
 	.navbar {
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
-		position: fixed;
+		position: sticky;
 		top: 0;
 		z-index: 10;
 	}
