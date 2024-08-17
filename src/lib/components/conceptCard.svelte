@@ -49,6 +49,7 @@
   });
 </script>
 
+<!-- TODO: concept card fonts -->
 {#each [currentImageIndex] as index (index)}
 <div transition:fade class="image-container w-full aspect-[4/3] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card rounded-lg  text-white {hover ? 'expand' : 'expand-revert'}"
      animate:fade="{{ duration: 3000 }}"

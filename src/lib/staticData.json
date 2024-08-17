@@ -156,8 +156,7 @@
             "company": "netanyahu",
             "type": "mourning",
             "link": "/",
-            "images": ["/blog-11.jpg", "/blog-12.jpg", "/blog-13.jpg"]
-        },
+            "images": ["/blog-11.jpg", "/blog-12.jpg", "/blog-13.jpg"] },
         {
             "title": "socrates hemlock",
             "company": "jews",
@@ -196,6 +195,35 @@
                 "/dark-8.webp",
                 "/dark-9.webp"
             ]
+        }
+    ],
+    "testimonials": [
+        {
+            "logo": "/gab.png",
+            "company": "Gab Studios",
+            "testimony": "I am an Alabama nigger and I wanna be free. Hell with NAACP. I don't drink, I don't cuss. I wanna ride at front of the bus.",
+            "stars": 4.5,
+            "userPic": "/user1.png",
+            "userName": "Pablo Escobar",
+            "userPost": "Bigg Communist"
+        },
+        {
+            "logo": "/gab.png",
+            "company": "Gab Studios",
+            "testimony": "I am an Alabama nigger and I wanna be free. Hell with NAACP. I don't drink, I don't cuss. I wanna ride at front of the bus.",
+            "stars": 4.5,
+            "userPic": "/user1.png",
+            "userName": "Pablo Escobar",
+            "userPost": "Bigg Communist"
+        },
+        {
+            "logo": "/gab.png",
+            "company": "Gab Studios",
+            "testimony": "I am an Alabama nigger and I wanna be free. Hell with NAACP. I don't drink, I don't cuss. I wanna ride at front of the bus.",
+            "stars": 4.5,
+            "userPic": "/user1.png",
+            "userName": "Pablo Escobar",
+            "userPost": "Bigg Communist"
         }
     ]
 

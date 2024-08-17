@@ -25,11 +25,10 @@
 	import FeaturedProjectsListItem from '$lib/components/featuredProjectsListItem.svelte';
 	import CarouselSliderDrag from '$lib/components/carouselSliderDrag.svelte';
 
-  import { highlightedIndex } from '../stores/carouselIndexStore.ts';
+	import { highlightedIndex } from '../stores/carouselIndexStore.ts';
 	import StarryBackground from '$lib/components/starryBackground.svelte';
 
 	let currentPageIndexGlobal: number = 0;
-
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
 	let isAboutUsPopupOpen: boolean = false;
@@ -64,7 +63,7 @@
 		isAboutUsPopupOpen = true;
 	}
 
-	function carouselGoTo(idx : number) {
+	function carouselGoTo(idx: number) {
 		carousel.goTo(idx, { animated: true });
 		currentPageIndexGlobal = idx;
 	}
@@ -81,7 +80,7 @@
 	}
 	$: {
 		currentPageIndexGlobal = $highlightedIndex;
-		if (carousel){
+		if (carousel) {
 			carouselGoTo(currentPageIndexGlobal);
 		}
 	}
@@ -163,7 +162,7 @@
 		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
 			{#each staticData.concepts as concept}
 				<div class="col-span-4">
-				<ConceptCard  {...concept}></ConceptCard>
+					<ConceptCard {...concept}></ConceptCard>
 				</div>
 			{/each}
 		</div>
@@ -198,7 +197,7 @@
 			pauseOnFocus={true}
 			bind:this={carousel}
 		>
-			<div slot="dots" class="flex justify-center w-full ">
+			<div slot="dots" class="flex w-full justify-center">
 				{#each Array(3) as _, pageIndex (pageIndex)}
 					<CarouselSlider
 						symbol={pageIndex + 1}
@@ -214,12 +213,17 @@
 	{/if}
 
 	<CarouselSliderDrag></CarouselSliderDrag>
-	<h1 id="Process" class="mt-5 font-pavelt text-5xl text-red">Testimonials</h1>
 
-	<div class="grid grid-cols-3 grid-rows-1 gap-x-10">
-		<Testimonial></Testimonial>
-		<Testimonial></Testimonial>
-		<Testimonial></Testimonial>
+	<div class="px-3.5rem">
+		<Header name="Testimonials"></Header>
+
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+			{#each staticData.testimonials as testimony}
+				<div class="col-span-4">
+					<Testimonial {...testimony}></Testimonial>
+				</div>
+			{/each}
+		</div>
 	</div>
 
 	<div class="m-20"></div>
