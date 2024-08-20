@@ -32,10 +32,12 @@
 				</p>
 			</div>
 		</div>
-		<div class="my-4rem">
-			<p class="text-2xl font-bold text-white font-neuemachina">
-				{testimony}
-			</p>
+		<div class="h-[10rem] my-4rem flex items-center">
+			<div class="">
+				<p class="text-2xl font-bold text-white font-neuemachina">
+					{testimony}
+				</p>
+			</div>
 		</div>
 
 		<!-- Stars Section -->
