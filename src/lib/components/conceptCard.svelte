@@ -51,17 +51,17 @@
 
 <!-- TODO: concept card fonts -->
 {#each [currentImageIndex] as index (index)}
-<div transition:fade class="image-container w-full aspect-[4/3] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card rounded-lg  text-white {hover ? 'expand' : 'expand-revert'}"
+<div transition:fade class="rounded-3xl image-container w-full aspect-[1] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card   text-white {hover ? 'expand' : 'expand-revert'}"
      animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave} on:focus={onMouseEnter}>
   <div class="background-image" style="background-image: url({imageUrls[currentImageIndex]});"></div>
-  <div class="content p-7">
+  <div class="content p-7 font-neuemachina">
     <p class="text-lg text-white font-bold leading-[1.4] tracking-[0.04em]">
       {type}
     </p>
 
     <div>
-      <p class="whitespace-pre-line text-2xl font-medium mt-7">{title}</p>
+      <p class="whitespace-pre-line text-4xl font-bold mt-7">{title}</p>
     </div>
 
     <div class="mb-40 transition-transform-description {hover ? 'visible-slide' : 'invisible-slide'}">
