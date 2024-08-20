@@ -64,7 +64,7 @@
       <p class="whitespace-pre-line text-4xl font-bold mt-7">{title}</p>
     </div>
 
-    <div class="mb-40 transition-transform-description {hover ? 'visible-slide' : 'invisible-slide'}">
+    <div class="transition-transform-description {hover ? 'visible-slide' : 'invisible-slide'}">
     <p class="whitespace-pre-line text-base font-medium mt-7">{description}</p>
     </div>
 
