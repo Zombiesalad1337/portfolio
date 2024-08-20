@@ -58,16 +58,22 @@
 <style>
   .bar {
     display: flex;
-    width: 100%;
-    height: 5px;
+    width: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 1.5rem;
     background-color: #101010; /* Dark gray color */
     position: relative;
     cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
   }
 
   .highlighted {
     background-color: #af1315; /* Red color */
     color: white;
+    border-radius: 1rem;
   }
 </style>
 
@@ -78,7 +84,7 @@
 >
   {#each Array(n) as _, index}
     <div
-      class="section {index === $highlightedIndex ? 'highlighted' : ''}"
+      class="section {index === $highlightedIndex ? 'highlighted' : 'non-highlighed'}"
       style="width: {100 / n}%"
     >
     </div>
