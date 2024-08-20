@@ -32,6 +32,7 @@
       const rect = barElement.getBoundingClientRect();
       const mouseX = event.clientX - rect.left;
       let newIndex = Math.floor(mouseX / sectionWidth);
+      console.log("newIndex: " + newIndex);
       
       if (newIndex >= 0 && newIndex < n) {
         highlightedIndex.set(newIndex);

@@ -28,6 +28,9 @@
 	import { highlightedIndex } from '../stores/carouselIndexStore.ts';
 	import StarryBackground from '$lib/components/starryBackground.svelte';
 
+	let isTransitioning = false;
+	let transitionQueue: number[] = [];
+
 	let currentPageIndexGlobal: number = 0;
 
 	let carousel; // for calling methods of the carousel instance const handleNextClick = () => {
@@ -64,9 +67,28 @@
 	}
 
 	function carouselGoTo(idx: number) {
-		carousel.goTo(idx, { animated: true });
-		currentPageIndexGlobal = idx;
+		transitionQueue.push(idx); // Add the request to the queue
+		processQueue(); // Start processing the queue
 	}
+	async function processQueue() {
+		if (isTransitioning || transitionQueue.length === 0) {
+			return; // Return if already processing or the queue is empty
+		}
+
+		isTransitioning = true; // Set transitioning state
+
+		const nextIndex = transitionQueue.shift(); // Get the next index from the queue
+		if (nextIndex !== undefined) {
+			await carousel.goTo(nextIndex, { animated: true });
+		}
+
+		isTransitioning = false; // Transition complete
+
+		if (transitionQueue.length > 0) {
+			processQueue(); // Recursively process the next item in the queue
+		}
+	}
+
 	function closeAboutUsPopup() {
 		isAboutUsPopupOpen = false;
 	}
