@@ -18,7 +18,8 @@
     }
   });
 
-  function onMouseDown() {
+  function onMouseDown(event: MouseEvent) {
+    event.preventDefault(); // Prevents any default actions
     dragging = true;
     document.body.style.cursor = 'pointer'; // Set cursor for entire body
     window.addEventListener('mousemove', onMouseMove);
@@ -27,6 +28,7 @@
 
   function onMouseMove(event: MouseEvent) {
     if (dragging) {
+      event.preventDefault();
       const rect = barElement.getBoundingClientRect();
       const mouseX = event.clientX - rect.left;
       let newIndex = Math.floor(mouseX / sectionWidth);
