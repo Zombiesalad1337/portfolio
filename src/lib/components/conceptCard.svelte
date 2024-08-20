@@ -55,7 +55,7 @@
      animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave} on:focus={onMouseEnter}>
   <div class="background-image" style="background-image: url({imageUrls[currentImageIndex]});"></div>
-  <div class="content p-7 font-neuemachina">
+  <div class="content p-7 font-neuemachina h-full flex flex-col">
     <p class="text-lg text-white font-bold leading-[1.4] tracking-[0.04em]">
       {type}
     </p>
@@ -64,8 +64,8 @@
       <p class="whitespace-pre-line text-4xl font-bold mt-7">{title}</p>
     </div>
 
-    <div class="transition-transform-description {hover ? 'visible-slide' : 'invisible-slide'}">
-    <p class="whitespace-pre-line text-base font-medium mt-7">{description}</p>
+    <div class="mt-auto transition-transform-description {hover ? 'visible-slide' : 'invisible-slide'}">
+    <p class="whitespace-pre-line text-base text-right font-medium">{description}</p>
     </div>
 
   </div>
