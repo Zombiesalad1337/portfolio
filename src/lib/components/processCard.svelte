@@ -22,7 +22,10 @@
 		</div>
 		<div class="flex items-end justify-between">
 			{#each keyPoints as keyPoint, index}
-				<p class="font-neuemachina text-base leading-[1.2] text-red  {(index < (keyPoints.length - 1)) ? 'pr-0.75rem border-r-2 border-r-red' : ''}">{keyPoint}</p>
+				<p class="font-neuemachina text-base leading-[1.2] text-red">{keyPoint}</p>
+				{#if index < keyPoints.length - 1}
+				<p class="text-red">|</p>
+				{/if}
 			{/each}
 		</div>
 	</div>
