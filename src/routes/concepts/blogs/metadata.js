@@ -1,6 +1,6 @@
 export const blogMetadata = [
   {
-    "slug": "release-notes",
+    "slug": "test-blog",
     "title": "Cloud Computing Trends",
     "date": "February 05, 2020",
     "category": "Cybersecurity",

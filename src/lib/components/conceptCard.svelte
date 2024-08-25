@@ -51,7 +51,7 @@
 
 <!-- TODO: concept card fonts -->
 {#each [currentImageIndex] as index (index)}
-<div transition:fade class="rounded-3xl image-container w-full aspect-[1] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card   text-white {hover ? 'expand' : 'expand-revert'}"
+<div transition:fade class="rounded-3xl image-container w-full aspect-[0.9] max-w-full background-image: url({imageUrls[currentImageIndex]}); transition transition-hover-card   text-white {hover ? 'expand' : 'expand-revert'}"
      animate:fade="{{ duration: 3000 }}"
      on:mouseover={onMouseEnter} on:mouseleave={onMouseLeave} on:focus={onMouseEnter}>
   <div class="background-image" style="background-image: url({imageUrls[currentImageIndex]});"></div>

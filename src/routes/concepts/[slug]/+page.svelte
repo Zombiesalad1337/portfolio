@@ -48,6 +48,7 @@
   <div class="mb-20 flex prose !max-w-none">
       <div class="w-1/5 mr-10">
           <Toc />
+          <div>Find me in the alps</div>
       </div>
       <div class="w-4/5">
           <svelte:component this={data.content} {...data.metadata} />

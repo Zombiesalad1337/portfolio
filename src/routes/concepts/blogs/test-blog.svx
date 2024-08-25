@@ -1,58 +1,93 @@
 ---
-title: "My First Blog Post"
-date: "2023-01-01"
+title: "Release notes what should be do about this faggotry fag fag code editor"
+date: "June 24, 2024"
+category: "Changelog"
+readTime: "4 min"
+headerImage: "/blog-1.jpg"
 ---
 
-<script>
-  export let title;
-  export let date;
-</script>
 
-# {title}
+[Back to landing page](/)
 
-Posted on {date}
+Welcome to the November 2021 release of Visual Studio Code. There are many updates in this version that we hope you will like, some of the key highlights include:
 
-Welcome to my first blog post written in MDsveX!
-Your prefer a left border on the active `<li>` to a full background color? Here's how to do that:
+- **[Marketplace theme preview](#preview-themes-before-installing)** - Try out Color Themes without installing them.
+- **[Configure problems navigation order](#configure-problem-navigation-order)** - Go to next error or warning by severity or file position.
+- **[Show commands in screencast mode](#screencast-mode-shows-command-names)** - Display command names along with keyboard shortcuts.
+- **[Notebook improvements](#notebooks)** - Adjust Markdown font size, better file and URL linking support.
+- **[Invisible Unicode highlighting](#unicode-highlighting)** - Highlights invisible or confusable Unicode characters.
+- **[TypeScript method completions](#method-signature-completions)** - Quickly fill in interface and override methods.
+- **[Pre-release extensions](#pre-release-extensions)** - Try out extension new features and fixes early.
+- **[New Java welcome experience](#java)** - To help you configure and learn about Java in VS Code.
+- **[Work in a container on an SSH server](#remote-development)** - New Remote - SSH **Reopen in Container** command.
 
-```svelte example
-<script>
-  import Toc from '$lib'
-</script>
+> If you'd like to read these release notes online, go to [Updates](https://code.visualstudio.com/updates) on [code.visualstudio.com](https://code.visualstudio.com).
 
-<div>
-  <main>
-    <h1>Hello</h1>
+**Join us live** at the [VS Code team's livestream](https://code.visualstudio.com/livestream) on Thursday, December 9 at 8am Pacific (4pm London) to see a demo of what's new in this release, and ask us questions live.
 
-    Lorem ipsum dolor sit amet consectetur
+**Insiders:** Want to try new features as soon as possible? You can download the nightly [Insiders](https://code.visualstudio.com/insiders) build and try the latest updates as soon as they are available.
 
-    <h2>World</h2>
+## Workbench
 
-    adipisicing elit. Recusandae eos, molestias cumque adipisci
+### Preview themes before installing
 
-    <h3>More</h3>
+You can now preview themes available on the Marketplace before installing them. From the Color Themes dropdown (`kb(workbench.action.selectTheme)`), select **Browse Additional Color Themes** to list the Marketplace themes. The VS Code UI will preview the Color Theme as you navigate the dropdown.
 
-    veniam totam vitae illo voluptatem assumenda magni consequuntur!
+Press `kbstyle(Enter)` on a theme entry to install the extension.
 
-    <h2>Headings</h2>
+### Configure problem navigation order
 
-    asperiores ab laboriosam quod est odit accusamus, reiciendis eum
-  </main>
+You can now define the order for **Go to Next Problem** (`kb(editor.action.marker.next)`) and **Go to Previous Problem** (`kb(editor.action.marker.prev)`) navigation. In previous versions, the order of navigation was based on severity, going to errors first, then warnings, then the rest. The new **Problems: Sort Order** (`problems.sortOrder`) setting lets you navigate problems by either their `severity` or `position`. When using `"problems.sortOrder": "position"`, a warning on line 5 will be shown before an error on line 13, etc.
 
-  <Toc
-    --toc-active-border="solid cornflowerblue"
-    --toc-active-border-width="0 0 0 2pt"
-    --toc-active-bg="none"
-    --toc-active-border-radius="0"
-  />
-</div>
+### Multiple language specific editor settings
 
-<style>
-  div {
-    display: grid;
-    grid-template-columns: 1fr 12em;
-  }
-</style>
+You can now configure language specific editor settings for multiple languages at once. The following example shows how you can customize settings for `javascript` and `typescript` languages together in your `settings.json` file:
+
+```json
+"[javascript][typescript]": {
+  "editor.maxTokenizationLineLength": 2500
+}
 ```
 
-# nigger
+### Automatic 2x2 editor grid
+
+A true 2x2 grid editor layout was only possible using the **View: Grid Editor Layout (2x2)** command. Now you can get the same layout by manually splitting editors until you reach a 2x2 grid, and the grid will automatically lock into a true 2x2 layout.
+
+### Better Escape handling in lists
+
+Pressing `kbstyle(Escape)` on lists and trees will now shrink the selection to a single element before clearing it.
+
+### Find enabled on web
+
+The Find control is now supported inside webviews when VS Code is running in a browser (github.dev in the example below):
+
+Due to limitations with current browser APIs, find behaves a bit differently than it does on desktop. For example, on web, VS Code can only highlight the current find result. On desktop, all results are highlighted in the current file.
+
+### Screencast mode shows command names
+
+You can now choose to show command names as you trigger them via keyboard shortcuts in screencast mode. Use the **Screencast Mode: Keyboard Shortcuts Format** (`screencastMode.keyboardShortcutsFormat`) setting to configure this behavior.
+
+### Pre release extensions
+
+VS Code now supports pre-release versions of extensions so you can opt in to install them and try out the latest cutting edge features from extensions. VS Code shows an additional **Install Pre-Release Version** option in the extension **Install** drop-down menu for installing the pre-release version.
+
+_Theme: [GitHub Light Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)_
+
+Once installed, an indicator makes it clear if you are using the pre-release version of an extension:
+
+_Theme: [GitHub Light Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)_
+
+If there is a pre-release version of an extension that you have already installed, you can easily switch to it:
+
+_Theme: [GitHub Light Theme](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme)_
+
+### Updated Find actions
+
+The Find actions in the Search view now use the same style as Find actions in the editor:
+
+
+## Thank you
+
+Last but certainly not least, a big _**Thank You**_ to the contributors of VS Code.
+
+[Back to landing page](/)
