@@ -250,33 +250,35 @@
 
 	<div class="m-20"></div>
 
-	<div class="peak-gradient w-full py-20">
-		<div class="flex items-center justify-center text-white">
-			<img src="/emailSub.svg" class="w-20" />
-			<h1 class="text-2xl">Let's Know the World Better</h1>
-		</div>
+	<div class="w-full py-20">
+		<h1 class="text-center font-pavelt text-5xl text-white underline">
+			Let's Know the World Better
+		</h1>
 
-		<div class="text-center text-white">
-			<h1 class="text-xl">Subscribe and receive our</h1>
-			<h1 class="text-xl">Newsletter to follow the news about</h1>
+		<div class="mb-2rem mt-1rem text-center font-neuemachina text-4.5xl text-white">
+			<h1>Subscribe and receive our</h1>
+			<h1>Newsletter to follow the news about</h1>
 		</div>
 
 		<div>
 			<form method="POST" action="?/subscribe" use:enhance class="flex items-center justify-center">
-				<label>
+				<div class="relative w-[70vw]">
 					<input
 						name="email"
 						type="email"
-						class="bg-black-10 h-20 w-[70vw] rounded rounded-2xl text-xl text-white"
+						class="bg-black-10 h-20 w-full rounded-[4rem] border border-red bg-transparent pl-[2rem] pr-[4rem] font-neuemachina text-[2rem] text-white outline-none transition-all duration-300 ease-in-out focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
 						placeholder="Your Email"
 					/>
-				</label>
-
-				<button formaction="?/subscribe" class="flex items-center justify-center">
-					<img src="/subscribeArrow.svg" class="mx-3 w-10" />
-				</button>
+					<button
+						type="submit"
+						class="absolute inset-y-0 right-0 flex h-full w-auto items-center justify-center"
+					>
+						<img src="/icons/subscribeArrow.svg" class="h-full" alt="Submit" />
+					</button>
+				</div>
 			</form>
 		</div>
+
 		{#if form?.invalid}
 			<p class="text-center text-red">Email is invalid</p>
 		{/if}
@@ -331,6 +333,7 @@
 		font-family: pavelt, sans-serif;
 	}
 
+	/* TODO: remove, unused */
 	.peak-gradient {
 		background: linear-gradient(to bottom, #000000 0%, #af1315 60%, #af1315 60%, #000000 100%);
 	}
