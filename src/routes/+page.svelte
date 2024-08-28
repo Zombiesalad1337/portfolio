@@ -27,6 +27,7 @@
 
 	import { highlightedIndex } from '../stores/carouselIndexStore.ts';
 	import StarryBackground from '$lib/components/starryBackground.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	let isTransitioning = false;
 	let transitionQueue: number[] = [];
@@ -174,7 +175,13 @@
   </div> -->
 
 	<div id="Concepts" class="px-3.5rem">
-		<Header name="Concepts"></Header>
+		<div class="flex items-center justify-between">
+			<h1 class="text-bold font-pavelt text-8.5xl text-red">Concepts</h1>
+			<button class="flex items-center">
+				<p class="font-pavelt text-4xl text-white">All Concepts</p>
+				<img src="/icons/topRightArrow.svg" class="ml-2rem w-4.5rem" />
+			</button>
+		</div>
 		<p class="text-left font-neuemachina text-4.5xl text-white">
 			I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger
 			said they should. Is that what a man looks like? Self improvement is masturbation. Now
@@ -202,9 +209,9 @@
 		<FeaturedProjectsList {...staticData.featuredProjectsList}></FeaturedProjectsList>
 	</div>
 
-	<div class="py-10rem"></div>
-	<div class="py-10rem"></div>
+	<div class="py-5rem"></div>
 
+	<Header name="Featured Projects"></Header>
 	{#if browser}
 		<Carousel
 			let:currentPageIndex
@@ -236,7 +243,7 @@
 
 	<CarouselSliderDrag></CarouselSliderDrag>
 
-	<div class="px-3.5rem">
+	<div class="px-3.5rem mt-10rem">
 		<Header name="Testimonials"></Header>
 
 		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
@@ -248,7 +255,6 @@
 		</div>
 	</div>
 
-	<div class="m-20"></div>
 
 	<div class="w-full py-20">
 		<h1 class="text-center font-pavelt text-5xl text-white underline">
@@ -289,22 +295,9 @@
 
 	<div class="p-10"></div>
 
-	<div class="flex justify-between">
-		<h1 id="Process" class="font-pavelt text-5xl text-red">Testimonials</h1>
-		<div>
-			<h3 class="text-2xl text-red">Email Address</h3>
-			<h3 class="text-xl text-white">humastudios@gmail.com</h3>
-		</div>
-	</div>
 
-	<div>
-		<div class="grid grid-cols-3 grid-rows-2 gap-4">
-			<div class="bg-black-10 col-span-1 p-4">Column 1, Row 1</div>
-			<div class="bg-black-10 col-span-2 p-4">Column 2, Row 1</div>
-			<div class="bg-black-10 col-span-1 p-4">Column 1, Row 2</div>
-			<div class="bg-black-10 col-span-2 p-4">Column 2, Row 2</div>
-		</div>
-	</div>
+
+	<Footer></Footer>
 </div>
 
 <style>
