@@ -266,7 +266,7 @@
 					<input
 						name="email"
 						type="email"
-						class="bg-black-10 h-20 w-full rounded-[4rem] border border-red bg-transparent pl-[2rem] pr-[4rem] font-neuemachina text-[2rem] text-white outline-none transition-all duration-300 ease-in-out focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+						class="h-20 w-full rounded-[4rem] border border-red bg-black bg-opacity-50 pl-[2rem] pr-[4rem] font-neuemachina text-[2rem] text-white outline-none transition-all duration-300 ease-in-out focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
 						placeholder="Your Email"
 					/>
 					<button
@@ -280,10 +280,10 @@
 		</div>
 
 		{#if form?.invalid}
-			<p class="text-center text-red">Email is invalid</p>
+			<p class="text-center text-red font-neuemachina mt-0.5rem">Email is invalid</p>
 		{/if}
 		{#if form?.success}
-			<p class="text-green text-center">You are successfully registered</p>
+			<p class="text-green text-center font-neuemachina mt-0.5rem">You are successfully registered</p>
 		{/if}
 	</div>
 
