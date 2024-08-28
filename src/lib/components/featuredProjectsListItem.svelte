@@ -32,7 +32,7 @@
 			<p class="font-neuemachina text-base text-gray-600">{type}</p>
 		</div>
 		<div
-			class="z-10 absolute left-1/2 top-1/2 hidden  group-hover:block w-[40rem] aspect-[4/3] object-cover"
+			class="z-10 absolute left-1/3 top-1/2 hidden  group-hover:block w-[40rem] aspect-[4/3] object-cover"
 		>
 			<!-- TODO: Fuck slide, use custom fade form concept card -->
 			{#if browser}
