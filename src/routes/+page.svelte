@@ -27,6 +27,7 @@
 
 	import { highlightedIndex } from '../stores/carouselIndexStore.ts';
 	import StarryBackground from '$lib/components/starryBackground.svelte';
+	import MainAccordion from '$lib/components/mainAccordion.svelte';
 	import Footer from '$lib/components/footer.svelte';
 
 	let isTransitioning = false;
@@ -295,6 +296,8 @@
 
 	<div class="p-10"></div>
 
+
+	<MainAccordion items={staticData.faq} />
 
 
 	<Footer></Footer>
