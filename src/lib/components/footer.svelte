@@ -62,7 +62,7 @@
 	</div>
 </div>
 
-<div class="spotlight"></div>
+<!-- <div class="spotlight"></div> -->
 <h1 class="text-center font-pavelt text-red">STUDIOS</h1>
 
 <style>
@@ -120,7 +120,6 @@ h1:focus {
         height: 100px; /* Keep the height equal to width for a circular spotlight */
         background: radial-gradient(circle, rgba(255, 0, 0, 0.8) 0%, rgba(255, 0, 0, 0) 70%);
         opacity: 0.9;
-        position: absolute;
         top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);

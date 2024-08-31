@@ -4,13 +4,21 @@
 
 	let navs = ['Services'];
 	let showNavbar: boolean = false;
+	let lastScrollTop: number = 0;
 	onMount(() => {
 		const handleScroll = () => {
 			if (window.scrollY > 0.9 * window.innerHeight) {
-				showNavbar = true;
+				const currentScrollTop = window.scrollY;
+				if (currentScrollTop < lastScrollTop){
+					showNavbar = true;
+				}
+				else {
+					showNavbar = false;
+				}
 			} else {
 				showNavbar = false;
 			}
+			lastScrollTop = window.scrollY;
 		};
 
 		window.addEventListener('scroll', handleScroll);
