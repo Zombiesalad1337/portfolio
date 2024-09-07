@@ -1,19 +1,22 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	export let showAtScrollYMultiplier : number = 0.9;
+	export let showAtScrollYMultiplier: number = 0.9;
+	export let initiallyVisible: boolean = false;
 	let activeLink = 'Services';
 
 	let navs = ['Services'];
-	let showNavbar: boolean = false;
+	let showNavbar: boolean = initiallyVisible;
 	let lastScrollTop: number = 0;
 	onMount(() => {
 		const handleScroll = () => {
-			if (window.scrollY > showAtScrollYMultiplier * window.innerHeight) {
+			if (initiallyVisible && window.scrollY === 0) {
+				showNavbar = true;
+			}
+			if (window.scrollY >= showAtScrollYMultiplier * window.innerHeight) {
 				const currentScrollTop = window.scrollY;
-				if (currentScrollTop < lastScrollTop){
+				if (currentScrollTop < lastScrollTop) {
 					showNavbar = true;
-				}
-				else {
+				} else {
 					showNavbar = false;
 				}
 			} else {
@@ -30,41 +33,41 @@
 	});
 </script>
 
-	<!-- TODO: breaks for mobile view, handle -->
+<!-- TODO: breaks for mobile view, handle -->
 
-	<!-- TODO: fix navbar overlap  -->
+<!-- TODO: fix navbar overlap  -->
 <nav
-	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem gap-2rem dark:bg-black"
+	class="navbar {showNavbar
+		? 'visible'
+		: ''} grid w-full grid-cols-12 items-center gap-2rem bg-white px-3.5rem dark:bg-black"
 >
 	<div class="col-span-4">
 		<!-- TODO: GET SVG OF LOGO, then animate -->
 		<img class="h-20" src="/logo-header.png" alt="Logo" />
 	</div>
-	<div class="col-span-4 content-right font-pavelt">
-		<div
-			class="flex transform justify-between px-2 space-x-2 rounded-full bg-red py-1 text-white"
-		>
+	<div class="content-right col-span-4 font-pavelt">
+		<div class="flex transform justify-between space-x-2 rounded-full bg-red px-2 py-1 text-white">
 			<a
 				href="#Services"
-				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium hover:bg-black hover:text-white"
 			>
 				Services
 			</a>
 			<a
 				href="#Process"
-				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium hover:bg-black hover:text-white"
 			>
 				Process
 			</a>
 			<a
 				href="#Concepts"
-				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium hover:bg-black hover:text-white"
 			>
-				Concepts	
+				Concepts
 			</a>
 			<a
 				href="#Connect"
-				class="relative rounded-full px-6 py-2 text-sm font-medium  hover:bg-black hover:text-white"
+				class="relative rounded-full px-6 py-2 text-sm font-medium hover:bg-black hover:text-white"
 			>
 				Connect
 			</a>
