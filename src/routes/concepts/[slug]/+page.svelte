@@ -12,13 +12,12 @@
 </script>
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
-
 <div class="bg-white px-3.5rem transition-colors duration-300 ease-in-out dark:bg-black">
-	<div class="my-5rem flex justify-end">
+	<div class="flex justify-end py-5rem">
 		<ThemeToggle></ThemeToggle>
 	</div>
 
-	<div class="font-martianmono flex">
+	<div class="flex font-martianmono">
 		<div class="w-4/5">
 			<!-- TODO: reduce gap on after mobile breakpoint triggered -->
 			<span class="rounded-full bg-red px-2rem py-1rem text-center text-xl font-medium text-white">
@@ -30,54 +29,54 @@
 			<p>Read time <strong>{data.metadata.readTime}</strong></p>
 		</div>
 	</div>
-</div>
 
-<div class="">
-	<div class="flex pb-20 pt-20">
-		<div class="w-4/5 text-5xl">
-			<strong>{data.metadata.title}</strong>
-		</div>
-		<div class="flex w-1/5 flex-col items-end">
-			<div class="mt-auto">
-				<div class="flex items-center">
-					<p>Share:</p>
-					<!-- TODO: Add dynamic sharable link logic -->
-					<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
-						>f</button
-					>
-					<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
-						>in</button
-					>
-					<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
-						>x</button
-					>
+	<div class="">
+		<div class="flex pb-20 pt-20">
+			<div class="w-4/5 text-5xl">
+				<strong>{data.metadata.title}</strong>
+			</div>
+			<div class="flex w-1/5 flex-col items-end">
+				<div class="mt-auto">
+					<div class="flex items-center">
+						<p>Share:</p>
+						<!-- TODO: Add dynamic sharable link logic -->
+						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
+							>f</button
+						>
+						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
+							>in</button
+						>
+						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red-500"
+							>x</button
+						>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<img
-		src={data.metadata.headerImage}
-		alt="Description of image"
-		class="mb-10 h-auto max-h-[50vh] w-full object-cover"
-	/>
+		<img
+			src={data.metadata.headerImage}
+			alt="Description of image"
+			class="mb-10 h-auto max-h-[50vh] w-full object-cover"
+		/>
 
-	<div class="prose mb-20 flex !max-w-none">
-		<div class="mr-10 w-1/5">
-			<Toc />
-			<div>Find me in the alps</div>
-		</div>
-		<div class="w-4/5">
-			<svelte:component this={data.content} {...data.metadata} />
-		</div>
-	</div>
-
-	<h1 class="mb-5 text-4xl">Related Resources</h1>
-	<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-		{#each data.blogs.slice(0, 3) as blog}
-			<div>
-				<BlogCard {...blog} />
+		<div class="prose mb-20 flex !max-w-none">
+			<div class="mr-10 w-1/5">
+				<Toc />
+				<div>Find me in the alps</div>
 			</div>
-		{/each}
+			<div class="w-4/5">
+				<svelte:component this={data.content} {...data.metadata} />
+			</div>
+		</div>
+
+		<h1 class="mb-5 text-4xl">Related Resources</h1>
+		<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+			{#each data.blogs.slice(0, 3) as blog}
+				<div>
+					<BlogCard {...blog} />
+				</div>
+			{/each}
+		</div>
 	</div>
 </div>
