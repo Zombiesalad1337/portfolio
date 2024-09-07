@@ -3,6 +3,7 @@
 
 	let darkMode = true;
 
+	//TODO: Use cookies to set theme during SSR to prevent FUOC.
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
 
