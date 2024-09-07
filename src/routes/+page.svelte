@@ -29,6 +29,7 @@
 	import StarryBackground from '$lib/components/starryBackground.svelte';
 	import MainAccordion from '$lib/components/mainAccordion.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import LetsConnect from '$lib/letsConnect.svelte';
 
 	let isTransitioning = false;
 	let transitionQueue: number[] = [];
@@ -296,9 +297,11 @@
 
 	<div class="p-10"></div>
 
+	<LetsConnect></LetsConnect>
 
 	<MainAccordion items={staticData.faq} />
 
+	<div class="p-10"></div>
 
 	<Footer></Footer>
 </div>
