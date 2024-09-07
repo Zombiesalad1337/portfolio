@@ -14,7 +14,7 @@
 
 <Navbar showAtScrollYMultiplier={0}></Navbar>
 
-<div class="bg-white dark:bg-black">
+<div class="transition-colors duration-300 ease-in-out bg-white dark:bg-black">
 
   <ThemeToggle></ThemeToggle>
   <div class="flex">

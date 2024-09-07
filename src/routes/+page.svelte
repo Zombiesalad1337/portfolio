@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import Navbar from '$lib/components/navbar.svelte';
 	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
@@ -109,6 +110,10 @@
 			carouselGoTo(currentPageIndexGlobal);
 		}
 	}
+
+	onMount(() => {
+		document.documentElement.classList.add('dark');
+	});
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
@@ -245,7 +250,7 @@
 
 	<CarouselSliderDrag></CarouselSliderDrag>
 
-	<div class="px-3.5rem mt-10rem">
+	<div class="mt-10rem px-3.5rem">
 		<Header name="Testimonials"></Header>
 
 		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
@@ -256,7 +261,6 @@
 			{/each}
 		</div>
 	</div>
-
 
 	<div class="w-full py-20">
 		<h1 class="text-center font-pavelt text-5xl text-white underline">
@@ -288,10 +292,12 @@
 		</div>
 
 		{#if form?.invalid}
-			<p class="text-center text-red font-neuemachina mt-0.5rem">Email is invalid</p>
+			<p class="mt-0.5rem text-center font-neuemachina text-red">Email is invalid</p>
 		{/if}
 		{#if form?.success}
-			<p class="text-green text-center font-neuemachina mt-0.5rem">You are successfully registered</p>
+			<p class="text-green mt-0.5rem text-center font-neuemachina">
+				You are successfully registered
+			</p>
 		{/if}
 	</div>
 

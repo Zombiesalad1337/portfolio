@@ -34,7 +34,7 @@
 
 	<!-- TODO: fix navbar overlap  -->
 <nav
-	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem gap-2rem bg-black"
+	class="navbar {showNavbar ? 'visible' : ''} w-full items-center grid grid-cols-12 px-3.5rem gap-2rem dark:bg-black"
 >
 	<div class="col-span-4">
 		<!-- TODO: GET SVG OF LOGO, then animate -->
