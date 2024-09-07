@@ -80,8 +80,10 @@ const config: Config = {
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],
+				mono: [...fontFamily.mono],
 				pavelt: ['Pavelt', 'sans-serif'],
-				neuemachina: ['neuemachina', 'sans-serif']
+				neuemachina: ['neuemachina', 'sans-serif'],
+				martianmono: ['neuemachina', 'mono']
 			},
 			borderRadius: generateSizes(),
 			fontSize: textSizes,

@@ -13,19 +13,26 @@
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
 
-<div class="bg-white transition-colors duration-300 ease-in-out dark:bg-black">
-	<ThemeToggle></ThemeToggle>
-	<div class="flex">
-		<div class="w-4/5">
-			<!-- TODO: reduce gap on after mobile breakpoint triggered -->
-			Concepts / {data.metadata.category}
-		</div>
-		<div class="w-1/5 text-right">
-			<p>Published on {data.metadata.date}</p>
-			<p>Read time {data.metadata.readTime}</p>
-		</div>
+<div class="bg-white px-3.5rem transition-colors duration-300 ease-in-out dark:bg-black">
+	<div class="my-5rem flex justify-end">
+		<ThemeToggle></ThemeToggle>
 	</div>
 
+	<div class="font-martianmono flex">
+		<div class="w-4/5">
+			<!-- TODO: reduce gap on after mobile breakpoint triggered -->
+			<span class="rounded-full bg-red px-2rem py-1rem text-center text-xl font-medium text-white">
+				Resources / {data.metadata.category}
+			</span>
+		</div>
+		<div class="w-1/5 text-right text-lg">
+			<p>Published on <strong>{data.metadata.date}</strong></p>
+			<p>Read time <strong>{data.metadata.readTime}</strong></p>
+		</div>
+	</div>
+</div>
+
+<div class="">
 	<div class="flex pb-20 pt-20">
 		<div class="w-4/5 text-5xl">
 			<strong>{data.metadata.title}</strong>

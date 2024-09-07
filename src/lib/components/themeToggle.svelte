@@ -28,7 +28,7 @@
 	}
 </script>
 
-<div class="flex items-center justify-center">
+<div class="flex justify-center">
 	<button
 		on:click={handleSwitchDarkMode}
 		class="relative h-8 w-16 rounded-full bg-gray-300 shadow-inner transition-all duration-300 ease-in-out {darkMode
