@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { highlightedIndex } from '../../stores/carouselIndexStore.ts';
+  import { highlightedIndex } from '$lib/stores/carouselIndexStore.ts';
   import { onMount } from 'svelte';
   import { get } from 'svelte/store';
 

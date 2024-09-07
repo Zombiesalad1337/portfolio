@@ -25,7 +25,7 @@
 	import FeaturedProjectsListItem from '$lib/components/featuredProjectsListItem.svelte';
 	import CarouselSliderDrag from '$lib/components/carouselSliderDrag.svelte';
 
-	import { highlightedIndex } from '../stores/carouselIndexStore.ts';
+	import { highlightedIndex } from '$lib/stores/carouselIndexStore.ts';
 	import StarryBackground from '$lib/components/starryBackground.svelte';
 	import MainAccordion from '$lib/components/mainAccordion.svelte';
 	import Footer from '$lib/components/footer.svelte';

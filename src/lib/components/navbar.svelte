@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	export let showAtScrollYMultiplier : number = 0.9;
 	let activeLink = 'Services';
 
 	let navs = ['Services'];
@@ -7,7 +8,7 @@
 	let lastScrollTop: number = 0;
 	onMount(() => {
 		const handleScroll = () => {
-			if (window.scrollY > 0.9 * window.innerHeight) {
+			if (window.scrollY > showAtScrollYMultiplier * window.innerHeight) {
 				const currentScrollTop = window.scrollY;
 				if (currentScrollTop < lastScrollTop){
 					showNavbar = true;

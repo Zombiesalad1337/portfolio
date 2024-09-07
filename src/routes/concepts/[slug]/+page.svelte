@@ -2,6 +2,8 @@
   import { Toc } from "svelte-toc"; 
     import { page } from '$app/stores'
   import BlogCard from "$lib/components/blogCard.svelte";
+	import Navbar from "$lib/components/navbar.svelte";
+	import ThemeToggle from "$lib/components/themeToggle.svelte";
 
   export let data : any;
     $: headingSelector =
@@ -10,9 +12,11 @@
 
 </script>
 
-<div class="mx-20 mt-10">
+<Navbar showAtScrollYMultiplier={0}></Navbar>
 
+<div class="bg-white dark:bg-black">
 
+  <ThemeToggle></ThemeToggle>
   <div class="flex">
     <div class="w-4/5">
       <!-- TODO: reduce gap on after mobile breakpoint triggered -->
