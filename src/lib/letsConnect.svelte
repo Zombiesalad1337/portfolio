@@ -46,7 +46,7 @@
 				type="text"
 				bind:value={name}
 				placeholder="Enter your name"
-				class="appearance-none border-none bg-transparent pr-4rem text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
 		<div class="flex items-center justify-between border-b-2 border-white">
@@ -55,20 +55,27 @@
 				type="email"
 				bind:value={email}
 				placeholder="Enter your email"
-				class="appearance-none border-none bg-transparent pr-4rem text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
-
-		<select
-			bind:value={typeOfService}
-			required
-			class="w-full border-b border-gray-400 bg-black p-2 text-white focus:border-red-500"
-		>
-			<option value="" disabled>Select a service</option>
-			<option value="design">Design</option>
-			<option value="development">Development</option>
-			<option value="marketing">Marketing</option>
-		</select>
+		<div class="flex items-center justify-between border-b-2 border-white">
+			<label class="appearance-none pl-4rem text-left text-4xl font-bold text-white"
+				>Type of Service</label
+			>
+			<div class="pr-2rem">
+				<select
+					bind:value={typeOfService}
+					required
+					placeholder="Select a service"
+					class="round w-full appearance-none overflow-hidden border-none pr-2rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				>
+					<option value="" disabled selected hidden>Please Choose...</option>
+					<option value="design" class="text-center">Design</option>
+					<option value="development" class="text-center">Development too long</option>
+					<option value="marketing" class="text-center">Marketing</option>
+				</select>
+			</div>
+		</div>
 
 		<div class="space-y-2">
 			<input
@@ -102,3 +109,25 @@
 		<button on:click={submitForm} class="w-full rounded bg-red-500 p-4 text-white"> Submit </button>
 	</div>
 </section>
+
+<style>
+	select {
+		background: none;
+		padding: 0;
+	}
+
+	select,
+	select option {
+		background-color: black;
+	}
+
+	select option:hover {
+		box-shadow: 0 0 10px 100px red inset !important;
+		color: #ffffff;
+		/* background-color: red; */
+	}
+	select:invalid,
+	select option[value=''] {
+		color: #999999;
+	}
+</style>
