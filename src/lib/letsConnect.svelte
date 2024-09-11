@@ -4,8 +4,12 @@
 	let typeOfService = '';
 	let budget = '';
 	let message = '';
+	export let maxChars = 800;
 
-	const budgetOptions = ['5k-10k', '10k-50k'];
+	// Compute remaining characters
+	$: remainingChars = maxChars - message.length;
+
+	const budgetOptions = ['Under $3K', '$3K-$5K', '$5K-$15K', '$25K+'];
 
 	const setBudget = (value: string) => {
 		budget = value;
@@ -62,7 +66,8 @@
 			<label class="appearance-none pl-4rem text-left text-4xl font-bold text-white"
 				>Type of Service</label
 			>
-			<div class="pr-2rem">
+			<!-- TODO: hover background color. PAIN IN ASS TO STYLE THIS SHI -->
+			<div class="pr-4rem">
 				<select
 					bind:value={typeOfService}
 					required
@@ -77,20 +82,22 @@
 			</div>
 		</div>
 
-		<div class="space-y-2">
-			<input
-				type="text"
-				bind:value={budget}
-				placeholder="Budget"
-				required
-				class="w-full border-b border-gray-400 bg-black p-2 text-white focus:border-red-500"
-			/>
-			<div class="flex space-x-2">
+		<div class="space-y-1rem">
+			<div class="flex items-center justify-between border-b-2 border-white">
+				<label class="pl-4rem text-left text-4xl font-bold text-white">Budget</label>
+				<input
+					type="text"
+					bind:value={budget}
+					placeholder="Enter your budget"
+					class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				/>
+			</div>
+			<div class="flex justify-center space-x-1rem border-b-2 border-white pb-1rem">
 				{#each budgetOptions as option}
 					<button
 						type="button"
 						on:click={() => setBudget(option)}
-						class="rounded bg-red-500 p-2 text-white"
+						class="rounded-1rem border border-red px-1rem py-1rem font-neuemachina text-2xl text-red hover:scale-105"
 					>
 						{option}
 					</button>
@@ -98,15 +105,28 @@
 			</div>
 		</div>
 
-		<textarea
-			bind:value={message}
-			placeholder="Message (Max 500 characters)"
-			maxlength="500"
-			required
-			class="h-32 w-full border-b border-gray-400 bg-black p-2 text-white focus:border-red-500"
-		></textarea>
+		<div class="space-y-1rem border-b-2 border-white pb-1rem pl-4rem pr-4rem">
+			<label class="text-left text-4xl font-bold text-white">Message</label>
 
-		<button on:click={submitForm} class="w-full rounded bg-red-500 p-4 text-white"> Submit </button>
+			<div class="relative">
+				<textarea
+					bind:value={message}
+					placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
+					maxlength="800"
+					required
+					class="h-[12rem] w-full border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+				></textarea>
+
+				<!-- Character counter positioned at the bottom-right -->
+				<div class="pointer-events-none absolute bottom-1rem right-1rem text-lg text-white">
+					{remainingChars}
+				</div>
+			</div>
+		</div>
+
+		<button on:click={submitForm} class="w-full rounded-2xl bg-red py-0.5rem text-4.5xl text-white">
+			Submit
+		</button>
 	</div>
 </section>
 
