@@ -1,0 +1,31 @@
+
+Desktop:
+    1. Blog
+    2. Blog index
+    3. Main Page
+        - 
+    3. Project 
+    4. Project Index
+    6. Landing page - Desktop + Mobile
+    7. BG
+    8. Loading page
+    9. Error pages
+    10. T&C, PVP
+    11. Lottiefiles
+    12. Video playback
+    13. Page Transitions
+
+-September end
+
+1. AWS - 1 week
+2. CDN - 0.5 week
+3. DB - 1 week
+4. DDOS protection
+5. Mobile Layouts - 2 weeks
+8. Newsletter
+NPM security vulnerabilities
+
+
+-oct end
+
+100. PWA

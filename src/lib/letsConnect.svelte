@@ -20,6 +20,16 @@
 	};
 </script>
 
+<div class="flex items-center justify-between px-3.5rem">
+	<h1 class="text-bold font-pavelt text-8.5xl text-red">Let's Connect</h1>
+	<div class="text-left">
+		<p class="font-neuemachina text-4xl text-red">Email Address</p>
+		<div class="space-1rem flex items-center">
+			<p class="font-neuemachina text-4xl text-white">humastudios@gmail.com</p>
+		</div>
+	</div>
+</div>
+
 <section class="flex flex-col space-y-8 px-3.5rem md:flex-row md:space-x-8 md:space-y-0">
 	<!-- Left Column -->
 	<div class="w-full space-y-8 md:w-2/5">
