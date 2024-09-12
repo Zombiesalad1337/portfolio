@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Datepicker } from 'svelte-calendar';
 	let name = '';
 	let email = '';
 	let typeOfService = '';
@@ -18,6 +19,36 @@
 	const submitForm = () => {
 		// Validate and submit form logic here
 	};
+	const darkTheme = {
+		calendar: {
+			width: '30vw',
+			maxWidth: '100vw',
+			legend: {
+				height: '10vh'
+			},
+			shadow: '0px 10px 26px rgba(175, 19, 21,0.25)',
+			colors: {
+				text: {
+					primary: '#eeeeee',
+					highlight: '#ffffff'
+				},
+				background: {
+					primary: '#000000',
+					highlight: '#af1315',
+					hover: '#222'
+				},
+				border: 'rgba(175, 19, 21, 0.5)'
+			},
+			font: {
+				regular: '1.5em',
+				large: '37em'
+			},
+			grid: {
+				disabledOpacity: '.5',
+				outsiderOpacity: '.7'
+			}
+		}
+	};
 </script>
 
 <div class="flex items-center justify-between px-3.5rem">
@@ -34,10 +65,11 @@
 	<!-- Left Column -->
 	<div class="w-full space-y-8 md:w-2/5">
 		<!-- Calendar Placeholder -->
-		<div class="rounded bg-white p-4 text-black">
-			<p>Select Meeting Dates:</p>
-			<!-- Date range picker logic -->
-		</div>
+		<Datepicker
+			start={new Date(new Date().setDate(new Date().getDate() + 1))}
+			end={new Date(new Date().setDate(new Date().getDate() + 180))}
+			theme={darkTheme}
+		></Datepicker>
 
 		<!-- Social Media Section -->
 		<div>
