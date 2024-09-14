@@ -96,35 +96,33 @@
 
 	<!-- Right Column -->
 	<div class="w-full space-y-8 font-neuemachina md:w-3/5">
-		<div class="flex items-center justify-between border-b-2 border-white">
+		<div class="flex items-end justify-between border-b-2 border-white">
 			<label class="pl-4rem text-left text-4xl font-bold text-white">Name</label>
 			<input
 				type="text"
 				bind:value={name}
 				placeholder="Enter your name"
-				class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
-		<div class="flex items-center justify-between border-b-2 border-white">
+		<div class="flex items-end justify-between border-b-2 border-white">
 			<label class="pl-4rem text-left text-4xl font-bold text-white">Email</label>
 			<input
 				type="email"
 				bind:value={email}
 				placeholder="Enter your email"
-				class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+				class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
-		<div class="flex items-center justify-between border-b-2 border-white">
-			<label class="appearance-none pl-4rem text-left text-4xl font-bold text-white"
-				>Type of Service</label
-			>
+		<div class="flex items-end justify-between border-b-2 border-white">
+			<label class=" pl-4rem text-left text-4xl font-bold text-white">Type of Service</label>
 			<!-- TODO: hover background color. PAIN IN ASS TO STYLE THIS SHI -->
 			<div class="pr-4rem">
 				<select
 					bind:value={typeOfService}
 					required
 					placeholder="Select a service"
-					class="round w-full appearance-none overflow-hidden border-none pr-2rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+					class="round w-full appearance-none overflow-hidden border-none pr-2rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 				>
 					<option value="" disabled selected hidden>Please Choose...</option>
 					<option value="design" class="text-center">Design</option>
@@ -135,13 +133,13 @@
 		</div>
 
 		<div class="space-y-1rem">
-			<div class="flex items-center justify-between border-b-2 border-white">
+			<div class="flex items-end justify-between border-b-2 border-white">
 				<label class="pl-4rem text-left text-4xl font-bold text-white">Budget</label>
 				<input
 					type="text"
 					bind:value={budget}
 					placeholder="Enter your budget"
-					class="appearance-none border-none bg-transparent pr-4rem text-right text-4.5xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+					class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 				/>
 			</div>
 			<div class="flex justify-center space-x-1rem border-b-2 border-white pb-1rem">
