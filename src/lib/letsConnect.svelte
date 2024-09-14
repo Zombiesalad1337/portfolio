@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Datepicker } from 'svelte-calendar';
+	import { InlineCalendar } from 'svelte-calendar';
 	let name = '';
 	let email = '';
 	let typeOfService = '';
@@ -21,10 +21,14 @@
 	};
 	const darkTheme = {
 		calendar: {
-			width: '30vw',
+			width: '25vw',
+			height: '1vh',
 			maxWidth: '100vw',
+			border: {
+				radius: '40px'
+			},
 			legend: {
-				height: '10vh'
+				height: '45px'
 			},
 			shadow: '0px 10px 26px rgba(175, 19, 21,0.25)',
 			colors: {
@@ -40,8 +44,8 @@
 				border: 'rgba(175, 19, 21, 0.5)'
 			},
 			font: {
-				regular: '1.5em',
-				large: '37em'
+				regular: '1em',
+				large: '25em'
 			},
 			grid: {
 				disabledOpacity: '.5',
@@ -51,7 +55,7 @@
 	};
 </script>
 
-<div class="flex items-center justify-between px-3.5rem">
+<div class="mb-3.5rem flex items-center justify-between px-3.5rem">
 	<h1 class="text-bold font-pavelt text-8.5xl text-red">Let's Connect</h1>
 	<div class="text-left">
 		<p class="font-neuemachina text-4xl text-red">Email Address</p>
@@ -63,23 +67,31 @@
 
 <section class="flex flex-col space-y-8 px-3.5rem md:flex-row md:space-x-8 md:space-y-0">
 	<!-- Left Column -->
-	<div class="w-full space-y-8 md:w-2/5">
+	<div
+		class="flex w-full flex-col items-center justify-between space-y-8 align-middle font-neuemachina md:w-2/5"
+	>
 		<!-- Calendar Placeholder -->
-		<Datepicker
-			start={new Date(new Date().setDate(new Date().getDate() + 1))}
-			end={new Date(new Date().setDate(new Date().getDate() + 180))}
-			theme={darkTheme}
-		></Datepicker>
+		<div class="flex items-center justify-between"></div>
+		<div class="h-1/2">
+			<p class="mb-2 text-4xl text-white">Select Meeting Dates</p>
+			<!-- Social Media Icons Placeholder -->
+			<!-- TODO: set end to end of 6th month or next button breaks-->
+			<InlineCalendar
+				start={new Date(new Date().setDate(new Date().getDate() + 1))}
+				end={new Date(new Date().setDate(new Date().getDate() + 180))}
+				theme={darkTheme}
+			></InlineCalendar>
+		</div>
 
 		<!-- Social Media Section -->
-		<div>
-			<p class="mb-2 text-red-500">SOCIAL MEDIA</p>
+		<div class="flex h-1/2 flex-col items-center justify-center">
+			<p class="font-pavelt text-6xl text-white">SOCIAL MEDIA</p>
 			<div class="grid grid-cols-2 gap-4">
 				<!-- Social Media Icons Placeholder -->
-				<div class="rounded bg-white p-4 text-center text-black">Icon 1</div>
-				<div class="rounded bg-white p-4 text-center text-black">Icon 2</div>
-				<div class="rounded bg-white p-4 text-center text-black">Icon 3</div>
-				<div class="rounded bg-white p-4 text-center text-black">Icon 4</div>
+				<img src="/icons/upwork.svg" class="w-[15rem]" />
+				<img src="/icons/upwork.svg" class="w-[15rem]" />
+				<img src="/icons/upwork.svg" class="w-[15rem]" />
+				<img src="/icons/upwork.svg" class="w-[15rem]" />
 			</div>
 		</div>
 	</div>
