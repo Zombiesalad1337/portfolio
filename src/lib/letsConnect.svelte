@@ -65,13 +65,11 @@
 	</div>
 </div>
 
-<section class="flex flex-col space-y-8 px-3.5rem md:flex-row md:space-x-8 md:space-y-0">
+<section class="flex flex-col px-3.5rem md:flex-row md:space-x-8 md:space-y-0">
 	<!-- Left Column -->
-	<div
-		class="flex w-full flex-col items-center justify-between space-y-8 align-middle font-neuemachina md:w-2/5"
-	>
+	<div class="flex w-full flex-col items-center justify-start font-neuemachina md:w-2/5">
 		<!-- Calendar Placeholder -->
-		<div class="flex items-center justify-between"></div>
+		<div class="flex items-center justify-start"></div>
 		<div class="h-1/2">
 			<p class="mb-2 text-4xl text-white">Select Meeting Dates</p>
 			<!-- Social Media Icons Placeholder -->
