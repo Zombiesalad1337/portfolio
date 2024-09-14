@@ -164,7 +164,7 @@
 					placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
 					maxlength="800"
 					required
-					class="h-[12rem] w-full border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+					class="h-[12rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
 				></textarea>
 
 				<!-- Character counter positioned at the bottom-right -->
