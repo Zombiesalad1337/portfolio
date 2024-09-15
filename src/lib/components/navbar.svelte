@@ -39,7 +39,7 @@
 <nav
 	class="navbar {showNavbar
 		? 'visible'
-		: ''} grid w-full grid-cols-12 items-center gap-2rem bg-white px-3.5rem dark:bg-black"
+		: ''} grid w-full grid-cols-12 items-center gap-2rem bg-white px-3.5rem transition-colors duration-300 dark:bg-black"
 >
 	<div class="col-span-4">
 		<!-- TODO: GET SVG OF LOGO, then animate -->

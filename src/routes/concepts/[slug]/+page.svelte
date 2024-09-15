@@ -4,6 +4,7 @@
 	import BlogCard from '$lib/components/blogCard.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
 	import ThemeToggle from '$lib/components/themeToggle.svelte';
+	import BlogSocialIcon from '$lib/components/blogSocialIcon.svelte';
 
 	export let data: any;
 	$: headingSelector =
@@ -20,6 +21,7 @@
 	<div class="flex font-neuemachina">
 		<div class="w-4/5">
 			<!-- TODO: reduce gap on after mobile breakpoint triggered -->
+			<!-- TODO: rhs lighter font -->
 			<span class="rounded-full bg-red px-2rem py-1rem text-center text-xl font-medium text-white">
 				Resources / {data.metadata.category}
 			</span>
@@ -32,23 +34,21 @@
 
 	<div class="">
 		<div class="flex pb-20 pt-20">
+			<!-- TODO: TEST: for multiline headings -->
 			<div class="w-4/5">
 				<p class="font-neuemachina text-6.5xl font-medium text-red">{data.metadata.title}</p>
 			</div>
 			<div class="flex w-1/5 flex-col items-end">
 				<div class="mt-auto">
-					<div class="flex items-center font-neuemachina text-xl font-medium">
+					<div class="flex items-center space-x-0.5rem font-neuemachina text-xl">
 						<p>Share:</p>
 						<!-- TODO: Add dynamic sharable link logic -->
-						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red"
-							>f</button
-						>
-						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red"
-							>in</button
-						>
-						<button class="ml-2 flex h-12 w-12 items-center justify-center rounded-full bg-red"
-							>x</button
-						>
+						<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+						></BlogSocialIcon>
+						<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+						></BlogSocialIcon>
+						<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+						></BlogSocialIcon>
 					</div>
 				</div>
 			</div>
