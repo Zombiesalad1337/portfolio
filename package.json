@@ -35,7 +35,7 @@
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"prettier-plugin-tailwindcss": "^0.5.1",
-		"svelte": "^4.2.7",
+		"svelte": "^4.2.19",
 		"svelte-calendar": "^3.1.6",
 		"svelte-carousel": "^1.0.25",
 		"svelte-check": "^3.6.0",
@@ -48,6 +48,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@svelte-plugins/datepicker": "^1.0.9",
 		"bits-ui": "^0.21.7",
 		"clsx": "^2.1.1",
 		"embla-carousel-svelte": "^8.0.4",
@@ -58,6 +59,7 @@
 		"svelte-toc": "^0.5.8",
 		"tailwind-merge": "^2.3.0",
 		"tailwind-variants": "^0.2.1",
-		"three": "^0.167.1"
+		"three": "^0.167.1",
+		"vanilla-calendar-pro": "^2.9.10"
 	}
 }

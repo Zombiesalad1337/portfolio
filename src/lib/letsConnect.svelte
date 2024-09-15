@@ -1,5 +1,17 @@
 <script lang="ts">
 	import { InlineCalendar } from 'svelte-calendar';
+	// import { DatePicker } from '@svelte-plugins/datepicker';
+	let companyEmail: string = 'test@gmail.com';
+
+	// Function to copy the email to clipboard
+	const copyToClipboard = async () => {
+		try {
+			await navigator.clipboard.writeText(companyEmail);
+			alert('Email copied to clipboard!');
+		} catch (err) {
+			console.error('Failed to copy: ', err);
+		}
+	};
 	let name = '';
 	let email = '';
 	let typeOfService = '';
@@ -7,6 +19,10 @@
 	let message = '';
 	export let maxChars = 800;
 
+	let isOpen: Boolean = true;
+	let startDate = new Date();
+	let dateFormat = 'MM/dd/yy';
+	let formattedStartDate = '';
 	// Compute remaining characters
 	$: remainingChars = maxChars - message.length;
 
@@ -19,18 +35,18 @@
 	const submitForm = () => {
 		// Validate and submit form logic here
 	};
+
 	const darkTheme = {
 		calendar: {
-			width: '25vw',
-			height: '1vh',
+			width: '20vw',
 			maxWidth: '100vw',
 			border: {
 				radius: '40px'
 			},
 			legend: {
-				height: '45px'
+				height: '2rem'
 			},
-			shadow: '0px 10px 26px rgba(175, 19, 21,0.25)',
+			shadow: '0px 20px 52px rgba(175, 19, 21,0.25)',
 			colors: {
 				text: {
 					primary: '#eeeeee',
@@ -59,9 +75,18 @@
 	<h1 class="text-bold font-pavelt text-8.5xl text-red">Let's Connect</h1>
 	<div class="text-left">
 		<p class="font-neuemachina text-4xl text-red">Email Address</p>
-		<div class="space-1rem flex items-center">
-			<p class="font-neuemachina text-4xl text-white">humastudios@gmail.com</p>
-		</div>
+		<!-- Clicking on the email or button will copy it -->
+		<!-- TODO: add tooltip and toast to button -->
+		<button
+			class="space-1rem flex items-center justify-start rounded p-2 text-red transition duration-150 hover:scale-105"
+			on:click={copyToClipboard}
+		>
+			<!-- Copy Icon (can be SVG or icon font) -->
+			<img src="/icons/copyButton.svg" class="w-3.5rem" />
+			<p class="cursor-pointer font-neuemachina text-4xl text-white">
+				{companyEmail}
+			</p>
+		</button>
 	</div>
 </div>
 
@@ -71,14 +96,17 @@
 		<!-- Calendar Placeholder -->
 		<div class="flex items-center justify-start"></div>
 		<div class="h-1/2">
-			<p class="mb-2 text-4xl text-white">Select Meeting Dates</p>
+			<!-- <p class="mb-2 text-4xl text-white">Select Meeting Dates</p> -->
 			<!-- Social Media Icons Placeholder -->
 			<!-- TODO: set end to end of 6th month or next button breaks-->
-			<InlineCalendar
+			<!-- <InlineCalendar
 				start={new Date(new Date().setDate(new Date().getDate() + 1))}
 				end={new Date(new Date().setDate(new Date().getDate() + 180))}
 				theme={darkTheme}
-			></InlineCalendar>
+			></InlineCalendar> -->
+			<!-- <DatePicker bind:isOpen bind:startDate enabledDates={['1/14/23:3/16/24']} enableFutureDates>
+				<input type="date" placeholder="Select date" bind:value={formattedStartDate} />
+			</DatePicker> -->
 		</div>
 
 		<!-- Social Media Section -->
@@ -95,8 +123,8 @@
 	</div>
 
 	<!-- Right Column -->
-	<div class="w-full space-y-8 font-neuemachina md:w-3/5">
-		<div class="flex items-end justify-between border-b-2 border-white">
+	<div class="w-full space-y-3rem font-neuemachina md:w-3/5">
+		<div class="flex items-end justify-between space-y-2rem border-b-2 border-white">
 			<label class="pl-4rem text-left text-4xl font-bold text-white">Name</label>
 			<input
 				type="text"
@@ -164,7 +192,7 @@
 					placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
 					maxlength="800"
 					required
-					class="h-[12rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+					class="h-[16rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
 				></textarea>
 
 				<!-- Character counter positioned at the bottom-right -->
