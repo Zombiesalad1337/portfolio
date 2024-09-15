@@ -57,13 +57,17 @@
 		<img
 			src={data.metadata.headerImage}
 			alt="Description of image"
-			class="mb-10 h-auto max-h-[50vh] w-full object-cover"
+			class="mb-4rem h-auto max-h-[46rem] w-full object-cover"
 		/>
 
 		<div class="prose mb-20 flex !max-w-none">
 			<div class="mr-10 w-1/5">
-				<Toc />
-				<div>Find me in the alps</div>
+				<Toc>
+					<p slot="title" class="font-red font-neuemachina text-2xl font-bold text-red">
+						Table of Contents:
+					</p>
+				</Toc>
+
 			</div>
 			<div class="w-4/5">
 				<svelte:component this={data.content} {...data.metadata} />
