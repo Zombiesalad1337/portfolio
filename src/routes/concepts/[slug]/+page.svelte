@@ -7,6 +7,8 @@
 	import BlogSocialIcon from '$lib/components/blogSocialIcon.svelte';
 
 	export let data: any;
+	let headings: HTMLHeadingElement[] = [];
+
 	$: headingSelector =
 		{ '/contributing': `main > h2`, '/changelog': `main > h4` }[$page.url.pathname] ??
 		`main :where(h2, h3)`;
@@ -62,12 +64,37 @@
 
 		<div class="prose mb-20 flex !max-w-none">
 			<div class="mr-10 w-1/5">
-				<Toc>
-					<p slot="title" class="font-red font-neuemachina text-2xl font-bold text-red">
-						Table of Contents:
-					</p>
-				</Toc>
+				<Toc bind:headings>
+					<div slot="title">
+						<button
+							class="rounded-full bg-red px-4rem py-1rem font-pavelt text-lg text-white transition duration-150 hover:scale-105"
+						>
+							Go Back
+						</button>
 
+						<div class="mx-auto mt-2.5rem h-[1px] bg-gray-800"></div>
+
+						<p class="font-red font-neuemachina text-2xl font-bold text-red">Table of Contents:</p>
+					</div>
+					<span let:idx let:heading slot="toc-item">
+						{#if idx < headings.length - 1}
+							{heading.innerText}
+						{:else}
+							{heading.innerText}
+							<div class="pointer-events-none">
+								<div class="mx-auto mb-1rem mt-2.5rem h-[1px] bg-gray-800"></div>
+								<p class="font-gray">Share this article</p>
+								<div class="flex justify-start space-x-1rem"></div>
+								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+								></BlogSocialIcon>
+								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+								></BlogSocialIcon>
+								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
+								></BlogSocialIcon>
+							</div>
+						{/if}
+					</span>
+				</Toc>
 			</div>
 			<div class="w-4/5">
 				<svelte:component this={data.content} {...data.metadata} />
