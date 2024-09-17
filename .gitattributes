@@ -1,0 +1,24 @@
+# Normalize all text files to LF (Linux/Unix style) in the repo
+* text=auto
+
+# Explicitly declare text files we want to be normalized
+# and converted to LF on check-in
+*.js       text
+*.ts       text
+*.svelte   text
+*.html     text
+*.css      text
+*.md       text
+*.json     text
+*.yml      text
+*.yaml     text
+
+# Binary files should be untouched
+*.png      binary
+*.jpg      binary
+*.gif      binary
+*.woff     binary
+*.woff2    binary
+*.ttf      binary
+*.mp4      binary
+*.mp3      binary
