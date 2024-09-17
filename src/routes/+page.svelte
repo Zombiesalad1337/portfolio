@@ -5,8 +5,6 @@
 	import Navbar from '$lib/components/navbar.svelte';
 	import { SvelteToast, toast } from '@zerodevx/svelte-toast';
 	import ProcessCard from '$lib/components/processCard.svelte';
-	import ProcessCardDeprecated from '$lib/components/processCardDeprecated.svelte';
-	import ServiceCardDeprecated from '$lib/components/serviceCardDeprecated.svelte';
 	import ServiceCard from '$lib/components/serviceCard.svelte';
 	import FeaturedProject from '$lib/components/featuredProject.svelte';
 	import FeaturedProjectsList from '$lib/components/featuredProjectsList.svelte';
