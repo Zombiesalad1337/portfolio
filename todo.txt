@@ -1,8 +1,8 @@
 
 Desktop:
-    1. Blog
+    1. Blog - blog styling, light theme components
     2. Blog index
-    3. Main Page
+    3. Main Page - calendar, footer text effect
         - 
     3. Project 
     4. Project Index
