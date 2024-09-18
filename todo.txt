@@ -25,6 +25,22 @@ Desktop:
 4. DDOS protection
 5. Mobile Layouts - 2 weeks
 8. Newsletter
+9. SEO optimizations:
+    SSR
+    Meta tags - head management
+    SEO friendly URLs
+    Proper content layout - proper use of html tags - h1, p, h2, article etc
+    Performance optimizations
+        -  srcset
+        - lazyloading
+        - static site generation
+    Mobile friendliness
+    Open Graphs and twitter cards for sharing
+        - provide metadata to social media platforms
+    Canonical rel links?
+    XML sitemap
+    Structed Data (schema.org) - provides info to search engines
+
 NPM security vulnerabilities
 
 
