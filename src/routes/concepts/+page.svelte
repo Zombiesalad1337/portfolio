@@ -1,28 +1,22 @@
 <script lang="ts">
+	import staticData from '$lib/staticData.json';
 
-	import BlogLayout from "$lib/components/blogLayout.svelte";
-    
-    import staticData from '$lib/staticData.json';
+	// let blogData = JSON.parse(staticData);
 
-    // let blogData = JSON.parse(staticData);
+	import TocLayout from '$lib/components/tocLayout.svelte';
 
-    import TocLayout from "$lib/components/tocLayout.svelte";
+	import Toc from 'svelte-toc';
 
-    import Toc from 'svelte-toc';
+	import BlogCard from '$lib/components/blogCard.svelte';
 
-  import BlogCard from "$lib/components/blogCard.svelte";
-
-  export let data: { title: string; date: string; slug: string }[];
-  $: console.log(data);
+	export let data: { title: string; date: string; slug: string }[];
+	$: console.log(data);
 </script>
-
 
 <!-- <BlogLayout blog={staticData.sections}>
 </BlogLayout> -->
 
 <!-- <TocLayout></TocLayout> -->
-
-
 
 <a href="/" class=""> Take me home, country roads</a>
 <h1 class="text-3xl">Blog Posts</h1>
@@ -34,13 +28,12 @@
   {/each}
 </ul> -->
 
-<div class="mx-20 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  {#each data.blogs as blog}
-    <div>
-      <BlogCard {...blog} />
-    </div>
-  {/each}
+<div class="mx-20 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+	{#each data.blogs as blog}
+		<div>
+			<BlogCard {...blog} />
+		</div>
+	{/each}
 </div>
-
 
 TEST | TEST | TEST

@@ -183,7 +183,7 @@
 			</div>
 		</div>
 
-		<div class="space-y-1rem border-b-2 border-white pb-1rem pl-4rem pr-4rem">
+		<div class="pr-0rem space-y-1rem border-b-2 border-white pb-1rem pl-4rem">
 			<label class="text-left text-4xl font-bold text-white">Message</label>
 
 			<div class="relative">
