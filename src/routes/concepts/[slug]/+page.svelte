@@ -60,7 +60,7 @@
 			class="mb-4rem h-auto max-h-[46rem] w-full object-cover"
 		/>
 
-		<div class="prose mb-20 flex !max-w-none">
+		<div class="prose mb-[8rem] mt-[12rem] flex !max-w-none">
 			<div class="w-[30%]">
 				<Toc
 					bind:headings
@@ -80,7 +80,7 @@
 
 						<p class="font-red font-neuemachina text-2xl font-bold text-red">Table of Contents:</p>
 					</div>
-					<span let:idx let:heading slot="toc-item">
+					<span let:idx let:heading slot="toc-item" class=" dark:text-white">
 						{heading.innerText}
 					</span>
 				</Toc>
@@ -90,7 +90,7 @@
 			</div>
 		</div>
 
-		<h1 class="mb-5 text-4xl">Related Resources</h1>
+		<h1 class="mb-6rem font-pavelt text-8.5xl text-red">Related Resources</h1>
 		<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 			{#each data.blogs.slice(0, 3) as blog}
 				<div>
