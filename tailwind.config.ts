@@ -24,6 +24,7 @@ const textSizes = {
 	'4.5xl': '2.5rem', // 40px
 	'5xl': '3rem', // 48px
 	'5.5xl': '3.5rem', // 56px
+	'5.75xl': '3.75rem', // 56px
 	'6xl': '4rem', // 64px
 	'6.5xl': '4.5rem', // 72px
 	'7xl': '5rem', // 80px
@@ -32,7 +33,11 @@ const textSizes = {
 	'8.5xl': '6.5rem', // 104px
 	'9xl': '7rem', // 112px
 	'9.5xl': '7.5rem', // 120px
-	'10xl': '8rem' // 128px
+	'10xl': '8rem', // 128px
+	'display1': '3.75rem', // 60
+	'display2': '3.125rem', // 50
+	'display3': '2.5rem', // 40
+	'display4': '2.125rem', // 34
 };
 
 const generateSizes = () => {

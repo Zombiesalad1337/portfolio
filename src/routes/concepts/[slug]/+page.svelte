@@ -9,9 +9,7 @@
 	export let data: any;
 	let headings: HTMLHeadingElement[] = [];
 
-	$: headingSelector =
-		{ '/contributing': `main > h2`, '/changelog': `main > h4` }[$page.url.pathname] ??
-		`main :where(h2, h3)`;
+	$: headingSelector = `:is(h2, h3, h4):not(.toc-exclude)`;
 </script>
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
@@ -63,8 +61,14 @@
 		/>
 
 		<div class="prose mb-20 flex !max-w-none">
-			<div class="mr-10 w-1/5">
-				<Toc bind:headings>
+			<div class="w-[30%]">
+				<Toc
+					bind:headings
+					{headingSelector}
+					--toc-li-hover-color="#af1315"
+					--toc-active-bg="#af1315f1"
+					--toc-active-border-radius="0"
+				>
 					<div slot="title">
 						<button
 							class="rounded-full bg-red px-4rem py-1rem font-pavelt text-lg text-white transition duration-150 hover:scale-105"
@@ -77,26 +81,11 @@
 						<p class="font-red font-neuemachina text-2xl font-bold text-red">Table of Contents:</p>
 					</div>
 					<span let:idx let:heading slot="toc-item">
-						{#if idx < headings.length - 1}
-							{heading.innerText}
-						{:else}
-							{heading.innerText}
-							<div class="pointer-events-none">
-								<div class="mx-auto mb-1rem mt-2.5rem h-[1px] bg-gray-800"></div>
-								<p class="font-gray">Share this article</p>
-								<div class="flex justify-start space-x-1rem"></div>
-								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
-								></BlogSocialIcon>
-								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
-								></BlogSocialIcon>
-								<BlogSocialIcon imgSrc={'/icons/facebook.svg'} url="https://www.youtube.com"
-								></BlogSocialIcon>
-							</div>
-						{/if}
+						{heading.innerText}
 					</span>
 				</Toc>
 			</div>
-			<div class="w-4/5">
+			<div class="blog mx-2rem w-[70%]">
 				<svelte:component this={data.content} {...data.metadata} />
 			</div>
 		</div>

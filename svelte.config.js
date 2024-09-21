@@ -13,6 +13,10 @@ const config = {
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.svx'],
+			layout: {
+				blog: "./src/lib/components/blogLayout.svelte",
+				_: "./src/lib/components/blogLayout.svelte"
+	}
 			// Additional mdsvex configuration
 		})
 	],
