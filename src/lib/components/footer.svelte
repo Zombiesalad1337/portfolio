@@ -82,7 +82,12 @@
 {#if $isDarkMode}
 	<h1 class="flicker text-center font-pavelt text-red">STUDIOS</h1>
 {:else}
-	<h1 class="text-center font-pavelt text-red">STUDIOS</h1>
+	<h1
+		class="bg-cover bg-clip-text text-center font-pavelt text-transparent"
+		style="background-image: url('/yellowClouds.gif');"
+	>
+		STUDIOS
+	</h1>
 {/if}
 
 <style>
