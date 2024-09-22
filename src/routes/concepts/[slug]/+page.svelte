@@ -107,4 +107,6 @@
 	</div>
 </div>
 
-<Footer></Footer>
+<div class=" dark:bg-black">
+	<Footer></Footer>
+</div>

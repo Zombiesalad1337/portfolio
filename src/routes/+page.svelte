@@ -26,6 +26,7 @@
 	import Footer from '$lib/components/footer.svelte';
 	import LetsConnect from '$lib/letsConnect.svelte';
 	import NewsLetterCta from '$components/newsLetterCTA.svelte';
+	import { isDarkMode } from '$lib/stores/theme';
 
 	let isTransitioning = false;
 	let transitionQueue: number[] = [];
@@ -79,6 +80,7 @@
 	}
 
 	onMount(() => {
+		isDarkMode.set(true);
 		document.documentElement.classList.add('dark');
 	});
 </script>
