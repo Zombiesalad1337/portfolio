@@ -5,6 +5,10 @@
 	import Navbar from '$lib/components/navbar.svelte';
 	import ThemeToggle from '$lib/components/themeToggle.svelte';
 	import BlogSocialIcon from '$lib/components/blogSocialIcon.svelte';
+	import NewsLetterCta from '$components/newsLetterCTA.svelte';
+	import staticData from '$lib/staticData.json';
+	import Footer from '$components/footer.svelte';
+	import ConceptCard from '$lib/components/conceptCard.svelte';
 
 	export let data: any;
 	let headings: HTMLHeadingElement[] = [];
@@ -13,7 +17,7 @@
 </script>
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
-<div class="bg-white px-3.5rem transition-colors duration-300 ease-in-out dark:bg-black">
+<div class="transition-background bg-white px-3.5rem duration-[300ms] ease-in-out dark:bg-black">
 	<div class="flex justify-end py-5rem">
 		<ThemeToggle></ThemeToggle>
 	</div>
@@ -91,12 +95,16 @@
 		</div>
 
 		<h1 class="mb-6rem font-pavelt text-8.5xl text-red">Related Resources</h1>
-		<div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-			{#each data.blogs.slice(0, 3) as blog}
-				<div>
-					<BlogCard {...blog} />
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+			{#each staticData.concepts as concept}
+				<div class="col-span-4">
+					<ConceptCard {...concept}></ConceptCard>
 				</div>
 			{/each}
 		</div>
+
+		<NewsLetterCta></NewsLetterCta>
 	</div>
 </div>
+
+<Footer></Footer>

@@ -37,9 +37,9 @@
 
 <!-- TODO: FIX: Submit broke after moving to component -->
 <div class="w-full py-20">
-	<h1 class="text-center font-pavelt text-5xl text-white underline">Let's Know the World Better</h1>
+	<h1 class="text-center font-pavelt text-5xl text-red underline">Let's Know the World Better</h1>
 
-	<div class="mb-2rem mt-1rem text-center font-neuemachina text-4.5xl text-white">
+	<div class="mb-2rem mt-1rem text-center font-neuemachina text-4.5xl text-black dark:text-white">
 		<h1>Subscribe and receive our</h1>
 		<h1>Newsletter to follow the news about</h1>
 	</div>
@@ -50,7 +50,7 @@
 				<input
 					name="email"
 					type="email"
-					class="h-20 w-full rounded-[4rem] border border-red bg-black bg-opacity-50 pl-[2rem] pr-[4rem] font-neuemachina text-[2rem] text-white outline-none transition-all duration-300 ease-in-out focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+					class="h-20 w-full rounded-[4rem] border border-red pl-[2rem] pr-[4rem] font-neuemachina text-[2rem] text-black outline-none transition-all duration-300 ease-in-out focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0 dark:bg-black dark:bg-opacity-50 dark:text-white"
 					placeholder="Your Email"
 				/>
 				<button
