@@ -24,7 +24,7 @@ const textSizes = {
 	'4.5xl': '2.5rem', // 40px
 	'5xl': '3rem', // 48px
 	'5.5xl': '3.5rem', // 56px
-	'5.75xl': '3.75rem', // 56px
+	'5.75xl': '3.75rem', // 60px 
 	'6xl': '4rem', // 64px
 	'6.5xl': '4.5rem', // 72px
 	'7xl': '5rem', // 80px
