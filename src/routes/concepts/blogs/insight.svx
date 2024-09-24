@@ -15,7 +15,7 @@ layout: blog
 
 # When launching a business, understanding your potential market size is key. This is where the TAM SAM SOM analysis comes in.
 
-### Introduction
+## Introduction
 
 When it comes to launching a business, one of the most important things you need to understdis your market size. Without a clear understanding of the size of your market, it’s impossible to know whether your business idea is viable, how big you can realisticall expect to grow, and what kind of competitors you might face. This is where TAM SAM SOM analysis comes in.
 
@@ -48,6 +48,6 @@ To calculate your SOM, you’ll need to consider factors such as your marketing 
   title="SMA SMAKSS LOK" 
 />
 
-### Conclusion
+## Conclusion
 Understanding your market size is crucial for launching and growing a successful business. TAM, SAM, and SOM analysis can help you get a better idea of your potential customer base and how big you can realistically expect to grow. By carefully calculating each of these numbers and analyzing your competition, you can make more informed decisions about your business strategy and set more accurate goals for growth. So, take the time to crunch the numbers, and use this information to guide your business decisions.
 
