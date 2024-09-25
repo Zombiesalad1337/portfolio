@@ -9,6 +9,8 @@
 	import staticData from '$lib/staticData.json';
 	import Footer from '$components/footer.svelte';
 	import ConceptCard from '$lib/components/conceptCard.svelte';
+	import LetsConnect from '$lib/letsConnect.svelte';
+	import { ssrImportKey } from 'vite/runtime';
 
 	export let data: any;
 	let headings: HTMLHeadingElement[] = [];
@@ -104,6 +106,7 @@
 		</div>
 
 		<NewsLetterCta></NewsLetterCta>
+		<LetsConnect simplified={true}></LetsConnect>
 	</div>
 </div>
 
