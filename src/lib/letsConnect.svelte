@@ -18,6 +18,7 @@
 	let budget = '';
 	let message = '';
 	export let maxChars = 800;
+	export let simplified = false;
 
 	let isOpen: Boolean = true;
 	let startDate = new Date();
@@ -110,16 +111,18 @@
 		</div>
 
 		<!-- Social Media Section -->
-		<div class="flex h-1/2 flex-col items-center justify-center">
-			<p class="font-pavelt text-6xl text-white">SOCIAL MEDIA</p>
-			<div class="grid grid-cols-2 gap-4">
-				<!-- Social Media Icons Placeholder -->
-				<img src="/icons/upwork.svg" class="w-[15rem]" />
-				<img src="/icons/upwork.svg" class="w-[15rem]" />
-				<img src="/icons/upwork.svg" class="w-[15rem]" />
-				<img src="/icons/upwork.svg" class="w-[15rem]" />
+		{#if !simplified}
+			<div class="flex h-1/2 flex-col items-center justify-center">
+				<p class="font-pavelt text-6xl text-white">SOCIAL MEDIA</p>
+				<div class="grid grid-cols-2 gap-4">
+					<!-- Social Media Icons Placeholder -->
+					<img src="/icons/upwork.svg" class="w-[15rem]" />
+					<img src="/icons/upwork.svg" class="w-[15rem]" />
+					<img src="/icons/upwork.svg" class="w-[15rem]" />
+					<img src="/icons/upwork.svg" class="w-[15rem]" />
+				</div>
 			</div>
-		</div>
+		{/if}
 	</div>
 
 	<!-- Right Column -->
@@ -160,47 +163,49 @@
 			</div>
 		</div>
 
-		<div class="space-y-1rem">
-			<div class="flex items-end justify-between border-b-2 border-white">
-				<label class="pl-4rem text-left text-4xl font-bold text-white">Budget</label>
-				<input
-					type="text"
-					bind:value={budget}
-					placeholder="Enter your budget"
-					class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
-				/>
-			</div>
-			<div class="flex justify-center space-x-1rem border-b-2 border-white pb-1rem">
-				{#each budgetOptions as option}
-					<button
-						type="button"
-						on:click={() => setBudget(option)}
-						class="rounded-1rem border border-red px-1rem py-1rem font-neuemachina text-2xl text-red hover:scale-105"
-					>
-						{option}
-					</button>
-				{/each}
-			</div>
-		</div>
-
-		<div class="pr-0rem space-y-1rem border-b-2 border-white pb-1rem pl-4rem">
-			<label class="text-left text-4xl font-bold text-white">Message</label>
-
-			<div class="relative">
-				<textarea
-					bind:value={message}
-					placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
-					maxlength="800"
-					required
-					class="h-[16rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
-				></textarea>
-
-				<!-- Character counter positioned at the bottom-right -->
-				<div class="pointer-events-none absolute bottom-1rem right-1rem text-lg text-white">
-					{remainingChars}
+		{#if !simplified}
+			<div class="space-y-1rem">
+				<div class="flex items-end justify-between border-b-2 border-white">
+					<label class="pl-4rem text-left text-4xl font-bold text-white">Budget</label>
+					<input
+						type="text"
+						bind:value={budget}
+						placeholder="Enter your budget"
+						class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
+					/>
+				</div>
+				<div class="flex justify-center space-x-1rem border-b-2 border-white pb-1rem">
+					{#each budgetOptions as option}
+						<button
+							type="button"
+							on:click={() => setBudget(option)}
+							class="rounded-1rem border border-red px-1rem py-1rem font-neuemachina text-2xl text-red hover:scale-105"
+						>
+							{option}
+						</button>
+					{/each}
 				</div>
 			</div>
-		</div>
+
+			<div class="pr-0rem space-y-1rem border-b-2 border-white pb-1rem pl-4rem">
+				<label class="text-left text-4xl font-bold text-white">Message</label>
+
+				<div class="relative">
+					<textarea
+						bind:value={message}
+						placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
+						maxlength="800"
+						required
+						class="h-[16rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+					></textarea>
+
+					<!-- Character counter positioned at the bottom-right -->
+					<div class="pointer-events-none absolute bottom-1rem right-1rem text-lg text-white">
+						{remainingChars}
+					</div>
+				</div>
+			</div>
+		{/if}
 
 		<button on:click={submitForm} class="w-full rounded-2xl bg-red py-0.5rem text-4.5xl text-white">
 			Submit

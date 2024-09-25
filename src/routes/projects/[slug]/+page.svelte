@@ -3,6 +3,7 @@
 	import Navbar from '$components/navbar.svelte';
 	import ProjectBrandMarquee from '$components/projectBrandMarquee.svelte';
 	import ProjectStaticBanner from '$components/projectStaticBanner.svelte';
+	import LetsConnect from '$lib/letsConnect.svelte';
 
 	// TODO: load
 	let staticBannerUrl: string = '/blog-1.jpg';
@@ -35,5 +36,6 @@
 		<p class="text-5xl font-medium text-white">{description}</p>
 	</div>
 
+	<LetsConnect simplified={true}></LetsConnect>
 	<Footer></Footer>
 </div>
