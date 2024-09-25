@@ -72,6 +72,7 @@
 	};
 </script>
 
+<!-- TODO: add theme -->
 <div class="mb-3.5rem flex items-center justify-between px-3.5rem">
 	<h1 class="text-bold font-pavelt text-8.5xl text-red">Let's Connect</h1>
 	<div class="text-left">
