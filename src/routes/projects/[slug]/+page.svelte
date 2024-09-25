@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Footer from '$components/footer.svelte';
 	import Navbar from '$components/navbar.svelte';
+	import ProjectBrandMarquee from '$components/projectBrandMarquee.svelte';
 	import ProjectStaticBanner from '$components/projectStaticBanner.svelte';
 
 	// TODO: load
@@ -27,6 +28,8 @@
 	<Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
 
 	<ProjectStaticBanner imageUrl={staticBannerUrl} {lines}></ProjectStaticBanner>
+
+	<ProjectBrandMarquee text={'NIKE'}></ProjectBrandMarquee>
 
 	<div class="mx-[10rem] my-[15rem] max-w-[90ch]">
 		<p class="text-5xl font-medium text-white">{description}</p>
