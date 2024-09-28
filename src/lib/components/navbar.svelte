@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+
 	export let showAtScrollYMultiplier: number = 0.9;
 	export let initiallyVisible: boolean = false;
-	let activeLink = 'Services';
 
+	let activeLink = 'Services';
 	let navs = ['Services'];
 	let showNavbar: boolean = initiallyVisible;
 	let lastScrollTop: number = 0;
+	let inactivityTimeout: NodeJS.Timeout | null = null;
+
 	onMount(() => {
 		const handleScroll = () => {
 			if (initiallyVisible && window.scrollY === 0) {
@@ -23,12 +26,33 @@
 				showNavbar = false;
 			}
 			lastScrollTop = window.scrollY;
+			resetInactivityTimer();
+		};
+
+		const handleMouseMove = () => {
+			resetInactivityTimer();
+		};
+
+		const resetInactivityTimer = () => {
+			if (inactivityTimeout) {
+				clearTimeout(inactivityTimeout);
+			}
+			if (showNavbar) {
+				inactivityTimeout = setTimeout(() => {
+					showNavbar = false;
+				}, 2000); // Set to 2 seconds
+			}
 		};
 
 		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('mousemove', handleMouseMove);
 
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('mousemove', handleMouseMove);
+			if (inactivityTimeout) {
+				clearTimeout(inactivityTimeout);
+			}
 		};
 	});
 </script>
