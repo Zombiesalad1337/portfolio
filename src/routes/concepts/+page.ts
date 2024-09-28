@@ -17,10 +17,11 @@
 //   };
 // }
 
-import { blogMetadata } from './blogs/metadata.js';
+import staticData from '$lib/staticData.json';
 
 export async function load() {
-  return {
-    blogs: blogMetadata
-  };
+	console.log('concepts: ' + staticData.concepts);
+	return {
+		blogs: staticData.concepts
+	};
 }
