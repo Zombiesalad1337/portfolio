@@ -48,6 +48,8 @@
 		'/blog-5.jpg',
 		'/blog-6.jpg'
 	];
+
+	let videoSrc: string = '/berserkIntro.mp4';
 </script>
 
 <div class="bg-black">
@@ -71,6 +73,12 @@
 				<VerticalSlideshow images={verticalImages}></VerticalSlideshow>
 			</div>
 		</div>
+	</div>
+
+	<div class="mx-5rem mt-6rem flex h-screen items-center justify-center text-white">
+		<video class="h-full w-full rounded-2xl object-cover" loop autoplay muted src={videoSrc}>
+			Your browser does not support the video tag.
+		</video>
 	</div>
 
 	<LetsConnect simplified={true}></LetsConnect>
