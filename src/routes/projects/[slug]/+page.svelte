@@ -4,6 +4,7 @@
 	import ProjectBrandMarquee from '$components/projectBrandMarquee.svelte';
 	import ProjectResponsibilites from '$components/projectResponsibilites.svelte';
 	import ProjectStaticBanner from '$components/projectStaticBanner.svelte';
+	import VerticalSlideshow from '$components/verticalSlideshow.svelte';
 	import LetsConnect from '$lib/letsConnect.svelte';
 
 	// TODO: load
@@ -39,6 +40,14 @@
 			text: '8 Weeks'
 		}
 	];
+	const verticalImages: string[] = [
+		'/blog-1.jpg',
+		'/blog-2.jpg',
+		'/blog-3.jpg',
+		'/blog-4.jpg',
+		'/blog-5.jpg',
+		'/blog-6.jpg'
+	];
 </script>
 
 <div class="bg-black">
@@ -52,13 +61,15 @@
 
 	<ProjectBrandMarquee text={'NIKE'}></ProjectBrandMarquee>
 
-	<div class="grid h-screen max-h-screen grid-cols-2 grid-rows-1 gap-x-[4rem] px-3.5rem">
+	<div class="-center grid h-screen max-h-screen grid-cols-2 grid-rows-1 gap-x-[4rem] px-5rem">
 		<div class="">
-			<img src="/hongKong.gif" class="rounded-2xl object-cover" />
+			<img src="/hongKong.gif" class="full aspect-[0.8] h-full rounded-2xl object-cover" />
 		</div>
-		<div class="grid grid-rows-2 gap-y-4rem">
+		<div class="flex flex-col justify-around gap-y-3rem">
 			<ProjectResponsibilites {content}></ProjectResponsibilites>
-			<div class="h-full"></div>
+			<div class="h-full">
+				<VerticalSlideshow images={verticalImages}></VerticalSlideshow>
+			</div>
 		</div>
 	</div>
 
