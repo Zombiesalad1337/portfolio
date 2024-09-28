@@ -18,6 +18,7 @@
 	};
 
 	const { blogs, totalBlogs } = data; // Destructure the blogs and totalBlogs from data
+	let totalLoadedBlogs = totalBlogs;
 	let loadedBlogs: Blog[] = blogs; // Initialize loadedBlogs with the blogs from the data
 	let displayedBlogs: Blog[] = blogs; // New array to hold the displayed blogs based on filter
 	const blogsPerLoad = 8; // Number of blogs to load each time
@@ -26,7 +27,10 @@
 	let currentFilter = 'All'; // State for current filter
 
 	let filters: string[] = ['All', 'Business', 'Design', 'Experience'];
+
+	// TODO: TEST: analyze all filter flows and do your best to minimize number of redundant calls for same blogs. Already did my best, but analyze further.
 	function filterBlogs(type: string) {
+		debugger;
 		currentFilter = type;
 
 		// Filter the already loaded blogs for display
@@ -36,11 +40,16 @@
 
 		// If displayedBlogs is less than the required amount, load more
 		if (displayedBlogs.length < blogsPerLoad) {
-			loadMore();
+			let limit = blogsPerLoad - (displayedBlogs.length % blogsPerLoad);
+			console.log('limit: ' + limit);
+			loadMore(limit);
+		} else {
+			loadMore(blogsPerLoad);
 		}
 	}
 
-	async function loadMore() {
+	async function loadMore(limit: number) {
+		debugger;
 		if (isLoading) return;
 		isLoading = true;
 
@@ -50,14 +59,19 @@
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
-				offset: loadedBlogs.length,
-				limit: blogsPerLoad
+				offset: displayedBlogs.length,
+				limit: limit,
+				filter: currentFilter
 			})
 		});
 
 		if (response.ok) {
 			const result = await response.json();
 			loadedBlogs = [...loadedBlogs, ...result.blogs]; // Append the new blogs
+			displayedBlogs = loadedBlogs.filter(
+				(blog) => currentFilter === 'All' || blog.type === currentFilter
+			);
+			totalLoadedBlogs = result.totalBlogs;
 		}
 
 		isLoading = false;
@@ -99,18 +113,18 @@
 
 	<div class="container-card my-16 grid grid-cols-4 justify-items-stretch gap-4rem">
 		<!-- TODO: id used for performance while rendering, prevents rerenders, use everywhere -->
-		{#each loadedBlogs as blog (blog.id)}
+		{#each displayedBlogs as blog (blog.id)}
 			<div class="">
 				<ConceptCardIndex {...blog}></ConceptCardIndex>
 			</div>
 		{/each}
 	</div>
 	<!-- "Load More" button -->
-	{#if loadedBlogs.length < totalBlogs}
+	{#if displayedBlogs.length < totalLoadedBlogs}
 		<div class="mt-8 flex justify-center text-white">
 			<button
 				class="btn btn-primary min-w-[10ch] rounded-full bg-red px-2rem py-1rem font-pavelt text-2xl"
-				on:click={loadMore}
+				on:click={() => loadMore(blogsPerLoad)}
 				disabled={isLoading}
 			>
 				{isLoading ? 'Loading...' : 'Load More'}

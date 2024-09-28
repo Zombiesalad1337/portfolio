@@ -15,9 +15,12 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for 1 second (1000 ms)
 	// Simulate fetching more blogs from a database (slice in place of DB query)
+	console.log('before filter');
 	let filteredBlogs = staticData.concepts;
 	if (filter !== 'All') {
+		console.log('in filter: ' + filter);
 		filteredBlogs = filteredBlogs.filter((blog) => blog.type === filter);
+		console.log('filteredBlogs' + filteredBlogs);
 	}
 
 	// Sort by ID descending
@@ -26,5 +29,5 @@ export const POST: RequestHandler = async ({ request }) => {
 	// Slice the blogs for loading
 	const moreBlogs = filteredBlogs.slice(offset, offset + limit);
 
-	return json({ blogs: moreBlogs });
+	return json({ blogs: moreBlogs, totalBlogs: filteredBlogs.length });
 };
