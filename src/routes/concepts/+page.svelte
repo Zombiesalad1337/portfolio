@@ -109,8 +109,8 @@
 	</div>
 
 	<p class="font-neuemachina text-3.5xl text-black dark:text-white">
-		Here you can find all the latest happenings in the actual world that differs a lot from your
-		dark moms basement
+		Here you can find all the latest happenings in the actual world that differs a lot from the
+		bottom of your moms basement
 	</p>
 
 	<div class="container-card my-16 grid grid-cols-4 justify-items-stretch gap-4rem">
@@ -123,9 +123,9 @@
 	</div>
 	<!-- "Load More" button -->
 	{#if displayedBlogs.length < totalLoadedBlogs}
-		<div class="mt-8 flex justify-center text-white">
+		<div class="mt-8 flex cursor-pointer justify-center text-white">
 			<button
-				class="btn btn-primary min-w-[10ch] rounded-full bg-red px-2rem py-1rem font-pavelt text-2xl"
+				class="min-w-[10ch] rounded-full bg-red px-2rem py-1rem font-pavelt text-2xl"
 				on:click={() => loadMore(blogsPerLoad)}
 				disabled={isLoading}
 			>
