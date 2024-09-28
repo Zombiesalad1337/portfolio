@@ -1,13 +1,5 @@
 <script lang="ts">
-	import staticData from '$lib/staticData.json';
-
-	// let blogData = JSON.parse(staticData);
-
-	import TocLayout from '$lib/components/tocLayout.svelte';
-
-	import Toc from 'svelte-toc';
-
-	import BlogCard from '$lib/components/blogCard.svelte';
+	import { onMount } from 'svelte';
 	import Navbar from '$components/navbar.svelte';
 	import ThemeToggle from '$components/themeToggle.svelte';
 	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
@@ -51,6 +43,11 @@
 
 		isLoading = false;
 	}
+
+	onMount(() => {
+		isDarkMode.set(true);
+		document.documentElement.classList.add('dark');
+	});
 </script>
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
@@ -62,7 +59,7 @@
 
 	<h1 class="font-pavelt text-9.5xl text-red">Insights</h1>
 
-	<p class="font-neuemachina text-3.5xl text-white">
+	<p class="font-neuemachina text-3.5xl text-black dark:text-white">
 		Here you can find all the latest happenings in the actual world that differs a lot from your
 		dark moms basement
 	</p>
@@ -78,7 +75,11 @@
 	<!-- "Load More" button -->
 	{#if loadedBlogs.length < totalBlogs}
 		<div class="mt-8 flex justify-center text-white">
-			<button class="btn btn-primary" on:click={loadMore} disabled={isLoading}>
+			<button
+				class="btn btn-primary min-w-[10ch] rounded-full bg-red px-2rem py-1rem font-pavelt text-2xl"
+				on:click={loadMore}
+				disabled={isLoading}
+			>
 				{isLoading ? 'Loading...' : 'Load More'}
 			</button>
 		</div>
