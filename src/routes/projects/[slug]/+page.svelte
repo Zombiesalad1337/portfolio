@@ -63,5 +63,7 @@
 	</div>
 
 	<LetsConnect simplified={true}></LetsConnect>
-	<Footer></Footer>
+	<div class="mt-6rem">
+		<Footer></Footer>
+	</div>
 </div>
