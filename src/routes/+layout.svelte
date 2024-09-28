@@ -3,6 +3,7 @@
 	import Bgbugtest from '$lib/components/bgbugtest.svelte';
 	// import StarryBackground from "$lib/components/starryBackground.svelte";
 
+	// TODO: too Slow, find another way
 	// onNavigate((navigation) => {
 	// 	if (document.startViewTransition) {
 	// 		return new Promise((resolve) => {
@@ -15,7 +16,7 @@
 	// });
 </script>
 
-<main class="bg-black">
+<main>
 	<slot></slot>
 </main>
 

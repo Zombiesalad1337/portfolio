@@ -85,7 +85,7 @@
 		>
 			<!-- Copy Icon (can be SVG or icon font) -->
 			<img src="/icons/copyButton.svg" class="w-3.5rem" />
-			<p class="cursor-pointer font-neuemachina text-4xl text-white">
+			<p class="cursor-pointer font-neuemachina text-4xl text-black dark:text-white">
 				{companyEmail}
 			</p>
 		</button>
@@ -114,7 +114,7 @@
 		<!-- Social Media Section -->
 		{#if !simplified}
 			<div class="flex h-1/2 flex-col items-center justify-center">
-				<p class="font-pavelt text-6xl text-white">SOCIAL MEDIA</p>
+				<p class="font-pavelt text-6xl text-black dark:text-white">SOCIAL MEDIA</p>
 				<div class="grid grid-cols-2 gap-4">
 					<!-- Social Media Icons Placeholder -->
 					<img src="/icons/upwork.svg" class="w-[15rem]" />
@@ -128,8 +128,10 @@
 
 	<!-- Right Column -->
 	<div class="w-full space-y-3rem font-neuemachina md:w-3/5">
-		<div class="flex items-end justify-between space-y-2rem border-b-2 border-white">
-			<label class="pl-4rem text-left text-4xl font-bold text-white">Name</label>
+		<div
+			class="flex items-end justify-between space-y-2rem border-b-2 border-black dark:border-white"
+		>
+			<label class="pl-4rem text-left text-4xl font-bold text-black dark:text-white">Name</label>
 			<input
 				type="text"
 				bind:value={name}
@@ -137,8 +139,8 @@
 				class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
-		<div class="flex items-end justify-between border-b-2 border-white">
-			<label class="pl-4rem text-left text-4xl font-bold text-white">Email</label>
+		<div class="flex items-end justify-between border-b-2 border-black dark:border-white">
+			<label class="pl-4rem text-left text-4xl font-bold text-black dark:text-white">Email</label>
 			<input
 				type="email"
 				bind:value={email}
@@ -146,8 +148,10 @@
 				class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 			/>
 		</div>
-		<div class="flex items-end justify-between border-b-2 border-white">
-			<label class=" pl-4rem text-left text-4xl font-bold text-white">Type of Service</label>
+		<div class="flex items-end justify-between border-b-2 border-black dark:border-white">
+			<label class=" pl-4rem text-left text-4xl font-bold text-black dark:text-white"
+				>Type of Service</label
+			>
 			<!-- TODO: hover background color. PAIN IN ASS TO STYLE THIS SHI -->
 			<div class="pr-4rem">
 				<select
@@ -166,8 +170,10 @@
 
 		{#if !simplified}
 			<div class="space-y-1rem">
-				<div class="flex items-end justify-between border-b-2 border-white">
-					<label class="pl-4rem text-left text-4xl font-bold text-white">Budget</label>
+				<div class="flex items-end justify-between border-b-2 border-black dark:border-white">
+					<label class="pl-4rem text-left text-4xl font-bold text-black dark:text-white"
+						>Budget</label
+					>
 					<input
 						type="text"
 						bind:value={budget}
@@ -175,7 +181,9 @@
 						class="appearance-none border-none bg-transparent pr-4rem text-right text-4xl leading-tight text-red focus:border-transparent focus:outline-none focus:ring-0"
 					/>
 				</div>
-				<div class="flex justify-center space-x-1rem border-b-2 border-white pb-1rem">
+				<div
+					class="flex justify-center space-x-1rem border-b-2 border-black pb-1rem dark:border-white"
+				>
 					{#each budgetOptions as option}
 						<button
 							type="button"
@@ -188,8 +196,8 @@
 				</div>
 			</div>
 
-			<div class="pr-0rem space-y-1rem border-b-2 border-white pb-1rem pl-4rem">
-				<label class="text-left text-4xl font-bold text-white">Message</label>
+			<div class="pr-0rem space-y-1rem border-b-2 border-black pb-1rem pl-4rem dark:border-white">
+				<label class="text-left text-4xl font-bold text-black dark:text-white">Message</label>
 
 				<div class="relative">
 					<textarea
@@ -197,18 +205,23 @@
 						placeholder="Enter Your Manifesto you dimwitted cock guzzling landwhale"
 						maxlength="800"
 						required
-						class="h-[16rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-white outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0"
+						class="h-[16rem] w-full rounded-2xl border-b border-red bg-black bg-opacity-50 p-1rem text-2xl text-black outline-none transition-all duration-100 ease-in-out focus:border-2 focus:border-red focus:outline-none focus:ring-2 focus:ring-red focus:ring-offset-0 dark:text-white"
 					></textarea>
 
 					<!-- Character counter positioned at the bottom-right -->
-					<div class="pointer-events-none absolute bottom-1rem right-1rem text-lg text-white">
+					<div
+						class="pointer-events-none absolute bottom-1rem right-1rem text-lg text-black dark:text-white"
+					>
 						{remainingChars}
 					</div>
 				</div>
 			</div>
 		{/if}
 
-		<button on:click={submitForm} class="w-full rounded-2xl bg-red py-0.5rem text-4.5xl text-white">
+		<button
+			on:click={submitForm}
+			class="w-full rounded-2xl bg-red py-0.5rem text-4.5xl text-black dark:text-white"
+		>
 			Submit
 		</button>
 	</div>

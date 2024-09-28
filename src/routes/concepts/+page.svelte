@@ -4,6 +4,9 @@
 	import Navbar from '$components/navbar.svelte';
 	import ThemeToggle from '$components/themeToggle.svelte';
 	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
+	import NewsLetterCta from '$components/newsLetterCTA.svelte';
+	import LetsConnect from '$lib/letsConnect.svelte';
+	import Footer from '$components/footer.svelte';
 
 	export let data: { blogs: Blog[]; totalBlogs: number }; // Define the expected structure of the data prop
 
@@ -141,4 +144,14 @@
 			Your browser does not support the video tag.
 		</video>
 	</div>
+	<div class="py-6rem">
+		<NewsLetterCta></NewsLetterCta>
+	</div>
+	<div class="py-6rem">
+		<LetsConnect simplified={true}></LetsConnect>
+	</div>
+</div>
+
+<div class="transition-background bg-white pt-6rem duration-[300ms] ease-in-out dark:bg-black">
+	<Footer></Footer>
 </div>
