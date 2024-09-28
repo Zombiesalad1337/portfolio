@@ -12,6 +12,7 @@
 	import LetsConnect from '$lib/letsConnect.svelte';
 	import { ssrImportKey } from 'vite/runtime';
 	import { goto } from '$app/navigation'; // Import SvelteKit's goto for programmatic navigation
+	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
 
 	function goBack() {
 		goto('/concepts'); // Programmatically navigate to the blog's slug
@@ -103,10 +104,12 @@
 		</div>
 
 		<h1 class="mb-6rem font-pavelt text-8.5xl text-red">Related Resources</h1>
-		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
-			{#each staticData.concepts as concept}
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-4rem">
+			<!-- TODO: pass parent data here -->
+			<!-- or calculate data depending on type -->
+			{#each staticData.concepts.slice(0, 3) as concept}
 				<div class="col-span-4">
-					<ConceptCard {...concept}></ConceptCard>
+					<ConceptCardIndex {...concept}></ConceptCardIndex>
 				</div>
 			{/each}
 		</div>
