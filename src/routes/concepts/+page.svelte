@@ -28,6 +28,8 @@
 
 	let filters: string[] = ['All', 'Business', 'Design', 'Experience'];
 
+	let videoSrc: string = '/allIWannaDo.mp4';
+
 	// TODO: TEST: analyze all filter flows and do your best to minimize number of redundant calls for same blogs. Already did my best, but analyze further.
 	function filterBlogs(type: string) {
 		debugger;
@@ -132,6 +134,11 @@
 		</div>
 	{/if}
 
-	<h1 class="mt-10rem font-pavelt text-7xl text-red">Hero Element / Mission</h1>
-	<div class="py-[20rem]">t</div>
+	<h1 class="mb-10rem mt-10rem font-pavelt text-7xl text-red">Hero Element / Mission</h1>
+
+	<div class="mx-5rem my-6rem flex h-screen items-center justify-center text-white">
+		<video class="h-full w-full rounded-2xl object-cover" loop autoplay muted src={videoSrc}>
+			Your browser does not support the video tag.
+		</video>
+	</div>
 </div>
