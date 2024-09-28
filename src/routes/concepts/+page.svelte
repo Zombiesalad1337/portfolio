@@ -34,7 +34,7 @@
 		isLoading = true;
 
 		// Send a POST request to load more data from the server
-		const response = await fetch('/api/blog', {
+		const response = await fetch('/api/concepts', {
 			// Update the endpoint to the API route
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },

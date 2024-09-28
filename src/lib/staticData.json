@@ -109,198 +109,294 @@
 	"concepts": [
 		{
 			"id": 1,
-			"type": "Business",
-			"title": "The Doesn't Know",
-			"description": "I have no hands and I must rub. I have no hands and I must rub.",
-			"imageUrls": ["/dark-1.webp", "/dark-2.webp", "/dark-3.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Design",
+			"title": "The Role of A/B Testing in Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark19.webp", "/dark29.webp", "/dark5.webp"],
+			"date": "10.06.2024",
+			"likes": 99
 		},
 		{
 			"id": 2,
-			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Experience",
+			"title": "Streamlining Business Processes with Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark27.webp", "/dark24.webp", "/dark28.webp"],
+			"date": "10.13.2024",
+			"likes": 8
 		},
 		{
 			"id": 3,
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Business",
+			"title": "Building Loyalty Through Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark26.webp", "/dark34.webp", "/dark14.webp", "/dark5.webp", "/dark35.webp"],
+			"date": "10.20.2024",
+			"likes": 62
 		},
 		{
 			"id": 4,
-			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Business",
+			"title": "Designing for Mobile: Best Practices",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark16.webp", "/dark10.webp", "/dark17.webp"],
+			"date": "10.16.2024",
+			"likes": 73
 		},
 		{
 			"id": 5,
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Design",
+			"title": "The Intersection of Business and Creativity",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark32.webp", "/dark24.webp", "/dark8.webp", "/dark23.webp"],
+			"date": "10.02.2024",
+			"likes": 81
 		},
 		{
 			"id": 6,
-			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Business",
+			"title": "The Role of A/B Testing in Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark19.webp", "/dark9.webp", "/dark30.webp", "/dark28.webp"],
+			"date": "09.30.2024",
+			"likes": 51
 		},
 		{
 			"id": 7,
 			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "The Evolution of Business Branding",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark23.webp", "/dark32.webp", "/dark19.webp", "/dark26.webp"],
+			"date": "10.23.2024",
+			"likes": 12
 		},
 		{
 			"id": 8,
-			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"type": "Experience",
+			"title": "The Art of Crafting Call-to-Actions",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark30.webp", "/dark10.webp", "/dark19.webp", "/dark7.webp"],
+			"date": "10.17.2024",
+			"likes": 30
 		},
 		{
 			"id": 9,
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
-		},
-		{
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "The Future of UX Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark31.webp", "/dark24.webp", "/dark27.webp", "/dark16.webp"],
+			"date": "10.19.2024",
+			"likes": 92
 		},
 		{
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"id": 10,
+			"type": "Business",
+			"title": "Innovative SaaS Solutions for Startups",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark4.webp", "/dark20.webp", "/dark31.webp"],
+			"date": "10.17.2024",
+			"likes": 24
 		},
 		{
+			"id": 11,
+			"type": "Business",
+			"title": "The Power of Prototyping",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark6.webp", "/dark17.webp", "/dark35.webp", "/dark11.webp"],
+			"date": "10.12.2024",
+			"likes": 9
+		},
+		{
+			"id": 12,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "The Role of A/B Testing in Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark25.webp", "/dark9.webp", "/dark30.webp"],
+			"date": "10.10.2024",
+			"likes": 5
 		},
 		{
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
-		},
-		{
+			"id": 13,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "Turning Feedback into Design Improvements",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark5.webp", "/dark10.webp", "/dark2.webp"],
+			"date": "10.10.2024",
+			"likes": 3
 		},
 		{
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"id": 14,
+			"type": "Business",
+			"title": "The Science of User Engagement",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark18.webp", "/dark14.webp", "/dark36.webp"],
+			"date": "10.04.2024",
+			"likes": 80
 		},
 		{
+			"id": 15,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "The Power of Prototyping",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark5.webp", "/dark19.webp", "/dark14.webp"],
+			"date": "10.14.2024",
+			"likes": 86
 		},
 		{
-			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
-		},
-		{
+			"id": 16,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "Creating Seamless User Flows",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark20.webp", "/dark10.webp", "/dark33.webp", "/dark3.webp", "/dark5.webp"],
+			"date": "10.03.2024",
+			"likes": 55
 		},
 		{
+			"id": 17,
+			"type": "Business",
+			"title": "The Importance of User Research",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark21.webp", "/dark34.webp", "/dark30.webp", "/dark19.webp", "/dark22.webp"],
+			"date": "10.21.2024",
+			"likes": 6
+		},
+		{
+			"id": 18,
+			"type": "Business",
+			"title": "How to Conduct a Competitive Analysis",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark15.webp", "/dark21.webp", "/dark3.webp", "/dark22.webp"],
+			"date": "10.15.2024",
+			"likes": 73
+		},
+		{
+			"id": 19,
 			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "The Intersection of Business and Creativity",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark11.webp", "/dark3.webp", "/dark35.webp", "/dark29.webp", "/dark32.webp"],
+			"date": "10.21.2024",
+			"likes": 72
 		},
 		{
+			"id": 20,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "Creating Interactive Dashboards",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark26.webp", "/dark16.webp", "/dark22.webp"],
+			"date": "09.28.2024",
+			"likes": 77
 		},
 		{
+			"id": 21,
+			"type": "Business",
+			"title": "How to Pitch Your SaaS Product Effectively",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark1.webp", "/dark3.webp", "/dark17.webp"],
+			"date": "10.15.2024",
+			"likes": 44
+		},
+		{
+			"id": 22,
+			"type": "Business",
+			"title": "Creating Compelling Visual Stories",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark14.webp", "/dark36.webp", "/dark24.webp"],
+			"date": "10.23.2024",
+			"likes": 58
+		},
+		{
+			"id": 23,
 			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "Designing for Different Audiences",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark12.webp", "/dark9.webp", "/dark18.webp"],
+			"date": "10.07.2024",
+			"likes": 46
 		},
 		{
+			"id": 24,
+			"type": "Experience",
+			"title": "Crafting an Unforgettable User Experience",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark25.webp", "/dark29.webp", "/dark36.webp"],
+			"date": "09.28.2024",
+			"likes": 76
+		},
+		{
+			"id": 25,
 			"type": "Design",
-			"title": "Spongebob's Jihad",
-			"description": "How did spongebob got his pineapple? Through Jihad.",
-			"imageUrls": ["/dark-4.webp", "/dark-5.webp", "/dark-6.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "How Design Drives Business Growth",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark32.webp", "/dark34.webp", "/dark30.webp", "/dark4.webp"],
+			"date": "10.17.2024",
+			"likes": 88
 		},
 		{
+			"id": 26,
+			"type": "Business",
+			"title": "Measuring Success in SaaS Design",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark27.webp", "/dark19.webp", "/dark20.webp"],
+			"date": "10.04.2024",
+			"likes": 10
+		},
+		{
+			"id": 27,
+			"type": "Business",
+			"title": "Designing for Accessibility",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark24.webp", "/dark10.webp", "/dark21.webp"],
+			"date": "10.12.2024",
+			"likes": 71
+		},
+		{
+			"id": 28,
+			"type": "Design",
+			"title": "How to Scale Your SaaS Business",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark12.webp", "/dark2.webp", "/dark5.webp"],
+			"date": "10.01.2024",
+			"likes": 15
+		},
+		{
+			"id": 29,
 			"type": "Experience",
-			"title": "Kalkestein burned to death",
-			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
-			"imageUrls": ["/dark-7.webp", "/dark-8.webp", "/dark-9.webp"],
-			"date": "09.11.2024",
-			"likes": 69
+			"title": "Creating Impactful Brand Experiences",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark15.webp", "/dark1.webp", "/dark9.webp"],
+			"date": "09.29.2024",
+			"likes": 40
+		},
+		{
+			"id": 30,
+			"type": "Experience",
+			"title": "The Importance of Visual Hierarchy",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark30.webp", "/dark12.webp", "/dark25.webp", "/dark31.webp"],
+			"date": "10.23.2024",
+			"likes": 34
+		},
+		{
+			"id": 31,
+			"type": "Business",
+			"title": "Creating Engaging User Interfaces",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark28.webp", "/dark15.webp", "/dark6.webp"],
+			"date": "10.02.2024",
+			"likes": 64
+		},
+		{
+			"id": 32,
+			"type": "Experience",
+			"title": "Future-Proofing Your SaaS Business",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"imageUrls": ["/dark13.webp", "/dark4.webp", "/dark23.webp", "/dark36.webp"],
+			"date": "10.09.2024",
+			"likes": 94
 		}
 	],
+
 	"testimonials": [
 		{
 			"logo": "/gab.png",
