@@ -63,7 +63,7 @@
 
 	<ProjectBrandMarquee text={'NIKE'}></ProjectBrandMarquee>
 
-	<div class="-center grid h-screen max-h-screen grid-cols-2 grid-rows-1 gap-x-[4rem] px-5rem">
+	<div class="my-[15rem] grid h-screen max-h-screen grid-cols-2 grid-rows-1 gap-x-[4rem] px-5rem">
 		<div class="">
 			<img src="/hongKong.gif" class="full aspect-[0.8] h-full rounded-2xl object-cover" />
 		</div>
@@ -75,13 +75,15 @@
 		</div>
 	</div>
 
-	<div class="mx-5rem mt-6rem flex h-screen items-center justify-center text-white">
+	<div class="mx-5rem my-6rem flex h-screen items-center justify-center text-white">
 		<video class="h-full w-full rounded-2xl object-cover" loop autoplay muted src={videoSrc}>
 			Your browser does not support the video tag.
 		</video>
 	</div>
 
-	<LetsConnect simplified={true}></LetsConnect>
+	<div class="my-[15rem]">
+		<LetsConnect simplified={true}></LetsConnect>
+	</div>
 	<div class="mt-6rem">
 		<Footer></Footer>
 	</div>
