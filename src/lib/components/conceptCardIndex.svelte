@@ -8,6 +8,7 @@
 	export let imageUrls = ['/blog-9.jpg', '/blog-10.jpg', '/blog-11.jpg'];
 	export let date: Date;
 	export let likes: number;
+	export let slug: string;
 
 	let currentImageIndex = 0;
 	let hover = false;
@@ -50,53 +51,55 @@
 
 <!-- TODO: concept card fonts -->
 {#each [currentImageIndex] as index (index)}
-	<div
-		transition:fade
-		class="image-container background-image: aspect-[0.834] w-full max-w-full rounded-3xl url({imageUrls[
-			currentImageIndex
-		]}); transition-hover-card text-white transition {hover ? 'expand' : 'expand-revert'}"
-		animate:fade={{ duration: 3000 }}
-		on:mouseover={onMouseEnter}
-		on:mouseleave={onMouseLeave}
-		on:focus={onMouseEnter}
-	>
+	<a href={`/concepts/${slug}`} class="no-underline">
 		<div
-			class="background-image"
-			style="background-image: url({imageUrls[currentImageIndex]});"
-		></div>
-		<div class="content flex h-full flex-col justify-between px-1rem py-1rem font-neuemachina">
-			<div class="px-0.5rem py-2rem">
-				<p class="text-right font-pavelt text-2xl text-white">
-					{type}
-				</p>
+			transition:fade
+			class="image-container background-image: aspect-[0.834] w-full max-w-full cursor-pointer rounded-3xl url({imageUrls[
+				currentImageIndex
+			]}); transition-hover-card text-white transition {hover ? 'expand' : 'expand-revert'}"
+			animate:fade={{ duration: 3000 }}
+			on:mouseover={onMouseEnter}
+			on:mouseleave={onMouseLeave}
+			on:focus={onMouseEnter}
+		>
+			<div
+				class="background-image"
+				style="background-image: url({imageUrls[currentImageIndex]});"
+			></div>
+			<div class="content flex h-full flex-col justify-between px-1rem py-1rem font-neuemachina">
+				<div class="px-0.5rem py-2rem">
+					<p class="text-right font-pavelt text-2xl text-white">
+						{type}
+					</p>
+
+					<div>
+						<p class="py-3rem text-right font-pavelt text-xl">{title}</p>
+					</div>
+				</div>
 
 				<div>
-					<p class="py-3rem text-right font-pavelt text-xl">{title}</p>
-				</div>
-			</div>
-
-			<div>
-				<div
-					class="transition-transform-description mt-auto pb-4rem {hover
-						? 'visible-slide'
-						: 'invisible-slide'}"
-				>
-					<p class="whitespace-pre-line text-right text-base font-medium">{description}</p>
-				</div>
-				<div class="flex items-center justify-between">
 					<div
-						class="flex items-center gap-0.25rem rounded-full border-2 border-red px-1rem py-0.25rem"
+						class="transition-transform-description mt-auto pb-4rem {hover
+							? 'visible-slide'
+							: 'invisible-slide'}"
 					>
-						<img src="/likesHeart.svg" class="w-2rem" />
-						<p class="text-2xl text-white">{likes}</p>
+						<p class="whitespace-pre-line text-right text-base font-medium">{description}</p>
 					</div>
-					<div>
-						<p class="font-mono text-2xl font-bold text-white">{date}</p>
+					<div class="flex items-center justify-between">
+						<div
+							class="flex items-center gap-0.25rem rounded-full border-2 border-red px-1rem py-0.25rem"
+						>
+							<img src="/likesHeart.svg" class="w-2rem" />
+							<p class="text-2xl text-white">{likes}</p>
+						</div>
+						<div>
+							<p class="font-mono text-2xl font-bold text-white">{date}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 {/each}
 
 <style>
