@@ -108,14 +108,16 @@
 	},
 	"concepts": [
 		{
+			"id": 1,
 			"type": "Business",
-			"title": "The Goyim Doesn't Know",
-			"description": "Oy vey, I have no hands and I must rub. Oy vey, I have no hands and I must rub.",
+			"title": "The Doesn't Know",
+			"description": "I have no hands and I must rub. I have no hands and I must rub.",
 			"imageUrls": ["/dark-1.webp", "/dark-2.webp", "/dark-3.webp"],
 			"date": "09.11.2024",
 			"likes": 69
 		},
 		{
+			"id": 2,
 			"type": "Design",
 			"title": "Spongebob's Jihad",
 			"description": "How did spongebob got his pineapple? Through Jihad.",
@@ -124,6 +126,7 @@
 			"likes": 69
 		},
 		{
+			"id": 3,
 			"type": "Experience",
 			"title": "Kalkestein burned to death",
 			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
@@ -132,6 +135,7 @@
 			"likes": 69
 		},
 		{
+			"id": 4,
 			"type": "Design",
 			"title": "Spongebob's Jihad",
 			"description": "How did spongebob got his pineapple? Through Jihad.",
@@ -140,6 +144,7 @@
 			"likes": 69
 		},
 		{
+			"id": 5,
 			"type": "Experience",
 			"title": "Kalkestein burned to death",
 			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
@@ -148,6 +153,7 @@
 			"likes": 69
 		},
 		{
+			"id": 6,
 			"type": "Design",
 			"title": "Spongebob's Jihad",
 			"description": "How did spongebob got his pineapple? Through Jihad.",
@@ -156,6 +162,7 @@
 			"likes": 69
 		},
 		{
+			"id": 7,
 			"type": "Experience",
 			"title": "Kalkestein burned to death",
 			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",
@@ -164,6 +171,7 @@
 			"likes": 69
 		},
 		{
+			"id": 8,
 			"type": "Design",
 			"title": "Spongebob's Jihad",
 			"description": "How did spongebob got his pineapple? Through Jihad.",
@@ -172,6 +180,7 @@
 			"likes": 69
 		},
 		{
+			"id": 9,
 			"type": "Experience",
 			"title": "Kalkestein burned to death",
 			"description": "Smoke erupted from his body which formed the words 'Radovid Sucks Flaccid Cock'",

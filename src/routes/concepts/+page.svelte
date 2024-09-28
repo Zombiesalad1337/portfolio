@@ -12,14 +12,45 @@
 	import ThemeToggle from '$components/themeToggle.svelte';
 	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
 
-	export let data: {
+	export let data: { blogs: Blog[]; totalBlogs: number }; // Define the expected structure of the data prop
+
+	type Blog = {
+		id: number;
 		type: string;
 		title: string;
 		description: string;
 		imageUrls: string[];
 		date: string;
 		likes: number;
-	}[];
+	};
+
+	const { blogs, totalBlogs } = data; // Destructure the blogs and totalBlogs from data
+	let loadedBlogs: Blog[] = blogs; // Initialize loadedBlogs with the blogs from the data
+	const blogsPerLoad = 8; // Number of blogs to load each time
+	let isLoading = false;
+
+	async function loadMore() {
+		if (isLoading) return;
+		isLoading = true;
+
+		// Send a POST request to load more data from the server
+		const response = await fetch('/api/blog', {
+			// Update the endpoint to the API route
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				offset: loadedBlogs.length,
+				limit: blogsPerLoad
+			})
+		});
+
+		if (response.ok) {
+			const result = await response.json();
+			loadedBlogs = [...loadedBlogs, ...result.blogs]; // Append the new blogs
+		}
+
+		isLoading = false;
+	}
 </script>
 
 <Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
@@ -36,12 +67,22 @@
 		dark moms basement
 	</p>
 
-	<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-4rem">
-		{#each data.blogs.slice(0, 4) as concept}
-			<div class="col-span-3">
-				<ConceptCardIndex {...concept}></ConceptCardIndex>
+	<div class="container-card my-16 grid grid-cols-4 justify-items-stretch gap-4rem">
+		<!-- TODO: id used for performance while rendering, prevents rerenders, use everywhere -->
+		{#each loadedBlogs as blog (blog.id)}
+			<div class="">
+				<ConceptCardIndex {...blog}></ConceptCardIndex>
 			</div>
 		{/each}
 	</div>
+	<!-- "Load More" button -->
+	{#if loadedBlogs.length < totalBlogs}
+		<div class="mt-8 flex justify-center text-white">
+			<button class="btn btn-primary" on:click={loadMore} disabled={isLoading}>
+				{isLoading ? 'Loading...' : 'Load More'}
+			</button>
+		</div>
+	{/if}
+
 	<div class="py-[20rem]">t</div>
 </div>
