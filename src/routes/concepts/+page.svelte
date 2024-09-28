@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { isDarkMode } from '$lib/stores/theme';
 	import Navbar from '$components/navbar.svelte';
 	import ThemeToggle from '$components/themeToggle.svelte';
 	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
@@ -18,8 +19,26 @@
 
 	const { blogs, totalBlogs } = data; // Destructure the blogs and totalBlogs from data
 	let loadedBlogs: Blog[] = blogs; // Initialize loadedBlogs with the blogs from the data
+	let displayedBlogs: Blog[] = blogs; // New array to hold the displayed blogs based on filter
 	const blogsPerLoad = 8; // Number of blogs to load each time
 	let isLoading = false;
+
+	let currentFilter = 'All'; // State for current filter
+
+	let filters: string[] = ['All', 'Business', 'Design', 'Experience'];
+	function filterBlogs(type: string) {
+		currentFilter = type;
+
+		// Filter the already loaded blogs for display
+		displayedBlogs = loadedBlogs.filter(
+			(blog) => currentFilter === 'All' || blog.type === currentFilter
+		);
+
+		// If displayedBlogs is less than the required amount, load more
+		if (displayedBlogs.length < blogsPerLoad) {
+			loadMore();
+		}
+	}
 
 	async function loadMore() {
 		if (isLoading) return;
@@ -57,7 +76,21 @@
 		<ThemeToggle></ThemeToggle>
 	</div>
 
-	<h1 class="font-pavelt text-9.5xl text-red">Insights</h1>
+	<div class="flex items-center justify-between">
+		<h1 class="font-pavelt text-9.5xl text-red">Insights</h1>
+		<div
+			class="flex items-center justify-around space-x-0.5rem rounded-full border-2 border-red px-1rem py-0.5rem font-neuemachina text-xl text-red"
+		>
+			{#each filters as filter}
+				<button
+					on:click={() => filterBlogs(filter)}
+					class="px-2rem py-1rem hover:rounded-full hover:bg-white {currentFilter === filter
+						? 'rounded-full bg-white'
+						: ''}">{filter}</button
+				>
+			{/each}
+		</div>
+	</div>
 
 	<p class="font-neuemachina text-3.5xl text-black dark:text-white">
 		Here you can find all the latest happenings in the actual world that differs a lot from your
