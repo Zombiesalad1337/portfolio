@@ -37,7 +37,7 @@
 			if (inactivityTimeout) {
 				clearTimeout(inactivityTimeout);
 			}
-			if (showNavbar) {
+			if (showNavbar && window.scrollY > 0) {
 				inactivityTimeout = setTimeout(() => {
 					showNavbar = false;
 				}, 2000); // Set to 2 seconds

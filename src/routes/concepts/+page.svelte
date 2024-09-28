@@ -8,32 +8,15 @@
 	import Toc from 'svelte-toc';
 
 	import BlogCard from '$lib/components/blogCard.svelte';
+	import Navbar from '$components/navbar.svelte';
+	import ThemeToggle from '$components/themeToggle.svelte';
 
 	export let data: { title: string; date: string; slug: string }[];
-	$: console.log(data);
 </script>
 
-<!-- <BlogLayout blog={staticData.sections}>
-</BlogLayout> -->
-
-<!-- <TocLayout></TocLayout> -->
-
-<a href="/" class=""> Take me home, country roads</a>
-<h1 class="text-3xl">Blog Posts</h1>
-<!-- <ul>
-  {#each data.blogs as blog}
-    <li>
-      <a href={`/concepts/${blog.slug}`} data-sveltekit-preload-data="tap" data-sveltekit-preload-code="hover">{blog.title}</a> - {blog.date}
-    </li>
-  {/each}
-</ul> -->
-
-<div class="mx-20 grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-	{#each data.blogs as blog}
-		<div>
-			<BlogCard {...blog} />
-		</div>
-	{/each}
+<Navbar showAtScrollYMultiplier={0} initiallyVisible={true}></Navbar>
+<div class="transition-background bg-white px-3.5rem duration-[300ms] ease-in-out dark:bg-black">
+	<div class="flex justify-end py-5rem">
+		<ThemeToggle></ThemeToggle>
+	</div>
 </div>
-
-TEST | TEST | TEST
