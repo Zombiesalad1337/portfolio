@@ -52,9 +52,11 @@
 
 	<ProjectBrandMarquee text={'NIKE'}></ProjectBrandMarquee>
 
-	<div class="flex h-screen max-h-screen px-3.5rem">
-		<div class="w-1/2"></div>
-		<div class="w-1/2 flex-col items-center justify-start">
+	<div class="grid h-screen max-h-screen grid-cols-2 grid-rows-1 gap-x-[4rem] px-3.5rem">
+		<div class="">
+			<img src="/hongKong.gif" class="rounded-2xl object-cover" />
+		</div>
+		<div class="grid grid-rows-2 gap-y-4rem">
 			<ProjectResponsibilites {content}></ProjectResponsibilites>
 			<div class="h-full"></div>
 		</div>
