@@ -132,5 +132,6 @@
 		</div>
 	{/if}
 
+	<h1 class="mt-10rem font-pavelt text-7xl text-red">Hero Element / Mission</h1>
 	<div class="py-[20rem]">t</div>
 </div>
