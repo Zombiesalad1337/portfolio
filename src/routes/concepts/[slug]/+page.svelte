@@ -11,6 +11,11 @@
 	import ConceptCard from '$lib/components/conceptCard.svelte';
 	import LetsConnect from '$lib/letsConnect.svelte';
 	import { ssrImportKey } from 'vite/runtime';
+	import { goto } from '$app/navigation'; // Import SvelteKit's goto for programmatic navigation
+
+	function goBack() {
+		goto('/concepts'); // Programmatically navigate to the blog's slug
+	}
 
 	export let data: any;
 	let headings: HTMLHeadingElement[] = [];
@@ -78,6 +83,7 @@
 					<div slot="title">
 						<button
 							class="rounded-full bg-red px-4rem py-1rem font-pavelt text-lg text-white transition duration-150 hover:scale-105"
+							on:click={() => goBack()}
 						>
 							Go Back
 						</button>
