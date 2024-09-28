@@ -4,10 +4,7 @@
 
 <div class="flex w-full items-start justify-between">
 	<!-- Left item rotated -90 degrees (90 degrees clockwise) -->
-	<div class="w-[10.5rem] flex-none rotate-90 transform whitespace-nowrap font-pavelt text-red">
-		<p class="text-center text-[13.25rem]">HUMA</p>
-	</div>
-
+	<img src="/footerHumaL.svg" class="w-auto" />
 	<!-- Center content -->
 	<div class="mx-4rem flex-grow flex-col justify-between pt-6rem">
 		<!-- Your center content here -->
@@ -71,11 +68,7 @@
 	</div>
 
 	<!-- Right item rotated 90 degrees clockwise and flipped vertically -->
-	<div
-		class="block w-[10.5rem] flex-none rotate-90 -scale-y-100 transform whitespace-nowrap font-pavelt text-red"
-	>
-		<p class="text-center text-[13.25rem]">HUMA</p>
-	</div>
+	<img src="/footerHumaR.svg" class="mt-3rem w-auto" />
 </div>
 
 <!-- <div class="spotlight"></div> -->
