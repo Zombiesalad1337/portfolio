@@ -27,6 +27,7 @@
 	import LetsConnect from '$lib/letsConnect.svelte';
 	import NewsLetterCta from '$components/newsLetterCTA.svelte';
 	import { isDarkMode } from '$lib/stores/theme';
+	import ConceptCardIndex from '$components/conceptCardIndex.svelte';
 
 	let isTransitioning = false;
 	let transitionQueue: number[] = [];
@@ -153,10 +154,12 @@
 	<div id="Concepts" class="px-3.5rem">
 		<div class="flex items-center justify-between">
 			<h1 class="text-bold font-pavelt text-8.5xl text-red">Concepts</h1>
-			<button class="flex items-center">
-				<p class="font-pavelt text-4xl text-white">All Concepts</p>
-				<img src="/icons/topRightArrow.svg" class="ml-2rem w-4.5rem" />
-			</button>
+			<a href="/concepts">
+				<button class="flex items-center">
+					<p class="font-pavelt text-4xl text-white">All Concepts</p>
+					<img src="/icons/topRightArrow.svg" class="ml-2rem w-4.5rem" />
+				</button>
+			</a>
 		</div>
 		<p class="text-left font-neuemachina text-4.5xl text-white">
 			I felt sorry for guys packed into gyms, trying to look like how Calvin Klein or Tommy Hilfiger
@@ -164,10 +167,10 @@
 			self-destruction.
 		</p>
 		<!-- TODO: infinite scroll bug -->
-		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-2rem">
+		<div class="container-card my-16 grid grid-cols-12 justify-items-stretch gap-4rem">
 			{#each staticData.concepts.slice(0, 3) as concept}
 				<div class="col-span-4">
-					<ConceptCard {...concept}></ConceptCard>
+					<ConceptCardIndex {...concept}></ConceptCardIndex>
 				</div>
 			{/each}
 		</div>
