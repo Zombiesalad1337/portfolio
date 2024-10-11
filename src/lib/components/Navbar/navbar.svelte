@@ -6,7 +6,7 @@
 
 <div class="flex justify-between items-center border-b-2 border-gray-700 px-3.5rem sticky">
 	<a href="/">
-		<p class="text-white text-base font-bold py-1.5rem hover:bg-gray-700">Name</p>
+		<p class="text-white text-base font-bold py-1.5rem hover:bg-gray-700">Rohit Choudhary</p>
 	</a>
 	<div class="flex justify-between gap-x-1rem text-white">
 		{#each staticData.navLinks as navLink}
