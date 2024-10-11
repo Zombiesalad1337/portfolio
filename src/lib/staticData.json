@@ -40,5 +40,25 @@
 			"name": "JavaScript",
 			"img": "/javascript.png"
 		}
+	],
+	"socialIcon": [
+		{
+			"src": "/icons/github.svg",
+			"srcDark": "/icons/github-dark.svg",
+			"classes": "w-1rem",
+			"link": "https://github.com/Zombiesalad1337"
+		},
+		{
+			"src": "/icons/linkedin.svg",
+			"srcDark": "/icons/linkedin-dark.svg",
+			"classes": "w-1rem",
+			"link": "https://www.linkedin.com/in/rohit-choudhary-26739520a/"
+		},
+		{
+			"src": "/icons/email.svg",
+			"srcDark": "/icons/email-dark.svg",
+			"classes": "w-1rem",
+			"link": "mailto:rohit01031999@gmail.com"
+		}
 	]
 }

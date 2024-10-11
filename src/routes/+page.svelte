@@ -3,6 +3,7 @@
 	import Carousel from 'svelte-carousel';
 	import staticData from '$lib/staticData.json';
 	import SkillCarouselItem from '$components/skills/skillCarouselItem.svelte';
+	import SocialIcon from '$components/socialIcon.svelte';
 
 	let carousel; // for calling methods of the carousel instance
 </script>
@@ -15,6 +16,13 @@
 				<h4 class="text-2xl font-light max-w-[36ch]">
 					A Software Engineer who embraces simplicity in design and efficiency in implementation
 				</h4>
+				<div class="flex gap-x-1rem justify-start items-center py-1rem">
+					{#each staticData.socialIcon as socialIcon}
+						<div>
+							<SocialIcon {...socialIcon}></SocialIcon>
+						</div>
+					{/each}
+				</div>
 			</div>
 
 			<div class="h-[8rem] max-w-[20rem] min-w-[20rem] flex flex-col justify-start">
