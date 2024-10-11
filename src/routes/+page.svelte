@@ -12,7 +12,7 @@
 	<div class="h-full flex flex-col justify-center items-center">
 		<div class="w-full flex justify-center items-center">
 			<div>
-				<h1 class="text-6xl font-bold">Name,</h1>
+				<h1 class="text-5xl font-bold">Rohit Choudhary,</h1>
 				<h4 class="text-2xl font-light max-w-[36ch]">
 					A Software Engineer who embraces simplicity in design and efficiency in implementation
 				</h4>
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 
-			<div class="h-[8rem] max-w-[20rem] min-w-[20rem] flex flex-col justify-start">
+			<div class="h-[8rem] max-w-[20rem] min-w-[20rem] flex flex-col justify-center">
 				{#if browser}
 					<Carousel
 						particlesToShow={1}
