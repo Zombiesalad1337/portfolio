@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* TODO: find fonts with more weights */
+    @font-face {
+    font-family: 'Pavelt';
+    src: url('/fonts/Pavelt.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('/fonts/NeueMachina-Light.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('/fonts/NeueMachina-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'neuemachina';
+    src: url('/fonts/NeueMachina-Ultrabold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'martianmono';
+    src: url('/fonts/MartianMono-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+
+}
+
+
+
+.font-pavelt {
+  font-family: pavelt, sans-serif;
+}
+
+.font-neuemachine {
+  font-family: neuemachina, sans-serif;
+}
+
+.font-martianmono {
+  font-family: martianmono, mono;
+}
+
+.calendar {
+		@apply relative box-border flex h-[100%] w-[30vw] min-w-[272px] max-w-full flex-col rounded-xl p-4 opacity-100 transition-opacity;
+	}
