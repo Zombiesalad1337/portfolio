@@ -2,18 +2,22 @@
 	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation'; // Import SvelteKit's goto for programmatic navigation
 
-	export let type = 'Case Study';
-	export let name = 'Example Blog Post Title';
+	export let name = 'Svelte';
 	export let description =
 		'This is a brief description of the blog post. It flies in from the right on hover.';
 	let imgSrc = '/svelte.png';
 	export let slug: string;
 
-	let currentImageIndex = 0;
 	let hover = false;
 
 	function navigateToBlog(slug: string) {
 		goto(`/concepts/${slug}`); // Programmatically navigate to the blog's slug
+	}
+	function onMouseEnter() {
+		hover = true;
+	}
+	function onMouseLeave() {
+		hover = false;
 	}
 
 	// Automatically change image every x seconds
@@ -23,34 +27,34 @@
 </script>
 
 <!-- TODO: concept card fonts -->
-{#each [currentImageIndex] as index (index)}
-	<div
-		transition:fade
-		class="image-container background-image: aspect-[4] w-full max-w-full cursor-pointer rounded-3xl url({imgSrc}); transition-hover-card text-white transition {hover
-			? 'expand'
-			: 'expand-revert'}"
-		on:click={() => navigateToBlog(slug)}
-	>
-		<div class="background-image" style="background-image: url({imgSrc});"></div>
-		<div class="content flex h-full flex-col justify-between px-1rem py-1rem font-neuemachina">
-			<div class="px-0.5rem py-2rem">
-				<div>
-					<p class="py-3rem text-right font-pavelt text-xl">{name}</p>
-				</div>
-			</div>
-
+<div
+	transition:fade
+	class="image-container background-image: aspect-[4] w-full max-w-full cursor-pointer rounded-3xl url({imgSrc}); transition-hover-card text-white transition border-white border {hover
+		? 'expand'
+		: 'expand-revert'}"
+	on:mouseover={onMouseEnter}
+	on:mouseleave={onMouseLeave}
+	on:click={() => navigateToBlog(slug)}
+>
+	<div class="background-image" style="background-image: url({imgSrc});"></div>
+	<div class="content flex h-full flex-col justify-between px-1.5rem pt-1.5rem font-neuemachina">
+		<div class="">
 			<div>
-				<div
-					class="transition-transform-description mt-auto pb-4rem {hover
-						? 'visible-slide'
-						: 'invisible-slide'}"
-				>
-					<p class="whitespace-pre-line text-right text-base font-medium">{description}</p>
-				</div>
+				<p class="font-pavelt text-xl">{name}</p>
+			</div>
+		</div>
+
+		<div>
+			<div
+				class="transition-transform-description mt-auto pb-1.5rem {hover
+					? 'visible-slide'
+					: 'invisible-slide'}"
+			>
+				<p class="whitespace-pre-line text-base font-medium">{description}</p>
 			</div>
 		</div>
 	</div>
-{/each}
+</div>
 
 <style>
 	/* .image-container {
@@ -84,15 +88,15 @@
 		transform: translate(0, 0), scale(1);
 	}
 	.invisible-slide {
-		transform: translateX(+50px);
+		transform: translateY(+50px);
 		opacity: 0;
 		transition-delay: 0s;
 	}
 
 	.visible-slide {
-		transform: translateX(+0px);
+		transform: translateY(+0px);
 		opacity: 1;
-		transition-delay: 0.3s;
+		transition-delay: 0.1s;
 	}
 	.background-image {
 		position: absolute;
@@ -100,14 +104,15 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-size: auto;
-		background-position: center;
+		background-size: contain;
+		background-position: center right;
+		background-repeat: no-repeat;
 		filter: blur(0); /* Initially no blur */
 		background-origin: border-box;
 		transition:
-			background-position 0.5s ease,
+			background-position 0.3s ease,
 			translate 0.2s ease,
-			filter 0.5s ease;
+			filter 0.3s ease;
 		transform: translate(0, 0);
 		transition-delay: 0.15s;
 	}
@@ -116,7 +121,7 @@
 		z-index: 1; /* Ensure content is above the background */
 	}
 	.image-container:hover .background-image {
-		filter: blur(5px); /* Apply blur on hover */
+		filter: blur(10px); /* Apply blur on hover */
 		background-position: bottom -100px right;
 		transition-delay: 0s;
 	}
