@@ -20,7 +20,9 @@
 >
 	<a href="/">
 		<div class="relative group">
-			<p class="rounded-full text-text ~text-sm/lg font-bold py-0.5rem">Rohit Choudhary</p>
+			<p class="rounded-full text-text ~text-sm/lg font-bold py-0.5rem group-hover:text-secondary">
+				Rohit Choudhary
+			</p>
 			<span
 				class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
 			></span>
