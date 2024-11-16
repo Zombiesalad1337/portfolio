@@ -16,7 +16,7 @@
 	>
 		<NavbarSvgIcon {path} {hoverColor}></NavbarSvgIcon>
 		<div class="block md:hidden lg:block">
-			<p class="font-white ~/md:~text-base/xl">{text}</p>
+			<p class="font-white ~md:~text-sm/xl">{text}</p>
 		</div>
 	</button>
 </a>
