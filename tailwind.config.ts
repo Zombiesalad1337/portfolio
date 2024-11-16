@@ -24,7 +24,7 @@ const textSizes = {
 	'4.5xl': '2.5rem', // 40px
 	'5xl': '3rem', // 48px
 	'5.5xl': '3.5rem', // 56px
-	'5.75xl': '3.75rem', // 60px 
+	'5.75xl': '3.75rem', // 60px
 	'6xl': '4rem', // 64px
 	'6.5xl': '4.5rem', // 72px
 	'7xl': '5rem', // 80px
@@ -34,10 +34,10 @@ const textSizes = {
 	'9xl': '7rem', // 112px
 	'9.5xl': '7.5rem', // 120px
 	'10xl': '8rem', // 128px
-	'display1': '3.75rem', // 60
-	'display2': '3.125rem', // 50
-	'display3': '2.5rem', // 40
-	'display4': '2.125rem', // 34
+	display1: '3.75rem', // 60
+	display2: '3.125rem', // 50
+	display3: '2.5rem', // 40
+	display4: '2.125rem' // 34
 };
 
 const generateSizes = () => {
@@ -67,21 +67,14 @@ const config: Config = {
 		},
 		extend: {
 			colors: {
-				...generateShades('#AF1315', 'red'),
-				...generateShades('#000000', 'black'),
-				...generateShades('#101010', 'black10'),
-				black: '#000000',
-				'black-light': '#333333',
-				'black-dark': '#000000',
-				red: '#AF1315',
-				'red-light': '#B73739',
-				'red-dark': '#960E0F',
-				white: '#FFFFFF',
-				'white-light': '#F0F0F0',
-				'white-dark': '#CCCCCC',
-				black10: '#101010',
-				'black10-light': '#1A1A1A',
-				'black10-dark': '#080808'
+				// ...generateShades('#922411', 'red'),
+				// ...generateShades('#a36229', 'golden'),
+				// ...generateShades('#101010', 'black10'),
+				text: '#d3cfc3', // Light beige for text
+				background: '#030303', // Deep black background
+				primary: '#912411', // Vibrant red
+				secondary: '#a46329', // Warm brownish-orange
+				accent: '#c6a25a' // Golden tone
 			},
 			fontFamily: {
 				sans: [...fontFamily.sans],

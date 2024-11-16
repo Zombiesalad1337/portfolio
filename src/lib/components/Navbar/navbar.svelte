@@ -4,14 +4,21 @@
 	import NavbarSvgIcon from './navbarSvgIcon.svelte';
 </script>
 
-<div class="flex justify-between items-center border-b-2 border-gray-700 px-3.5rem sticky">
+<div
+	class="flex justify-between items-center border-b-2 border-secondary px-3.5rem sticky rounded-full py-0.5rem"
+>
 	<a href="/">
-		<p class="text-white text-base font-bold py-1.5rem hover:bg-gray-700">Rohit Choudhary</p>
+		<p class="rounded-full text-text text-base font-bold py-1rem px-2rem hover:bg-primary">
+			Rohit Choudhary
+		</p>
 	</a>
-	<div class="flex justify-between gap-x-1rem text-white">
+	<div class="flex justify-between gap-x-2rem text-text">
 		{#each staticData.navLinks as navLink}
-			<div class="hover:bg-gray-700">
+			<div class="relative group px-1rem py-0.5rem">
 				<NavbarItem {...navLink}></NavbarItem>
+				<span
+					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
+				></span>
 			</div>
 		{/each}
 	</div>
