@@ -3,9 +3,9 @@
 	import '../app.css';
 </script>
 
-<div class="bg-background">
+<div class="bg-background flex flex-col min-h-screen justify-center">
 	<Navbar></Navbar>
-	<main class="">
+	<main class="flex flex-col flex-grow justify-center">
 		<slot></slot>
 	</main>
 </div>

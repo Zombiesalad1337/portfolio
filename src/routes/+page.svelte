@@ -8,13 +8,12 @@
 	let carousel; // for calling methods of the carousel instance
 </script>
 
-<div class="py-[100rem] bg-black">test</div>
-<!-- <div class="px-3.5rem">
-	<div class="h-full flex flex-col justify-center items-center">
+<div class="px-3.5rem h-full">
+	<div class="flex flex-col justify-center items-center flex-1 self-stretch">
 		<div class="w-full flex justify-center items-center">
 			<div>
-				<h1 class="text-5xl font-bold">Rohit Choudhary,</h1>
-				<h4 class="text-2xl font-light max-w-[36ch]">
+				<h1 class="text-5xl font-bold text-text">Rohit Choudhary,</h1>
+				<h4 class="text-2xl font-light max-w-[36ch] text-text">
 					A Software Engineer who embraces simplicity in design and efficiency in implementation
 				</h4>
 				<div class="flex gap-x-1rem justify-start items-center py-1rem">
@@ -46,4 +45,4 @@
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
