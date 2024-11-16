@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.5rem/0.75rem z-20 bg-background"
+	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem ~py-0.5rem/0.75rem z-20 bg-background"
 >
 	<a href="/">
 		<div class="relative group">
