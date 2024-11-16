@@ -4,6 +4,6 @@
 </script>
 
 <div class="flex flex-col justify-center items-center min-w-[2rem] gap-y-1rem">
-	<img src={img} class="h-8rem max-h-[8rem]" />
-	<p class="text-white text-xl">{name}</p>
+	<img src={img} class="~h-[8rem]/[10rem] max-h-[10rem]" />
+	<p class="text-text text-xl">{name}</p>
 </div>

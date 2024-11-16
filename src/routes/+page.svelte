@@ -8,12 +8,14 @@
 	let carousel; // for calling methods of the carousel instance
 </script>
 
-<div class="px-3.5rem h-full">
-	<div class="flex flex-col justify-center items-center flex-1 self-stretch">
-		<div class="w-full flex justify-center items-center">
-			<div>
-				<h1 class="text-5xl font-bold text-text">Rohit Choudhary,</h1>
-				<h4 class="text-2xl font-light max-w-[36ch] text-text">
+<div class="px-3.5rem h-full md:justify-center">
+	<div class="flex flex-col justify-center items-center">
+		<div class="w-full flex flex-col md:flex-row justify-center items-center gap-y-[8rem]">
+			<div
+				class="flex flex-col justify-center items-center text-center md:items-start md:text-left text-text"
+			>
+				<h1 class="~text-3xl/5xl font-bold">Rohit Choudhary,</h1>
+				<h4 class="~text-xl/2xl font-light max-w-[36ch]">
 					A Software Engineer who embraces simplicity in design and efficiency in implementation
 				</h4>
 				<div class="flex gap-x-1rem justify-start items-center py-1rem">
@@ -25,7 +27,9 @@
 				</div>
 			</div>
 
-			<div class="h-[8rem] max-w-[20rem] min-w-[20rem] flex flex-col justify-center">
+			<div
+				class="~h-[8rem]/[10rem] ~max-w-[20rem]/[25rem] ~min-w-[10rem]/[12.5rem] flex flex-col justify-center mb-[10rem] md:mb-0"
+			>
 				{#if browser}
 					<Carousel
 						particlesToShow={1}
