@@ -7,6 +7,7 @@
 		'This is a brief description of the blog post. It flies in from the right on hover.';
 	let imgSrc = '/svelte.png';
 	export let slug: string;
+	export let dominantColor = '#ff3e00'; // Example color for Svelte logo
 
 	let hover = false;
 
@@ -29,14 +30,18 @@
 <!-- TODO: concept card fonts -->
 <div
 	transition:fade
-	class="image-container background-image: aspect-[4] w-full max-w-full cursor-pointer rounded-3xl url({imgSrc}); transition-hover-card text-white transition border-white border {hover
+	class="image-container background-image: aspect-[4] w-full max-w-full cursor-pointer rounded-3xl url({imgSrc}); transition-hover-card text-white transition {hover
 		? 'expand'
 		: 'expand-revert'}"
+	style="border: 1px solid {hover ? dominantColor : 'white'};"
 	on:mouseover={onMouseEnter}
 	on:mouseleave={onMouseLeave}
 	on:click={() => navigateToBlog(slug)}
 >
 	<div class="background-image" style="background-image: url({imgSrc});"></div>
+	<!-- Overlay Gradient -->
+	<div class="gradient-overlay absolute inset-0" style="--dominant-color: {dominantColor};"></div>
+
 	<div class="content flex h-full flex-col justify-between px-1.5rem pt-1.5rem font-neuemachina">
 		<div class="">
 			<div>
@@ -124,5 +129,19 @@
 		filter: blur(10px); /* Apply blur on hover */
 		background-position: bottom -100px right;
 		transition-delay: 0s;
+	}
+	/* New: Gradient Overlay */
+	.gradient-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+			var(--dominant-color);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		z-index: 0;
+	}
+
+	.image-container:hover .gradient-overlay {
+		opacity: 0.5; /* Control the intensity of the gradient */
 	}
 </style>
