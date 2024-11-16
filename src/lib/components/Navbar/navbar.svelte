@@ -16,11 +16,13 @@
 </script>
 
 <div
-	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.5rem/1rem z-20 bg-background"
+	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.5rem/0.75rem z-20 bg-background"
 >
 	<a href="/">
 		<div class="relative group">
-			<p class="rounded-full text-text ~text-sm/lg font-bold py-0.5rem group-hover:text-secondary">
+			<p
+				class="rounded-full text-text ~text-sm/lg font-bold ~md:~py-0.5rem/0.75rem group-hover:text-secondary"
+			>
 				Rohit Choudhary
 			</p>
 			<span
@@ -28,10 +30,14 @@
 			></span>
 		</div>
 	</a>
-	<div class="hidden md:flex md:justify-between md:~gap-x-0.5/2rem text-text">
+	<div class="hidden md:flex md:justify-between ~lg:~gap-x-0.5rem/2rem text-text">
 		{#each staticData.navLinks as navLink}
-			<div class="relative group px-1rem py-0.5rem">
-				<NavbarItem {...navLink} hoverColor="group-hover:text-secondary"></NavbarItem>
+			<div class="relative group px-1rem">
+				<NavbarItem
+					{...navLink}
+					className="h-full ~md:~py-0.5rem/0.75rem"
+					hoverColor="group-hover:text-secondary"
+				></NavbarItem>
 				<span
 					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
 				></span>
