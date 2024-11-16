@@ -16,12 +16,15 @@
 </script>
 
 <div
-	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.25rem/0.5rem z-20 bg-background"
+	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.5rem/1rem z-20 bg-background"
 >
 	<a href="/">
-		<p class="rounded-full text-text ~text-sm/lg font-bold ~py-0.5rem/1rem hover:bg-primary">
-			Rohit Choudhary
-		</p>
+		<div class="relative group">
+			<p class="rounded-full text-text ~text-sm/lg font-bold py-0.5rem">Rohit Choudhary</p>
+			<span
+				class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
+			></span>
+		</div>
 	</a>
 	<div class="hidden md:flex md:justify-between md:~gap-x-0.5/2rem text-text">
 		{#each staticData.navLinks as navLink}
