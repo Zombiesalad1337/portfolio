@@ -8,7 +8,8 @@
 	let carousel; // for calling methods of the carousel instance
 </script>
 
-<div class="px-3.5rem">
+<div class="py-[100rem] bg-black">test</div>
+<!-- <div class="px-3.5rem">
 	<div class="h-full flex flex-col justify-center items-center">
 		<div class="w-full flex justify-center items-center">
 			<div>
@@ -45,4 +46,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->

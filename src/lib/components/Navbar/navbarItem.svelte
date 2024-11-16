@@ -11,6 +11,8 @@
 		class="flex justify-between gap-x-0.5rem items-center transition-colors group-hover:text-secondary"
 	>
 		<NavbarSvgIcon {path} hoverColor="group-hover:text-secondary"></NavbarSvgIcon>
-		<p class="font-white text-base">{text}</p>
+		<div class="hidden lg:block">
+			<p class="font-white text-base">{text}</p>
+		</div>
 	</div>
 </a>

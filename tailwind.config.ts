@@ -1,5 +1,6 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import type { Config } from 'tailwindcss';
+import fluid, {extract, screens, fontSize} from 'fluid-tailwind'
 
 const generateShades = (color: string, name: string) => {
 	const shades = {};
@@ -50,9 +51,14 @@ const generateSizes = () => {
 
 const config: Config = {
 	darkMode: ['class'],
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+    content: {
+        files: ['./src/**/*.{html,js,svelte,ts}'],
+        extract
+    },
 	safelist: ['dark'],
 	theme: {
+		screens,
+        fontSize,
 		container: {
 			center: true,
 			padding: '2rem',
@@ -111,6 +117,7 @@ const config: Config = {
 		}
 	},
 	plugins: [
+        fluid,
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/forms')
 		// ...
