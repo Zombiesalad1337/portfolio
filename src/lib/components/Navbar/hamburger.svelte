@@ -1,8 +1,6 @@
 <script lang="ts">
 	export let open = false;
-	export let onClick = (): void => {
-		open = !open;
-	};
+	export let onClick = (): void => {};
 
 	export let ariaLabel = 'toggle menu';
 	export let width: string | number = 80;
