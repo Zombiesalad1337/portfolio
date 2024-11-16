@@ -8,6 +8,7 @@
 
 	let hamburgerOpen = false;
 	let hamburgerClick = (): void => {
+		console.log('navbar on click');
 		hamburgerOpen = !hamburgerOpen;
 	};
 
@@ -55,6 +56,7 @@
 					{...navLink}
 					className="h-full w-full ~/md:~py-1rem/2rem"
 					hoverColor="group-hover:text-accent"
+					onClick={hamburgerClick}
 				></NavbarItem>
 				<span
 					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
