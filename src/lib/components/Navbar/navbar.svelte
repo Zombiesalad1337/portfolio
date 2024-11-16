@@ -1,17 +1,21 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import staticData from '$lib/staticData.json';
 	import NavbarItem from '$lib/components/Navbar/navbarItem.svelte';
 	import NavbarSvgIcon from './navbarSvgIcon.svelte';
 	import Hamburger from './hamburger.svelte';
+	import { fly } from 'svelte/transition';
 
 	let hamburgerOpen = false;
 	let hamburgerClick = (): void => {
 		hamburgerOpen = !hamburgerOpen;
 	};
+
+	// Function to calculate dynamic navbar height
 </script>
 
 <div
-	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky rounded-full ~py-0.25rem/0.5rem"
+	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem sticky ~py-0.25rem/0.5rem z-20 bg-background"
 >
 	<a href="/">
 		<p class="rounded-full text-text ~text-sm/lg font-bold ~py-0.5rem/1rem hover:bg-primary">
@@ -35,6 +39,23 @@
 		></NavbarSvgIcon>
 	</div>
 	<div class="block md:hidden text-text">
-		<Hamburger open={hamburgerOpen} onClick={hamburgerClick} width={45}></Hamburger>
+		<Hamburger open={hamburgerOpen} onClick={hamburgerClick} width={35}></Hamburger>
 	</div>
 </div>
+{#if hamburgerOpen}
+	<!-- Side pane with nav links, positioned below the dynamic navbar height -->
+	<div class="fixed inset-0 bg-black bg-opacity-50 z-10" on:click={hamburgerClick}></div>
+	<nav
+		transition:fly={{ x: 200, duration: 400 }}
+		class="fixed top-[2rem] right-0 w-1/2 h-full bg-primary text-white z-10 ~px-1rem/2rem ~py-3rem/6rem flex flex-col gap-y-6 items-start md:hidden"
+	>
+		{#each staticData.navLinks as navLink}
+			<div class="relative ~px-0rem/2rem ~py-0.5rem/2rem w-full border-b border-accent items-start">
+				<NavbarItem {...navLink}></NavbarItem>
+				<span
+					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
+				></span>
+			</div>
+		{/each}
+	</nav>
+{/if}
