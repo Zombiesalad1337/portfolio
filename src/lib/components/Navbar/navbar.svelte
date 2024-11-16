@@ -25,7 +25,7 @@
 	<div class="hidden md:flex md:justify-between md:~gap-x-0.5/2rem text-text">
 		{#each staticData.navLinks as navLink}
 			<div class="relative group px-1rem py-0.5rem">
-				<NavbarItem {...navLink}></NavbarItem>
+				<NavbarItem {...navLink} hoverColor="group-hover:text-secondary"></NavbarItem>
 				<span
 					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
 				></span>
@@ -47,11 +47,15 @@
 	<div class="fixed inset-0 bg-black bg-opacity-50 z-10" on:click={hamburgerClick}></div>
 	<nav
 		transition:fly={{ x: 200, duration: 400 }}
-		class="fixed top-[2rem] right-0 w-1/2 h-full bg-primary text-white z-10 ~px-1rem/2rem ~py-3rem/6rem flex flex-col gap-y-6 items-start md:hidden"
+		class="fixed top-[2rem] right-0 w-1/2 h-full bg-primary text-white z-10 ~px-1rem/2rem ~/md:~py-1rem/2rem flex flex-col items-start md:hidden"
 	>
 		{#each staticData.navLinks as navLink}
-			<div class="relative ~px-0rem/2rem ~py-0.5rem/2rem w-full border-b border-accent items-start">
-				<NavbarItem {...navLink}></NavbarItem>
+			<div class="relative ~px-0rem/2rem w-full border-b border-accent items-start">
+				<NavbarItem
+					{...navLink}
+					className="h-full w-full ~/md:~py-1rem/2rem"
+					hoverColor="group-hover:text-accent"
+				></NavbarItem>
 				<span
 					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
 				></span>

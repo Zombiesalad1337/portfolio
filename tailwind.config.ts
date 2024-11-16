@@ -72,6 +72,9 @@ const config: Config = {
 			}
 		},
 		extend: {
+            screens: {
+                xs: '20rem'
+            },
 			colors: {
 				// ...generateShades('#922411', 'red'),
 				// ...generateShades('#a36229', 'golden'),
@@ -113,7 +116,7 @@ const config: Config = {
 				wider: '.05em',
 				widest: '.1em',
 				extended: '.15em'
-			}
+            },
 		}
 	},
 	plugins: [
