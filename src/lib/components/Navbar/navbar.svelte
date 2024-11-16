@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 	import staticData from '$lib/staticData.json';
 	import NavbarItem from '$lib/components/Navbar/navbarItem.svelte';
 	import NavbarSvgIcon from './navbarSvgIcon.svelte';
 	import Hamburger from './hamburger.svelte';
 	import { fly } from 'svelte/transition';
+	$: currentPath = $page.url.pathname;
+	$: console.log('current path: ' + currentPath);
 
 	let hamburgerOpen = false;
 	let hamburgerClick = (): void => {
@@ -35,11 +38,18 @@
 			<div class="relative group px-1rem">
 				<NavbarItem
 					{...navLink}
-					className="h-full ~md:~py-0.5rem/0.75rem"
-					hoverColor="group-hover:text-secondary"
+					className="h-full ~md:~py-0.5rem/0.75rem {currentPath === navLink.link
+						? 'text-secondary '
+						: ''}"
+					hoverColor="group-hover:text-secondary {currentPath === navLink.link
+						? 'text-secondary'
+						: 'text-text'}"
 				></NavbarItem>
 				<span
-					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
+					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full {currentPath ===
+					navLink.link
+						? 'w-full'
+						: ''}"
 				></span>
 			</div>
 		{/each}
@@ -65,12 +75,19 @@
 			<div class="relative ~px-0rem/2rem w-full border-b border-accent items-start">
 				<NavbarItem
 					{...navLink}
-					className="h-full w-full ~/md:~py-1rem/2rem"
-					hoverColor="group-hover:text-accent"
+					className="h-full w-full ~/md:~py-1rem/2rem {currentPath === navLink.link
+						? 'text-secondary '
+						: ''}"
+					hoverColor="group-hover:text-accent {currentPath === navLink.link
+						? 'text-accent'
+						: 'text-text'}"
 					onClick={hamburgerClick}
 				></NavbarItem>
 				<span
-					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full"
+					class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-secondary group-hover:w-full {currentPath ===
+					navLink.link
+						? 'w-full'
+						: ''}"
 				></span>
 			</div>
 		{/each}
