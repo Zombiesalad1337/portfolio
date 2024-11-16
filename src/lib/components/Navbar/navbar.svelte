@@ -21,7 +21,7 @@
 	<a href="/">
 		<div class="relative group">
 			<p
-				class="rounded-full text-text ~text-sm/lg font-bold ~md:~py-0.5rem/0.75rem group-hover:text-secondary"
+				class="rounded-full text-text ~md:~text-sm/xl font-bold ~md:~py-0.5rem/0.75rem group-hover:text-secondary"
 			>
 				Rohit Choudhary
 			</p>
