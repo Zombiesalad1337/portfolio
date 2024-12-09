@@ -25,7 +25,9 @@
 		isMobile = window.innerWidth < 768;
 	}
 	function toggleContent(){
-		showContent = !showContent;
+		if (isMobile){
+			showContent = !showContent;
+		}
 	}
 	onMount(() => {
 		updateIsMobile();
@@ -40,7 +42,7 @@
 <!-- TODO: concept card fonts -->
 <div
 	transition:fade
-	class="~/md:~rounded-[1rem]/[2rem] image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({imgSrc}); transition-hover-card text-white transition {hover && !isMobile
+	class="~/md:~rounded-[1rem]/[2rem]  image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({imgSrc}); transition-hover-card text-white transition {(hover && !isMobile) || showContent
 		? 'expand active-hover'
 		: 'expand-revert'}"
 	style="border: 1px solid {hover && !isMobile ? dominantColor : 'white'};"
@@ -134,7 +136,7 @@
 		position: relative;
 		z-index: 1; /* Ensure content is above the background */
 	}
-	.active-hover:hover .background-image {
+	.active-hover .background-image {
 		filter: blur(10px); /* Apply blur on hover */
 		background-position: bottom -100px right;
 		transition-delay: 0s;
@@ -150,7 +152,7 @@
 		z-index: 0;
 	}
 
-	.active-hover:hover .gradient-overlay {
+	.active-hover .gradient-overlay {
 		opacity: 0.5; /* Control the intensity of the gradient */
 	}
 </style>
