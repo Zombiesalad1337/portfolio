@@ -41,9 +41,11 @@
 <div
 	transition:fade
 	class="~/md:~rounded-[1rem]/[2rem] image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({imgSrc}); transition-hover-card text-white transition {hover && !isMobile
-		? 'expand'
+		? 'expand active-hover'
 		: 'expand-revert'}"
 	style="border: 1px solid {hover && !isMobile ? dominantColor : 'white'};"
+	on:mouseover={onMouseEnter}
+	on:mouseleave={onMouseLeave}
 	on:click={toggleContent}
 >
 	<div class="background-image" style="background-image: url({imgSrc});"></div>
@@ -87,9 +89,9 @@
 
 	.transition-hover-card {
 		transition:
-			background-position 0.5s ease,
-			translate 0.5s ease,
-			scale 0.5s ease,
+			background-position 0.1s ease,
+			translate 0.2s ease,
+			scale 0.2s ease,
 			blur 0.1s ease;
 	}
 	.expand {
@@ -109,7 +111,7 @@
 	.visible-slide {
 		transform: translateY(+0px);
 		opacity: 1;
-		transition-delay: 0.1s;
+		/* transition-delay: 0.1s; */
 	}
 	.background-image {
 		position: absolute;
@@ -123,17 +125,16 @@
 		filter: blur(0); /* Initially no blur */
 		background-origin: border-box;
 		transition:
-			background-position 0.3s ease,
+			background-position 0.4s ease,
 			translate 0.2s ease,
-			filter 0.3s ease;
+			filter 0.1s ease;
 		transform: translate(0, 0);
-		transition-delay: 0.15s;
 	}
 	.content {
 		position: relative;
 		z-index: 1; /* Ensure content is above the background */
 	}
-	.image-container:hover .background-image {
+	.active-hover:hover .background-image {
 		filter: blur(10px); /* Apply blur on hover */
 		background-position: bottom -100px right;
 		transition-delay: 0s;
@@ -149,7 +150,7 @@
 		z-index: 0;
 	}
 
-	.image-container:hover .gradient-overlay {
+	.active-hover:hover .gradient-overlay {
 		opacity: 0.5; /* Control the intensity of the gradient */
 	}
 </style>
