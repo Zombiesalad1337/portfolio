@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="flex justify-between items-center border-b-2 border-secondary ~px-1rem/3.5rem ~py-0.5rem/0.75rem z-20 bg-background"
+	class="flex justify-between items-center border-b-2 border-secondary ~/md:~px-1rem/2rem md:px-3.5rem ~/md:~py-0.5rem/[0.75rem] md:py-1rem z-20 bg-background"
 >
 	<a href="/">
 		<div class="relative group">
