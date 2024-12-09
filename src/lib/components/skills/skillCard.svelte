@@ -57,17 +57,17 @@
 	<div class="~/md:~px-[0.5rem]/[1rem] ~/md:~py-[0.5rem]/[1rem] md:px-1rem md:py-1rem content flex h-full flex-col justify-between font-neuemachina">
 		<div class="md:flex  md:items-center md:h-full">
 			<div>
-				<p class="font-pavelt ~/md:~text-[1rem]/[2rem] md:text-2rem">{name}</p>
+				<p class="font-pavelt ~/md:~text-[1rem]/[2rem] md:text-2rem leading-none">{name}</p>
 			</div>
 		</div>
 
 		<div class="">
 			<div
-				class="transition-transform-description mt-auto pb-1.5rem {(hover && !isMobile) || showContent
+				class="transition-transform-description mt-auto {(hover && !isMobile) || showContent
 					? 'visible-slide'
 					: 'invisible-slide'}"
 			>
-				<p class="whitespace-pre-line text-base font-medium">{description}</p>
+				<p class="whitespace-pre-line ~/md:~text-[0.7rem]/[1.4rem] font-light ~/md:~mt-[0.3rem]/[0.6rem] leading-snug pb-0">{description}</p>
 			</div>
 		</div>
 	</div>
@@ -113,7 +113,7 @@
 	.visible-slide {
 		transform: translateY(+0px);
 		opacity: 1;
-		/* transition-delay: 0.1s; */
+		transition-delay: 0.1s;
 	}
 	.background-image {
 		position: absolute;
