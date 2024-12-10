@@ -3,11 +3,10 @@
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation'; // Import SvelteKit's goto for programmatic navigation
 
-	export let name = 'Svelte';
-	export let description =
-		'This is a brief description of the blog post. It flies in from the right on hover.';
-	let imgSrc = '/svelte.png';
-	export let dominantColor = '#ff3e00'; // Example color for Svelte logo
+	export let name : String;
+	export let description : String;
+	export let img : String;
+	export let dominantColor : String;
 
 	let hover = false;
 	let isMobile = false;
@@ -42,7 +41,7 @@
 <!-- TODO: concept card fonts -->
 <div
 	transition:fade
-	class="~/md:~rounded-[1rem]/[2rem]  image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({imgSrc}); transition-hover-card text-white transition {(hover && !isMobile) || showContent
+	class="~/md:~rounded-[1rem]/[2rem]  image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({img}); transition-hover-card text-white transition {(hover && !isMobile) || showContent
 		? 'expand active-hover'
 		: 'expand-revert'}"
 	style="border: 1px solid {hover && !isMobile ? dominantColor : 'white'};"
@@ -50,7 +49,7 @@
 	on:mouseleave={onMouseLeave}
 	on:click={toggleContent}
 >
-	<div class="background-image" style="background-image: url({imgSrc});"></div>
+	<div class="background-image" style="background-image: url({img});"></div>
 	<!-- Overlay Gradient -->
 	<div class="gradient-overlay absolute inset-0" style="--dominant-color: {dominantColor};"></div>
 
