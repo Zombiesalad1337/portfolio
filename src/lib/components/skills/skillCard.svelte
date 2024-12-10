@@ -41,7 +41,7 @@
 <!-- TODO: concept card fonts -->
 <div
 	transition:fade
-	class="~/md:~rounded-[1rem]/[2rem]  image-container background-image: aspect-[4] w-full max-w-full md:rounded-2rem url({img}); transition-hover-card text-white transition {(hover && !isMobile) || showContent
+	class="~/md:~rounded-[0.5rem]/[1rem]  image-container background-image: aspect-[4] w-full max-w-full md:rounded-1rem url({img}); transition-hover-card text-white transition {(hover && !isMobile) || showContent
 		? 'expand active-hover'
 		: 'expand-revert'}"
 	style="border: 1px solid {hover && !isMobile ? dominantColor : 'white'};"
