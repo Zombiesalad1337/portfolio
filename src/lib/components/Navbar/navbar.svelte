@@ -66,6 +66,7 @@
 	</div>
 </div>
 {#if hamburgerOpen}
+	<!-- CICD TEST -->
 	<!-- Side pane with nav links, positioned below the dynamic navbar height -->
 	<div class="fixed inset-0 bg-black bg-opacity-50 z-10" on:click={hamburgerClick}></div>
 	<nav
