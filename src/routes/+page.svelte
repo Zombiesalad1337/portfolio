@@ -41,7 +41,7 @@
 						autoplayProgressVisible={false}
 						bind:this={carousel}
 					>
-						{#each staticData.skills as skill}
+						{#each staticData.skillsCarousel as skill}
 							<SkillCarouselItem {...skill}></SkillCarouselItem>
 						{/each}
 					</Carousel>
